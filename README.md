@@ -10,6 +10,8 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - Consider adjusting costs / taxes /subsidies on certain transportation modes
 - Could extend into macro solution above
 - Consider induced demand
+- We should use a mesoscopic model of traffic flow https://towardsdatascience.com/simulating-traffic-flow-in-python-ee1eab4dd20f
+
 
 
 
@@ -18,7 +20,8 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - https://www.duckietown.org/
 - https://github.com/a-b-street
   - More complete idea of what we are doing (possibly)
-  - Utilize osm2street
+  - Utilize osm2street for street layout
+  - Utilize https://github.com/asu-trans-ai-lab/grid2demand for corresponding baseline demand
 - https://www.openstreetmap.org/#map=7/41.701/-72.136
   - Use this
 - https://developer.ibm.com/tutorials/wa-build2dphysicsengine/

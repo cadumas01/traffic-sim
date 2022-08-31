@@ -18,6 +18,7 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - https://www.duckietown.org/
 - https://github.com/a-b-street
   - More complete idea of what we are doing (possibly)
+  - Utilize osm2street
 - https://www.openstreetmap.org/#map=7/41.701/-72.136
   - Use this
 - https://developer.ibm.com/tutorials/wa-build2dphysicsengine/

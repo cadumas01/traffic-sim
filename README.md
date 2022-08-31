@@ -11,6 +11,7 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - Could extend into macro solution above
 - Consider induced demand
 - We should use a mesoscopic model of traffic flow https://towardsdatascience.com/simulating-traffic-flow-in-python-ee1eab4dd20f
+- Focus in on just one small segment of Boston (to start)
 
 
 

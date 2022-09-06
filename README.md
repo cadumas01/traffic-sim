@@ -9,6 +9,7 @@ An urban traffic simulator designed to changes in traffic with variable street d
  
 2. Model Traffic on a Street 
 - Model Trafffic in Python and pass JSON objects to JS Frontend
+- Python is called by the JS Frontend when new information is needed
 
 # Ideas 
 - Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes
@@ -23,8 +24,11 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - Focus in on just one small segment of Boston (to start)
 - Model traffic depending on time of day/day of the week (Traffic is different Tuesday at 9 AM than it is Saturday at 3 PM)
   - Simulation could run through hours in a day, changing the traffic flow diagram as it goes
+- 
 
-
+# React App
+- Download NodeJS (https://nodejs.org/en/download/)
+- 
 
 
 # Resources / Inspiration

@@ -20,6 +20,8 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - Consider induced demand
 - We should use a mesoscopic model of traffic flow https://towardsdatascience.com/simulating-traffic-flow-in-python-ee1eab4dd20f
 - Focus in on just one small segment of Boston (to start)
+- Model traffic depending on time of day/day of the week (Traffic is different Tuesday at 9 AM than it is Saturday at 3 PM)
+  - Simulation could run through hours in a day, changing the traffic flow diagram as it goes
 
 
 

@@ -5,6 +5,7 @@ An urban traffic simulator designed to changes in traffic with variable street d
 1. Build map with GUI
  - Get small street section in XML tag form
  - Recreate that in JS / Typescript with React App
+   - xml2json parser: https://www.npmjs.com/package/xml2json
  - Static map view to start
  
 2. Model Traffic on a Street 

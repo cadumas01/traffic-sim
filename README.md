@@ -30,6 +30,8 @@ In each dictionary, individual elements are indexed by id. From there all of the
 - Ways have a "name" tag and contain and **ordered** list of nodes
 Based on: https://wiki.openstreetmap.org/wiki/Elements
 
+**Note:** dummy_streets.json doesn't have relations or ways for outlining buildings.
+
 
 # Inital Map Rendering
 Option 1:

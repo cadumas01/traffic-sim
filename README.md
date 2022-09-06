@@ -21,8 +21,9 @@ An urban traffic simulator designed to changes in traffic with variable street d
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;
 1. Nodes - Points in space, define places or make up ways [defined further here](https://wiki.openstreetmap.org/wiki/Node)
-2. Ways - Ordered lists of nodes which define a linear features (Ex: roads, train lines, rivers, building walls, ...) [defined further here](https://wiki.openstreetmap.org/wiki/Way )
+2. Ways - Ordered lists of nodes which define a linear features (Ex: roads, train lines, rivers, building boundaries, ...) [defined further here](https://wiki.openstreetmap.org/wiki/Way )
 3. Relations - Ordered List of Nodes, describes a special relation between Nodes (Ex: No Left Turn here) [defined further here](https://wiki.openstreetmap.org/wiki/Relation)
+  - look more into: [multipolygons](https://wiki.openstreetmap.org/wiki/Relation:multipolygon)
 
 In each dictionary, individual elements are indexed by id. From there all of the properties of each element are indexed by descriptor.
 **Key Descriptors:**
@@ -36,15 +37,17 @@ Option 1:
  - There are generally two types of Nodes:
     1. **Connections**: Single line nodes, no tags - These are usually part of a way
     2. **Attractions**: Multi line nodes, with tags - These are usually attractions / buildings
+      - Attraction nodes are at center of a building??
+      - Their boundaries are designated by Relations (as a collection of ways) which form multigons
 2. Then render ways and relations (kind of like connecting the dots)
+3. As ways are formed, properties can be checked to see if they are part of roads or building walls or ...
 All Nodes will be accessed at least once here. Simplest. 
 
-Option 2 - Cole's choice: 
+Option 2: 
 1. Loop through all nodes in JSON processing phase and categorize as nodes into two cateogires (connections or attractions)
 2. Render roads by forming lines/curves in roads with connection nodes
 4. Only render attractions
-5. Render building walls?
-6. Add relations?
+5. Render relations (building walls - surrounding a central building node?)
 
 # React App
 - Download NodeJS (https://nodejs.org/en/download/)

@@ -20,9 +20,9 @@ An urban traffic simulator designed to changes in traffic with variable street d
 
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;
-1. Nodes - Points in space, define places or make up ways [defined further here](https://wiki.openstreetmap.org/wiki/Node)
-2. Ways - Ordered lists of nodes which define a linear features (Ex: roads, train lines, rivers, building boundaries, ...) [defined further here](https://wiki.openstreetmap.org/wiki/Way )
-3. Relations - Ordered List of Nodes, describes a special relation between Nodes (Ex: No Left Turn here) [defined further here](https://wiki.openstreetmap.org/wiki/Relation)
+1. [Nodes](https://wiki.openstreetmap.org/wiki/Node) - Points in space, define places or make up ways
+2. [Ways](https://wiki.openstreetmap.org/wiki/Way)- Ordered lists of nodes which define a linear features (Ex: roads, train lines, rivers, building boundaries, ...) 
+3. [Relations](https://wiki.openstreetmap.org/wiki/Relation) - Ordered List of Nodes, Ways and/or Relations, describes a special relation between Nodes (Ex: No Left Turn here) 
   - look more into: [multipolygons](https://wiki.openstreetmap.org/wiki/Relation:multipolygon)
 
 In each dictionary, individual elements are indexed by id. From there all of the properties of each element are indexed by descriptor.

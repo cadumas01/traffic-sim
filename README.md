@@ -4,10 +4,11 @@ An urban traffic simulator designed to changes in traffic with variable street d
 # Planning
 1. Build map with GUI
  - Get small street section in XML tag form
- - Recreate that in JS / Typescript 
+ - Recreate that in JS / Typescript with React App
+ - Static map view to start
  
 2. Model Traffic on a Street 
-- Model Trafffic in Python and pass JSON objects at 
+- Model Trafffic in Python and pass JSON objects to JS Frontend
 
 # Ideas 
 - Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes

@@ -1,0 +1,205 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API 0.7.58.5 b0c4acbb">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2022-09-06T15:42:46Z"/>
+
+  <node id="63522025" lat="42.3390784" lon="-71.1406994" version="3" timestamp="2021-11-13T20:06:31Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63522688" lat="42.3385488" lon="-71.1391005" version="4" timestamp="2021-11-13T20:06:31Z" changeset="113743734" uid="5778126" user="jdcarls2">
+    <tag k="highway" v="traffic_signals"/>
+  </node>
+  <node id="63527745" lat="42.3389965" lon="-71.1411390" version="3" timestamp="2021-11-13T20:06:31Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63530636" lat="42.3399200" lon="-71.1375700" version="2" timestamp="2021-11-13T20:06:31Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63531487" lat="42.3389902" lon="-71.1392942" version="4" timestamp="2021-11-13T20:06:31Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63534539" lat="42.3397300" lon="-71.1379900" version="2" timestamp="2021-11-13T20:06:32Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63535020" lat="42.3404257" lon="-71.1368838" version="3" timestamp="2022-04-04T23:40:18Z" changeset="119321161" uid="8482773" user="aweech"/>
+  <node id="63538709" lat="42.3393570" lon="-71.1394639" version="5" timestamp="2021-11-13T20:06:32Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63539181" lat="42.3398200" lon="-71.1377500" version="2" timestamp="2021-11-13T20:06:32Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63541263" lat="42.3396100" lon="-71.1384000" version="2" timestamp="2021-11-13T20:06:32Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63558078" lat="42.3390371" lon="-71.1409071" version="3" timestamp="2021-11-13T20:06:33Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63560634" lat="42.3394238" lon="-71.1377162" version="4" timestamp="2021-11-13T20:06:33Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63567617" lat="42.3401400" lon="-71.1372500" version="2" timestamp="2021-11-13T20:06:34Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63570104" lat="42.3388122" lon="-71.1423827" version="3" timestamp="2021-11-13T20:06:34Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="63575040" lat="42.3391251" lon="-71.1404768" version="3" timestamp="2021-11-13T20:06:34Z" changeset="113743734" uid="5778126" user="jdcarls2"/>
+  <node id="325347924" lat="42.3392433" lon="-71.1389258" version="1" timestamp="2009-01-04T05:45:36Z" changeset="727013" uid="1034" user="crschmidt"/>
+  <node id="325347925" lat="42.3393704" lon="-71.1389790" version="1" timestamp="2009-01-04T05:45:37Z" changeset="727013" uid="1034" user="crschmidt"/>
+  <node id="325347926" lat="42.3393932" lon="-71.1388798" version="1" timestamp="2009-01-04T05:45:37Z" changeset="727013" uid="1034" user="crschmidt"/>
+  <node id="325347927" lat="42.3392661" lon="-71.1388267" version="1" timestamp="2009-01-04T05:45:37Z" changeset="727013" uid="1034" user="crschmidt"/>
+  <node id="326600926" lat="42.3394017" lon="-71.1397997" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="326600928" lat="42.3394543" lon="-71.1398221" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="326600930" lat="42.3394609" lon="-71.1397942" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="326600932" lat="42.3395406" lon="-71.1398281" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="326600934" lat="42.3395734" lon="-71.1396880" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="326600936" lat="42.3394411" lon="-71.1396317" version="1" timestamp="2009-01-05T05:52:44Z" changeset="734807" uid="1034" user="crschmidt"/>
+  <node id="327254465" lat="42.3389935" lon="-71.1396619" version="1" timestamp="2009-01-05T15:30:35Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254468" lat="42.3391501" lon="-71.1397274" version="1" timestamp="2009-01-05T15:30:35Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254471" lat="42.3391832" lon="-71.1395834" version="1" timestamp="2009-01-05T15:30:35Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254474" lat="42.3390267" lon="-71.1395179" version="1" timestamp="2009-01-05T15:30:35Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254553" lat="42.3390460" lon="-71.1398401" version="1" timestamp="2009-01-05T15:30:41Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254554" lat="42.3391474" lon="-71.1398826" version="1" timestamp="2009-01-05T15:30:41Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254556" lat="42.3391708" lon="-71.1397812" version="1" timestamp="2009-01-05T15:30:41Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327254558" lat="42.3390694" lon="-71.1397388" version="1" timestamp="2009-01-05T15:30:41Z" changeset="736637" uid="1034" user="crschmidt"/>
+  <node id="327403557" lat="42.3392198" lon="-71.1391085" version="1" timestamp="2009-01-05T18:25:36Z" changeset="737358" uid="1034" user="crschmidt"/>
+  <node id="329076050" lat="42.3389017" lon="-71.1391493" version="2" timestamp="2017-05-27T21:07:25Z" changeset="49033436" uid="326503" user="wambag"/>
+  <node id="329084413" lat="42.3389629" lon="-71.1388836" version="2" timestamp="2017-05-27T21:07:26Z" changeset="49033436" uid="326503" user="wambag"/>
+  <node id="329088143" lat="42.3392829" lon="-71.1392716" version="1" timestamp="2009-01-06T12:39:36Z" changeset="744018" uid="1034" user="crschmidt"/>
+  <node id="329091689" lat="42.3395014" lon="-71.1393505" version="1" timestamp="2009-01-06T12:41:53Z" changeset="744018" uid="1034" user="crschmidt"/>
+  <node id="329092273" lat="42.3390980" lon="-71.1389400" version="2" timestamp="2017-05-27T21:07:26Z" changeset="49033436" uid="326503" user="wambag"/>
+  <node id="329096102" lat="42.3391744" lon="-71.1390894" version="1" timestamp="2009-01-06T12:46:31Z" changeset="744018" uid="1034" user="crschmidt"/>
+  <node id="329099654" lat="42.3396585" lon="-71.1394235" version="1" timestamp="2009-01-06T12:48:23Z" changeset="744018" uid="1034" user="crschmidt"/>
+  <node id="329704712" lat="42.3390368" lon="-71.1392058" version="2" timestamp="2017-05-27T21:07:25Z" changeset="49033436" uid="326503" user="wambag"/>
+  <node id="329712194" lat="42.3396030" lon="-71.1392661" version="1" timestamp="2009-01-06T23:26:12Z" changeset="749836" uid="1034" user="crschmidt"/>
+  <node id="329785211" lat="42.3391892" lon="-71.1390250" version="1" timestamp="2009-01-07T01:09:49Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="329785869" lat="42.3396122" lon="-71.1392304" version="1" timestamp="2009-01-07T01:10:09Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="329788874" lat="42.3391911" lon="-71.1392331" version="1" timestamp="2009-01-07T01:12:13Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="329793667" lat="42.3395315" lon="-71.1392329" version="1" timestamp="2009-01-07T01:15:28Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="329797021" lat="42.3393264" lon="-71.1390824" version="1" timestamp="2009-01-07T01:18:20Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="329797648" lat="42.3396977" lon="-71.1392701" version="1" timestamp="2009-01-07T01:18:47Z" changeset="749862" uid="1034" user="crschmidt"/>
+  <node id="2221487977" lat="42.3392792" lon="-71.1387334" version="1" timestamp="2013-03-25T07:39:54Z" changeset="15487947" uid="1137433" user="jremillard-massgis"/>
+  <node id="2221487979" lat="42.3392607" lon="-71.1388103" version="1" timestamp="2013-03-25T07:39:54Z" changeset="15487947" uid="1137433" user="jremillard-massgis"/>
+  <node id="2221487981" lat="42.3392087" lon="-71.1387876" version="1" timestamp="2013-03-25T07:39:54Z" changeset="15487947" uid="1137433" user="jremillard-massgis"/>
+  <node id="2221487983" lat="42.3392273" lon="-71.1387107" version="1" timestamp="2013-03-25T07:39:54Z" changeset="15487947" uid="1137433" user="jremillard-massgis"/>
+  <node id="3324640033" lat="42.3390485" lon="-71.1393197" version="2" timestamp="2015-02-01T07:21:13Z" changeset="28538583" uid="326503" user="wambag"/>
+  <node id="3324678357" lat="42.3399670" lon="-71.1397264" version="1" timestamp="2015-02-01T07:21:12Z" changeset="28538583" uid="326503" user="wambag"/>
+  <node id="3335204599" lat="42.3389365" lon="-71.1415133" version="1" timestamp="2015-02-06T23:59:48Z" changeset="28664556" uid="326503" user="wambag"/>
+  <node id="3335204601" lat="42.3389128" lon="-71.1416734" version="1" timestamp="2015-02-06T23:59:48Z" changeset="28664556" uid="326503" user="wambag"/>
+  <node id="3335204604" lat="42.3391679" lon="-71.1402835" version="1" timestamp="2015-02-06T23:59:48Z" changeset="28664556" uid="326503" user="wambag"/>
+  <node id="9661173379" lat="42.3386413" lon="-71.1391411" version="1" timestamp="2022-04-12T15:55:22Z" changeset="119628061" uid="1538030" user="ntisdell"/>
+  <way id="8814519" version="4" timestamp="2015-02-01T07:15:50Z" changeset="28538583" uid="326503" user="wambag">
+    <nd ref="3324640033"/>
+    <nd ref="63560634"/>
+    <tag k="attribution" v="Office of Geographic and Environmental Information (MassGIS)"/>
+    <tag k="condition" v="deficient"/>
+    <tag k="highway" v="service"/>
+    <tag k="lanes" v="1"/>
+    <tag k="massgis:way_id" v="156836"/>
+    <tag k="source" v="massgis_import_v0.1_20071009101959"/>
+    <tag k="surface" v="unpaved"/>
+    <tag k="width" v="4.6"/>
+  </way>
+  <way id="8814652" version="7" timestamp="2022-04-12T15:55:22Z" changeset="119628061" uid="1538030" user="ntisdell">
+    <nd ref="63522688"/>
+    <nd ref="9661173379"/>
+    <nd ref="63531487"/>
+    <nd ref="3324640033"/>
+    <nd ref="63538709"/>
+    <nd ref="3324678357"/>
+    <tag k="attribution" v="Office of Geographic and Environmental Information (MassGIS)"/>
+    <tag k="condition" v="fair"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="massgis:way_id" v="191689"/>
+    <tag k="maxspeed" v="25 mph"/>
+    <tag k="name" v="Williston Road"/>
+    <tag k="source" v="massgis_import_v0.1_20071009101959"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="12.2"/>
+  </way>
+  <way id="29513373" version="3" timestamp="2019-05-08T18:22:07Z" changeset="70041374" uid="8980145" user="Alan_Bragg_Import">
+    <nd ref="325347924"/>
+    <nd ref="325347925"/>
+    <nd ref="325347926"/>
+    <nd ref="325347927"/>
+    <nd ref="325347924"/>
+    <tag k="addr:housenumber" v="52"/>
+    <tag k="addr:street" v="Salisbury Road"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29681134" version="4" timestamp="2019-06-08T23:15:28Z" changeset="71060867" uid="8980145" user="Alan_Bragg_Import">
+    <nd ref="326600926"/>
+    <nd ref="326600928"/>
+    <nd ref="326600930"/>
+    <nd ref="326600932"/>
+    <nd ref="326600934"/>
+    <nd ref="326600936"/>
+    <nd ref="326600926"/>
+    <tag k="addr:housenumber" v="30"/>
+    <tag k="addr:street" v="Williston Road"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29708171" version="3" timestamp="2019-05-08T18:24:40Z" changeset="70041374" uid="8980145" user="Alan_Bragg_Import">
+    <nd ref="327254465"/>
+    <nd ref="327254468"/>
+    <nd ref="327254471"/>
+    <nd ref="327254474"/>
+    <nd ref="327254465"/>
+    <tag k="addr:housenumber" v="18"/>
+    <tag k="addr:street" v="Williston Road"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29708180" version="3" timestamp="2020-03-14T13:14:10Z" changeset="82193187" uid="8980145" user="Alan_Bragg_Import">
+    <nd ref="327254553"/>
+    <nd ref="327254554"/>
+    <nd ref="327254556"/>
+    <nd ref="327254558"/>
+    <nd ref="327254553"/>
+    <tag k="addr:housenumber" v="72"/>
+    <tag k="addr:street" v="Salisbury Road"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29934256" version="2" timestamp="2013-09-08T21:56:54Z" changeset="17741339" uid="1137433" user="jremillard-massgis">
+    <nd ref="329096102"/>
+    <nd ref="327403557"/>
+    <nd ref="329788874"/>
+    <nd ref="329088143"/>
+    <nd ref="329797021"/>
+    <nd ref="329785211"/>
+    <nd ref="329096102"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29939106" version="3" timestamp="2019-05-08T18:28:10Z" changeset="70041374" uid="8980145" user="Alan_Bragg_Import">
+    <nd ref="329091689"/>
+    <nd ref="329099654"/>
+    <nd ref="329797648"/>
+    <nd ref="329785869"/>
+    <nd ref="329712194"/>
+    <nd ref="329793667"/>
+    <nd ref="329091689"/>
+    <tag k="addr:housenumber" v="29"/>
+    <tag k="addr:street" v="Williston Road"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="29940223" version="2" timestamp="2013-09-08T22:03:13Z" changeset="17741420" uid="1137433" user="jremillard-massgis">
+    <nd ref="329076050"/>
+    <nd ref="329704712"/>
+    <nd ref="329092273"/>
+    <nd ref="329084413"/>
+    <nd ref="329076050"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="212273475" version="1" timestamp="2013-03-25T07:41:26Z" changeset="15487947" uid="1137433" user="jremillard-massgis">
+    <nd ref="2221487979"/>
+    <nd ref="2221487977"/>
+    <nd ref="2221487983"/>
+    <nd ref="2221487981"/>
+    <nd ref="2221487979"/>
+    <tag k="building" v="yes"/>
+  </way>
+  <way id="326839557" version="3" timestamp="2019-02-21T01:07:07Z" changeset="67412952" uid="179506" user="nkhall">
+    <nd ref="63570104"/>
+    <nd ref="3335204601"/>
+    <nd ref="3335204599"/>
+    <nd ref="63527745"/>
+    <nd ref="63558078"/>
+    <nd ref="63522025"/>
+    <nd ref="63575040"/>
+    <nd ref="3335204604"/>
+    <nd ref="63538709"/>
+    <nd ref="63541263"/>
+    <nd ref="63534539"/>
+    <nd ref="63539181"/>
+    <nd ref="63530636"/>
+    <nd ref="63567617"/>
+    <nd ref="63535020"/>
+    <tag k="attribution" v="Office of Geographic and Environmental Information (MassGIS)"/>
+    <tag k="condition" v="fair"/>
+    <tag k="highway" v="residential"/>
+    <tag k="lanes" v="2"/>
+    <tag k="massgis:way_id" v="126024"/>
+    <tag k="maxspeed" v="25 mph"/>
+    <tag k="name" v="Salisbury Road"/>
+    <tag k="source" v="massgis_import_v0.1_20071009101959"/>
+    <tag k="surface" v="asphalt"/>
+    <tag k="width" v="12.2"/>
+  </way>
+
+</osm>

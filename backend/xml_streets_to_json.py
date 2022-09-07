@@ -2,6 +2,7 @@
 import xmltodict
 import json
 import pprint
+import sys
 
 
 
@@ -19,6 +20,9 @@ def xml_to_json(xml_file):
         for element_type in ["nodes", "ways", "relations"]:
             #print("raw_data[elementtype]=", raw_data[element_type])
             
+            if element_type not in raw_data:
+                break
+
             new_elements = {} # a dictionary(elements) of dictionarys(individual element)
             for element in raw_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
         
@@ -113,4 +117,4 @@ def remove_AT_from_keys(dictionary):
 
 
 if __name__ == "__main__":
-    xml_to_json("salisbury-road-large")
+    xml_to_json("salisbury-road-just-roads")

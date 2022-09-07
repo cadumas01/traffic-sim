@@ -11,15 +11,15 @@
     "nodes":{
         "connections":{
             "n1":{
-                "long": 1,
+                "lon": 1,
                 "lat": 1
             },
             "n2":{
-                "long": 2,
+                "lon": 2,
                 "lat": 2
             },
             "n3":{
-                "long": 3,
+                "lon": 3,
                 "lat": 3
             }
         },
@@ -27,13 +27,13 @@
             "n4":{
                 "type":"private residence",
                 "occupents": 1,
-                "long": 0.5,
+                "lon": 0.5,
                 "lat": 0.5
             },
             "n5":{
                 "type":"commercial",
                 "name": "Carl's Bike Shop",
-                "long": 3.5,
+                "lon": 3.5,
                 "lat": 3
             }
         }

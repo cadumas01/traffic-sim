@@ -52,9 +52,9 @@ Option 2:
 5. Render relations (building walls - surrounding a central building node?)
 
 # React App
-- Download NodeJS (https://nodejs.org/en/download/)
-- npx create-react-app sim_ui
-- 
+- Using React-Konva (https://konvajs.org/docs/react/index.html) for generating graphics
+- Imports road data from JSON file and reads nodes into two arrays, one for connections and one for attractions
+- Prints all nodes to the screen, adjusting their longitude and latitude to the scale of the window
 
 # Ideas 
 - Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes

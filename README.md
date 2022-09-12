@@ -17,6 +17,14 @@ An urban traffic simulator designed to changes in traffic with variable street d
 - Model Trafffic in Python and pass JSON objects to JS Frontend
 - Python is called by the JS Frontend when new information is needed
 
+# Things to do Week of 9/12-9/18
+- Fix npm start
+- XML to JSON converter
+- Just draw ways
+  - Incorporate street labels?
+  - Simple roads? Or maybe just colored rectangles / lines
+- figure out lat/lon to screen coordinates
+
 
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;

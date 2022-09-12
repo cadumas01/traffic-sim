@@ -148,7 +148,7 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
 }
 ```
 
-# Inital Map Rendering
+# Initial Map Rendering
 Option 1:
 1. Render all nodes first
  - There are generally two types of Nodes:

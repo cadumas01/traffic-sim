@@ -44,7 +44,8 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
 **Note:** dummy_streets.json doesn't have relations or ways for outlining buildings.
 
 ### Full Generic JSON Example below:
-``` {
+``` 
+{
     "nodes":{
         "connections":{
             "ID": {

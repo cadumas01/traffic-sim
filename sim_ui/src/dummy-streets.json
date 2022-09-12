@@ -12,7 +12,7 @@
         "connections":{
             "n1":{
                 "lon": 1,
-                "lat": 1
+                "lat": 2
             },
             "n2":{
                 "lon": 2,
@@ -20,7 +20,7 @@
             },
             "n3":{
                 "lon": 3,
-                "lat": 3
+                "lat": 2
             }
         },
         "attractions":{

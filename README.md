@@ -29,17 +29,123 @@ An urban traffic simulator designed to changes in traffic with variable street d
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;
 1. [Nodes](https://wiki.openstreetmap.org/wiki/Node) - Points in space, define places or make up ways
+  - Subcategorized into "attractions" (more than just lon and lat) and connections (just lon and lat)
 2. [Ways](https://wiki.openstreetmap.org/wiki/Way)- Ordered lists of nodes which define a linear features (Ex: roads, train lines, rivers, building boundaries, ...) 
+  - Subcategorized into "roads", "rails" and "other"
 3. [Relations](https://wiki.openstreetmap.org/wiki/Relation) - Ordered List of Nodes, Ways and/or Relations, describes a special relation between Nodes (Ex: No Left Turn here) 
   - look more into: [multipolygons](https://wiki.openstreetmap.org/wiki/Relation:multipolygon)
 
-In each dictionary, individual elements are indexed by id. From there all of the properties of each element are indexed by descriptor.
+In each dictionary, individual elements are indexed by id. From there all of the properties of each element are indexed by descriptor. For "ways" and "nodes" a subcategory type is also needed to index before indexing by node:
+  - Ex:  ```my_attractions_node = json_dict["nodes"]["attractions"][NODE_ID_NUMBER]```
 **Key Descriptors:**
 - Ways have a "name" tag and contain and **ordered** list of nodes
 Based on: https://wiki.openstreetmap.org/wiki/Elements
 
 **Note:** dummy_streets.json doesn't have relations or ways for outlining buildings.
 
+### Full Generic JSON Example below:
+``` {
+    "nodes":{
+        "connections":{
+            "ID": {
+                "lat": "LATITUDE",
+                "lon": "LONGITUDE"
+            },
+            "ID": {
+                "lat": "LATITUDE",
+                "lon": "LONGITUDE"
+            },
+            ...
+        },
+        "attractions":{
+            "ID":{
+                "lat": "LATITUDE",
+                "lon": "LONGITUDE",
+                "addr:city": "CITY",
+                "addr:housenumber": "HOUSE NUMBER",
+                "addr:postcode": "ZIP CODE",
+                "addr:state": "STATE",
+                "addr:street": "STREET ROAD",
+                ...
+            },
+            "ID":{
+                "lat": "LATITUDE",
+                "lon": "LONGITUDE",
+                "addr:housenumber": "HOUSE NUMBER",
+                "addr:postcode": "ZIP CODE",
+                "addr:state": "STATE",
+                "addr:street": "STREET ROAD",
+                ...
+            }
+        }
+    },
+    "ways": {
+      "roads" :{
+           "8814911": {
+             "node-refs": [
+                "NODE REF ID",
+                "NODE REF ID",
+                "NODE REF ID",
+                ...
+            ],
+              "condition": "fair",
+              "highway": "service",
+              "lanes": "1",
+              "massgis:way_id": "193636",
+              "source": "massgis_import_v0.1_20071009101959",
+              "width": "6.1"
+        },
+      },
+      "rails":  
+            "ID": {
+              "node-refs": [
+                "NODE REF ID",
+                "NODE REF ID",
+                "NODE REF ID",
+                ...
+                ],
+                "electrified": "ELECTRIFIED STATUS",
+                "frequency": "FREQUENCY",
+                "gauge": "GUAGE",
+                "massgis:geom_id": "GEOM ID",
+                "name": "NAME",
+                "railway": "RAIL TYPE",
+                "railway:preferred_direction": "FORWARD OR BACKWARD",
+            },
+      "other" : {
+           "ID": {
+              "node-refs": [
+                "NODE REF ID",
+                "NODE REF ID",
+                "NODE REF ID",
+                ...
+              ]
+            },
+      }
+    }
+    "relations": {
+        "9670662": {
+            "addr:housenumber": "HOUSE NUMBER",
+            "addr:street": "STREET NAME",
+            "building": "YES OR NO",
+            "type": "multipolygon",
+            "members": [
+                {
+                    "type": "way",
+                    "ref": "NODE REFERENCE",
+                    "role": "outer"
+                },
+                {
+                    "type": "way",
+                    "ref": "NODE REFERENCE",
+                    "role": "outer"
+                }
+            ]
+        },
+        ...
+    }
+}
+```
 
 # Inital Map Rendering
 Option 1:

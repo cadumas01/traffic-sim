@@ -22,6 +22,17 @@ def xml_to_json(xml_file):
                 continue
 
             new_elements = {} # a dictionary(elements) of dictionarys(individual element)
+
+            # nodes has two sub dictionaries: connections and attractions
+            if element_type == "nodes":
+                new_elements["connections"] = {}
+                new_elements["attractions"] = {}
+
+            if element_type == "ways":
+                new_elements["roads"] = {}
+                new_elements["nonroads"] = {}
+                new_elements["rails"] = {}
+
             for element in raw_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
                 id = element["@id"]
 
@@ -32,6 +43,7 @@ def xml_to_json(xml_file):
                 # remove any "@" from keys
                 element = remove_AT_from_keys(element)
             
+                # handle node refs
                 handle_node_refs(element)
 
                 handle_tags(element)
@@ -41,8 +53,24 @@ def xml_to_json(xml_file):
                 # If the element is of "relation type", go into the "member" value and remove @s from tags
                 handle_members(element)
 
-                # add refined element to new dict of elements
-                new_elements[id] = element
+                # Categorizes nodes into "connections"(just lat and lon) or "attractions"
+                if element_type == "nodes":
+                    if len(element) == 2: # if the element is a node and just has lon and lat, it is a connection
+                        new_elements["connections"][id] = element
+                    else:
+                        new_elements["attractions"][id] = element
+                
+                # Categorizes ways into "roads" and "nonroads" - key insight: roads have a width
+                elif element_type == "ways":
+                    if "width" in element: # roads
+                        new_elements["roads"][id] = element
+                    elif "railway" in element: # rails
+                        new_elements["rails"][id] = element
+                    else:
+                        new_elements["nonroads"][id] = element
+                else:
+                    # add refined element to new dict of elements, for relations
+                    new_elements[id] = element
 
             # delete old elements list and add new elements list
             del raw_data[element_type]
@@ -119,4 +147,7 @@ def remove_AT_from_keys(dictionary):
 
 
 if __name__ == "__main__":
+
+    xml_to_json("salisbury-road-just-roads")
     xml_to_json("beacon-street")
+    xml_to_json("salisbury-road-large")

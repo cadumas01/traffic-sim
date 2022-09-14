@@ -76,11 +76,12 @@ def normalize_coords(streets_data):
     
             # if Northmost lat is south of lat=0, move everything up
             # If Northmost lat is north of lon=0, move everything to down  
+            # Must subtract everything from height_scale=900 so because (0,0) is top left and positive y is down
             if min_lat < 0:
-                node["lat"] = (lat + min_lat ) * occupied_vertical_space / height + vert_margin
+                node["lat"] = height_scale - ((lat + min_lat ) * occupied_vertical_space / height + vert_margin)
             else:
-                #print("vertical_margin = ", vert_margin)
-                node["lat"] = (lat - min_lat) * occupied_vertical_space / height + vert_margin
+                #
+                node["lat"] = height_scale - ((lat - min_lat) * occupied_vertical_space / height + vert_margin)
 
     return streets_data
 

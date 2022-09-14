@@ -3,22 +3,110 @@ import xmltodict
 import json
 import pprint
 import sys
+import math
 
 
-def xml_to_json(xml_file):
+def get_min_max_lon_lat(streets_data):
+    min_lon = 10000
+    min_lat = 10000
+
+    max_lon = -10000
+    max_lat = -10000
+       
+    # First loops to find mins and maxes and create scale factors
+    for sub_category_dict in streets_data["nodes"].values():
+        for node in sub_category_dict.values():
+
+            lat = float(node["lat"])
+            node["lat"] = lat
+
+            lon = float(node["lon"])
+            node["lon"] = lon
+
+
+            if lat < min_lat:
+                min_lat = lat
+            elif lat > max_lat:
+                max_lat = lat
+
+            if lon < min_lon:
+                min_lon= lon
+            elif lon > max_lon:
+                max_lon = lon
+
+    return min_lon, max_lon, min_lat, max_lat
+
+# normalizes coords to 
+def normalize_coords(streets_data):
+
+    min_lon, max_lon, min_lat, max_lat =  get_min_max_lon_lat(streets_data)
+
+    mid_lat = (max_lat + min_lat) / 2
+    width = lon_to_x(max_lon, mid_lat) - lon_to_x(min_lon, mid_lat)
+    height = max_lat - min_lat
+
+    width_scale = 1600
+    occupied_horizontal_space = 1500
+
+    height_scale = 900
+    occupied_vertical_space = occupied_horizontal_space * height/ width
+
+    vert_margin  = (height_scale - occupied_vertical_space) / 2 # determined by leftover space
+    horiz_margin = (width_scale - occupied_horizontal_space) /2
+
+    # width should be 1400
+    # height will be scaled normally as well, so variable height (since width:height ratio is not constant), buffer will be added to make it constant
+
+    # Lat and lon to x,y for small area
+    # https://stackoverflow.com/questions/16266809/convert-from-latitude-longitude-to-x-y
+
+    # Normalize lon and lat to be x and y on a 1400 wide by 700 tall grid, plus 100 pixel margins (top, bottom, left, right) = 1600 wide, by 900 tall grid
+    for sub_category_dict in streets_data["nodes"].values():
+        for node in sub_category_dict.values():
+            lon = node["lon"]
+            lat = node["lat"]
+
+            # Centering lon and lat
+            # if Westmost lon is west of lon=0, move everything to right
+            # If Westmost lon is east of lon=0, move everything to left
+            if min_lon < 0:
+                node["lon"] = (lon_to_x(lon, mid_lat)  - lon_to_x(min_lon, mid_lat))  * occupied_horizontal_space/width + horiz_margin
+            else:
+                node["lon"] = (lon_to_x(lon, mid_lat)  + lon_to_x(min_lon, mid_lat)) * occupied_horizontal_space/width + horiz_margin
+    
+            # if Northmost lat is south of lat=0, move everything up
+            # If Northmost lat is north of lon=0, move everything to down  
+            if min_lat < 0:
+                node["lat"] = (lat + min_lat ) * occupied_vertical_space / height + vert_margin
+            else:
+                #print("vertical_margin = ", vert_margin)
+                node["lat"] = (lat - min_lat) * occupied_vertical_space / height + vert_margin
+
+    return streets_data
+
+
+
+def lon_to_x(lon, mid_lat):
+    return  lon * math.cos(math.radians(mid_lat))
+
+def lat_to_y(lat, earth_radius):
+    return  lat
+
+# cleans xml file and reorganizes into dictionary
+def xml_to_streets_data(xml_file):
     with open(xml_file  + ".xml") as xml:
-        raw_data = xmltodict.parse(xml.read())["osm"]
+        streets_data = xmltodict.parse(xml.read())["osm"]
 
         # Make its own function
         # adjust naming of node to nodes, way to ways and relation to relations
         for k in ["node", "way", "relation"]:
-           rename_key(raw_data, k, k+"s")
+           rename_key(streets_data, k, k+"s")
 
         # for each node, way and relation, take the id and use it as a key in the newly created dictionary
         for element_type in ["nodes", "ways", "relations"]:
             #print("raw_data[elementtype]=", raw_data[element_type])
             
-            if element_type not in raw_data:
+            if element_type not in streets_data:
                 continue
 
             new_elements = {} # a dictionary(elements) of dictionarys(individual element)
@@ -33,7 +121,7 @@ def xml_to_json(xml_file):
                 new_elements["nonroads"] = {}
                 new_elements["rails"] = {}
 
-            for element in raw_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
+            for element in streets_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
                 id = element["@id"]
 
                 # remove unnecessary keys/values for each element
@@ -73,11 +161,15 @@ def xml_to_json(xml_file):
                     new_elements[id] = element
 
             # delete old elements list and add new elements list
-            del raw_data[element_type]
-            raw_data[element_type] = new_elements
+            del streets_data[element_type]
+            streets_data[element_type] = new_elements
 
-        with open(xml_file + ".json", 'w+', encoding='utf-8') as f:
-            json.dump(raw_data, f, ensure_ascii=False, indent=4)
+        return streets_data
+
+
+def write_json(dictionary, file_name):
+    with open(file_name + ".json", 'w+', encoding='utf-8') as f:
+            json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
 
 # Removes "@" from any keys in the member value of an element
@@ -110,7 +202,6 @@ def handle_tags(element):
         # tags is a list of dictionaries, each with the format: {"@k": "some_key", "@v": "some_value"}
         # Must transorm this list of dictionaries as dictionary key value pairs in the regular dictionary
         tags = element["tag"]
-        print("tags = " , tags)
 
         # if there is only 1 tag, it is just a dictionary
         if type(tags) is dict:
@@ -119,7 +210,6 @@ def handle_tags(element):
         else:
             # if multiple tags, there is a list of tags
             for tag in tags:
-                print("tag = ", tag)
                 key = tag["@k"]
                 value = tag["@v"]
             
@@ -148,6 +238,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    xml_to_json("salisbury-road-just-roads")
-    xml_to_json("beacon-street")
-    xml_to_json("salisbury-road-large")
+    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street"):
+        print(f"\n {f}")
+        write_json(normalize_coords(xml_to_streets_data(f)), f)

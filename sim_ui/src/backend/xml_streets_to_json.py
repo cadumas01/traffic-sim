@@ -193,7 +193,7 @@ def handle_node_refs(element):
 
         # delete element["nd"], rename key to "node-refs" and set element["node-refs"] to the orderd list of refs
         del element["nd"]
-        element["node-refs"] = refs
+        element["noderefs"] = refs
 
 
 # Adjust how tags are organized and puts them higher up in the data structure with lon and lat

@@ -33,37 +33,46 @@ function way_points(nodes_hash, way) {
   return points
 }
 
-function points_to_coord_array(hash, ways) {
+function points_to_way_dict(hash, ways) {
   var array = []
   for (let i = 0; i < ways[0].length; i++) {
     const points = way_points(hash, ways[0][i][1].noderefs)
     points.map((_, i) => (
       points[i] = points[i] * 0.5
     ))
-    array.push(points)
+    array.push({
+      points: points,
+      detail: ways[0][i][1]
+    })
   }
   return array
 }
 
-// Helper function I used to check if I was gathering the correct coordinates for the nodes of each way
-/* function way_array(nodes_hash, way) {
-  var points = []
-  for (let i = way.length - 1; i >= 0; i--){
-    points.push(nodes_hash.get(way[i]))
-  }
-  return points
-} */
-
 const GEN_ROADS = dict_to_array(road_data.nodes.connections)
 const GEN_ATTRS = dict_to_array(road_data.nodes.attractions)
-const GEN_WAYS = dict_to_array(road_data.ways.roads)
+const GEN_WAYS_ROADS = dict_to_array(road_data.ways.roads)
+const GEN_WAYS_NONROADS = dict_to_array(road_data.ways.nonroads)
+
+/*
+const roads:
+roads is an array, roads[0] is an array of arrays, where each element in the array is a node
+s.t. roads[0][0] = ["63522025", {lat: 600.8817859964461, lon: 509.173652912172}]
+roads[0][0][0] is the node ID, roads[0][0][1] is the node coordinates
+
+const attrs:
+attrs
+
+*/
 
 const App = () => {
   const roads = React.useState(GEN_ROADS)
   const attrs = React.useState(GEN_ATTRS)
-  const ways = React.useState(GEN_WAYS)
+  console.log(attrs)
+  const ways_roads = React.useState(GEN_WAYS_ROADS)
+  const ways_nonroads = React.useState(GEN_WAYS_NONROADS)
   const roads_hash = nodes_to_hash(roads[0])
-  const coord_array = points_to_coord_array(roads_hash, ways)
+  const coord_array_roads = points_to_way_dict(roads_hash, ways_roads)
+  const coord_array_nonroads = points_to_way_dict(roads_hash, ways_nonroads)
   const widthFactor = 0.5
   const heightFactor = 0.5
     return (
@@ -81,13 +90,20 @@ const App = () => {
             fill="black"
           />
         ))}
-          {coord_array.map((_, i) => (
+          {coord_array_roads.map((_, i) => (
           <Line
           key={i.toString()}
-          points={coord_array[i]}
+          points={coord_array_roads[i].points}
           stroke="black"
-          tension={1}
-          strokeWidth={3}
+          strokeWidth={parseInt(coord_array_roads[i].detail.width)}
+          />
+        ))}
+          {coord_array_nonroads.map((_, i) => (
+          <Line
+          key={i.toString()}
+          points={coord_array_nonroads[i].points}
+          stroke="red"
+          strokeWidth={5}
           />
         ))}
         </Layer>

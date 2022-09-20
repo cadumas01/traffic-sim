@@ -27,8 +27,11 @@ function nodes_to_hash(array) {
 function way_points(nodes_hash, way) {
   var points = []
   for (let i = way.length - 1; i >= 0; i--){
-    points.push(nodes_hash.get(way[i]).lon)
-    points.push(nodes_hash.get(way[i]).lat)
+    var val = nodes_hash.get(way[i])
+    if (val) {
+      points.push(val.lon)
+      points.push(val.lat)
+    }
   }
   return points
 }
@@ -66,8 +69,7 @@ attrs
 
 const App = () => {
   const roads = React.useState(GEN_ROADS)
-  const attrs = React.useState(GEN_ATTRS)
-  console.log(attrs)
+  //const attrs = React.useState(GEN_ATTRS)
   const ways_roads = React.useState(GEN_WAYS_ROADS)
   const ways_nonroads = React.useState(GEN_WAYS_NONROADS)
   const roads_hash = nodes_to_hash(roads[0])
@@ -95,7 +97,7 @@ const App = () => {
           key={i.toString()}
           points={coord_array_roads[i].points}
           stroke="black"
-          strokeWidth={parseInt(coord_array_roads[i].detail.width)}
+          strokeWidth={parseInt(coord_array_roads[i].detail.width) * 0.5}
           />
         ))}
           {coord_array_nonroads.map((_, i) => (
@@ -103,7 +105,7 @@ const App = () => {
           key={i.toString()}
           points={coord_array_nonroads[i].points}
           stroke="red"
-          strokeWidth={5}
+          strokeWidth={1}
           />
         ))}
         </Layer>

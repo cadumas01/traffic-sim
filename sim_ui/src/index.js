@@ -2,7 +2,7 @@ import Konva from 'konva';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Stage, Layer, Rect, Text, Line } from 'react-konva';
-import road_data from './backend/salisbury-road-just-roads.json';
+import road_data from './backend/beacon-street.json';
 
 // Takes a JSON dict group (nodes) and pushes its elements into an Array
 function dict_to_array(group) {
@@ -61,15 +61,11 @@ const roads:
 roads is an array, roads[0] is an array of arrays, where each element in the array is a node
 s.t. roads[0][0] = ["63522025", {lat: 600.8817859964461, lon: 509.173652912172}]
 roads[0][0][0] is the node ID, roads[0][0][1] is the node coordinates
-
-const attrs:
-attrs
-
 */
 
 const App = () => {
   const roads = React.useState(GEN_ROADS)
-  //const attrs = React.useState(GEN_ATTRS)
+  const attrs = React.useState(GEN_ATTRS)
   const ways_roads = React.useState(GEN_WAYS_ROADS)
   const ways_nonroads = React.useState(GEN_WAYS_NONROADS)
   const roads_hash = nodes_to_hash(roads[0])
@@ -90,6 +86,17 @@ const App = () => {
             width={5}
             height={5}
             fill="black"
+          />
+        ))}
+        {attrs[0].map((_, i) => (
+          <Rect
+            key={i}
+            id={attrs[0][i][0]}
+            x={attrs[0][i][1].lon * widthFactor}
+            y={attrs[0][i][1].lat * heightFactor}
+            width={5}
+            height={5}
+            fill="red"
           />
         ))}
           {coord_array_roads.map((_, i) => (

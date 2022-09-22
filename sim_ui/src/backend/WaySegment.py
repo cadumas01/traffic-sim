@@ -7,15 +7,48 @@ import math
 # a way may be split into many different way_segments deliminated by intersections in roads
 class WaySegment:
 
-    def __init__(self, noderefs, json_file):
-        self.json_file = json_file
-        self.noderefs = noderefs
+    # Need to add all properites like speed, width, and a container for travelers
+    def __init__(self, noderefs, json_obj):
+        self.json_obj = json_obj
+        self.nodes = self.load_nodes(noderefs, json_obj)
+        self.pieces = self.gen_piecewise_function(self.nodes)
 
 
+     # evaluates a function (returns a solution of x,y) for a value of t
+    def evaluate(self, t):
+        if t > self.t_upperbound or t < 0:
+            return None, None # no solution, t out of range
+        else:
+            for piece in self.pieces:
+                if t >= piece[0] and t <= piece[1]:
+                    return piece[2].evaluate(t)
+
+    
+    def is_solution(self, x_test, y_test): 
+        for piece in self.pieces:
+            if piece[2].is_solution(x_test, y_test): # If any x,y is a solution on any piece, return true
+                return True
+
+        return False
+
+
+    def __str__(self):
+        string = "WaySegment:\n"
+
+        print(self.pieces)
+        for piece in self.pieces:
+            string += str(piece[2]) + "\n"
+        return string
+        
     # generates a piecewise parametric function
-    def gen_piecewise_function(nodes):
+    def gen_piecewise_function(self, nodes):
 
         # generates a linear parametric function between nodes[i] and nodes[i+1]
+        t = 0
+        # each element of pieces is a tuple (lowerbound, upperbound, function)
+        # we really need a dictionary that has an interval as a key
+        pieces = [] # 
+
         for i in range(0, len(nodes) - 1):
 
             # lons are x and lats are y
@@ -25,26 +58,30 @@ class WaySegment:
             x2 = nodes[i+1]["lon"]
             y2 = nodes[i+1]["lat"]
 
-            # Need to create ParametricLinearFunc objects and keep them in the list
-            ....
+            # create ParametricLinearFunc objects and keep them in the list
 
+            t_lowerbound = t
+            func = ParametricLinearFunc(x1,y1,x2,y2,t)
+            t_upperbound = func.t_range[1]
+
+            t = t_upperbound
+
+            pieces.append((t_lowerbound, t_upperbound, func))
+
+        self.t_upperbound = t
+        return pieces
+    
 
     # returns list of dictionaries  containing all fields for a node
-    def load_nodes(noderefs, json_file):
-        f = open(json_file)
-    
-        # returns JSON object as 
-        # a dictionary
-        data = json.load(f)
-        f.close()
+    def load_nodes(self, noderefs, json_obj):
 
         nodes = []
 
-        for node in noderefs:    
-            if noderef in data["nodes"]["attractions"][noderef]:  # Replace this part with a database query if we go that route
-                nodes.append(data["nodes"]["attractions"][noderef])
+        for noderef in noderefs:    
+            if noderef in json_obj["nodes"]["attractions"]:  # Replace this part with a database query if we go that route
+                nodes.append(json_obj["nodes"]["attractions"][noderef])
             else:
-                nodes.append(data["nodes"]["connections"][noderef])
+                nodes.append(json_obj["nodes"]["connections"][noderef])
 
         return nodes
 
@@ -58,7 +95,7 @@ class ParametricLinearFunc:
         self.x2 = x2
         self.y1 = y1
         self.y2 = y2
-        self.t_range = [t_lowerbound, t_lowerbound + distance(x1,y1,x2,y2)] # [lowerbound, upperbound]
+        self.t_range = (t_lowerbound, t_lowerbound + distance(x1,y1,x2,y2)) # [lowerbound, upperbound]
     
     # evaluates a function (returns a solution of x,y) for a value of t
     def evaluate(self, t):
@@ -90,6 +127,7 @@ class ParametricLinearFunc:
     def __str__(self):
         return f"({self.x1},{self.y1}) to ({self.x2},{self.y2}), angle={self.angle}, t=[{self.t_range}]"
 
+# gets angle between line and x axis (in radians)
 def get_angle(x1,y1,x2,y2):
     if x2-x1 == 0: # either vertical up or vertical down
         if y2 < y1: # vertical down:
@@ -104,8 +142,8 @@ def distance(x1,y1,x2,y2):
 
 
 if __name__=="__main__":
-    way_seg = ParametricLinearFunc(10,10,20,20)
+    way_seg = ParametricLinearFunc(10,10,10,20)
     print(way_seg.t_range)
     print(way_seg)
     print(way_seg.evaluate(2))
-    print(way_seg.is_solution(15,15))
+    print(way_seg.is_solution(10,15))

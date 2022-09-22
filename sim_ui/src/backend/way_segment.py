@@ -65,7 +65,7 @@ class ParametricLinearFunc:
         if t > self.t_range[1] or t < self.t_range[0]:
             return None, None # no solution, t out of range
         else:
-            x = t * math.cos(self.angle) + self.x1
+            x = t * math.cos(self.angle) + self.x1 # Need to deal with None angles!!!
             y = t * math.sin(self.angle) + self.y1
             return x, y
     

@@ -178,7 +178,15 @@ def handle_members(element):
     if "members" in element:
         members = element["members"]
 
+        if type(members) is dict:
+            members = [members]
+        print("members = ", members)
+        print(f"len(members) = {len(members)}")
+
         for i in range(len(members)):
+            print(f"i={i}")
+            print(f"len(members) = {len(members)}")
+            print(f"members[i]={members[i]}, ")
             members[i] = remove_AT_from_keys(members[i])
 
 
@@ -239,6 +247,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street"):
+    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "comm-beacon"):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

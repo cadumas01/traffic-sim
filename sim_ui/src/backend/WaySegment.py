@@ -40,6 +40,14 @@ class WaySegment:
             string += str(piece[2]) + "\n"
         return string
         
+
+    def nodes_str(self):
+        string = "WaySegment nodes:\n"
+        
+        for node in self.nodes:
+            string += str(node) + "\n"
+        return string
+
     # generates a piecewise parametric function
     def gen_piecewise_function(self, nodes):
 
@@ -111,14 +119,11 @@ class ParametricLinearFunc:
         # check is x is in range of x1 and x2 and if y is in range of y1 and y2
 
         angle_test = get_angle(self.x1, self.y1 , x_test, y_test)
-        print("angle test", angle_test)
         
         # if angle matches, make sure x (or y) is in range 
         # checks if t produced is within actual t range
         if angle_test == self.angle: # maybe include some sort of of wiggle room???
-            print("inside")
             t_test = (x_test - self.x1) / math.cos(angle_test) # not working
-            print("t test", t_test)
             return (t_test >= self.t_range[0] and t_test <= self.t_range[1])
 
         return False

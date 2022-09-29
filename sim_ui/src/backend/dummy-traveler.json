@@ -1,0 +1,26 @@
+{
+    "nodes": {
+        "connections": {
+            "01": {
+                "lat": 1,
+                "lon": 1
+            },
+            "02": {
+                "lat": 2,
+                "lon": 1
+            },
+            "03": {
+                "lat": 3,
+                "lon": 1
+            }
+        },
+        "attractions": {
+            "04": {
+                "lat": 2,
+                "lon": 2,
+                "way_segment": "strathmore_road_brookline_01", 
+                "is_origin": 1
+            }
+        }
+    }
+}

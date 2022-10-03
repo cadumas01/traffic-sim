@@ -10,8 +10,9 @@ class WaySegment:
     # Need to add all properites like speed, width, and a container for travelers
     def __init__(self, noderefs, json_obj):
         self.json_obj = json_obj
-        self.nodes = self.load_nodes(noderefs, json_obj)
+        self.nodes = self.load_nodes(noderefs, json_obj)  # essentially same as json dictionary but with value added
         self.pieces = self.gen_piecewise_function(self.nodes)
+        self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 
 
      # evaluates a function (returns a solution of x,y) for a value of t
@@ -38,6 +39,12 @@ class WaySegment:
         print(self.pieces)
         for piece in self.pieces:
             string += str(piece[2]) + "\n"
+
+        
+        string += "with attractions at t = \n"
+        for attraction in self.attractions:
+            string += "\t" + str(attraction["t"]) + "\n"
+
         return string
         
 
@@ -72,6 +79,10 @@ class WaySegment:
             func = ParametricLinearFunc(x1,y1,x2,y2,t)
             t_upperbound = func.t_range[1]
 
+            # assign t value to each of the nodes
+            nodes[i]["t"] = t_lowerbound
+            nodes[i+1]["t"] = t_upperbound # useless operation unless i == len(nodes) - 1
+
             t = t_upperbound
 
             pieces.append((t_lowerbound, t_upperbound, func))
@@ -82,16 +93,40 @@ class WaySegment:
 
     # returns list of dictionaries  containing all fields for a node
     def load_nodes(self, noderefs, json_obj):
-
         nodes = []
 
-        for noderef in noderefs:    
+        for noderef in noderefs:   
+            node = {"noderef": noderef}
             if noderef in json_obj["nodes"]["attractions"]:  # Replace this part with a database query if we go that route
-                nodes.append(json_obj["nodes"]["attractions"][noderef])
+                node.update(json_obj["nodes"]["attractions"][noderef])
             else:
-                nodes.append(json_obj["nodes"]["connections"][noderef])
+                node.update(json_obj["nodes"]["connections"][noderef])
+
+            nodes.append(node)
+
 
         return nodes
+
+
+    def add_attraction(self, noderef, t_value):
+        attraction = self.json_obj["nodes"]["attractions"][noderef]
+        attraction.update({"t": t_value})
+        self.attractions.append(attraction)
+
+
+    # Find min distance of a [attraction] node to a way segment node 
+    def min_node_distance(self, lon, lat):
+        minimum =  100000
+        min_node_name = ""
+        t= 0
+
+        for node in self.nodes:
+            dist = math.sqrt((node["lon"] - lon) ** 2 + (node["lat"] - lat) **2) 
+            if dist < minimum:
+                minimum = dist
+                t = node["t"]
+
+        return minimum, t
 
 
 # defines a linear math function between (x1,y1) and (x2,y2)
@@ -144,6 +179,8 @@ def get_angle(x1,y1,x2,y2):
 
 def distance(x1,y1,x2,y2):
     return math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
+
 
 
 if __name__=="__main__":

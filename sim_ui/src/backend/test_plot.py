@@ -39,8 +39,8 @@ if __name__ == "__main__":
     road_nodes = road["noderefs"]
 
 
-    lons = [300,320,340,350,290] 
-    lats = [300,350,310,360,370]
+    lons = [] 
+    lats = []
 
     attraction_lons = []
     attraction_lats = []

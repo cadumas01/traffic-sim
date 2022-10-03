@@ -125,9 +125,11 @@ def xml_to_streets_data(xml_file):
             for element in streets_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
                 id = element["@id"]
 
+                print("element = ", element)
                 # remove unnecessary keys/values for each element
-                for k in ["@id", "@uid", "@user", "@changeset", "@timestamp","@version"]:
-                    del element[k] 
+                for k in ["@id", "@uid", "@user", "@changeset", "@timestamp","@version", "@visible"]:
+                    if k in element:
+                        del element[k]  
 
                 # remove any "@" from keys
                 element = remove_AT_from_keys(element)
@@ -180,13 +182,8 @@ def handle_members(element):
 
         if type(members) is dict:
             members = [members]
-        print("members = ", members)
-        print(f"len(members) = {len(members)}")
 
         for i in range(len(members)):
-            print(f"i={i}")
-            print(f"len(members) = {len(members)}")
-            print(f"members[i]={members[i]}, ")
             members[i] = remove_AT_from_keys(members[i])
 
 
@@ -247,6 +244,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "comm-beacon"):
+    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map"):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

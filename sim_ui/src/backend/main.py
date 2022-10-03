@@ -19,7 +19,7 @@ def noderefs_to_waysegs(noderefs, data):
 
 if __name__=="__main__":
 
-    f = open("beacon-street.json")
+    f = open("test-map.json")
     
     # returns JSON object as 
     # a dictionary
@@ -38,10 +38,34 @@ if __name__=="__main__":
 
         ways.append(noderefs_to_waysegs(noderefs, data))
 
+
+    # Need to "attach" all nodes to the correct way and way_segment
+    for noderef, attraction in data["nodes"]["attractions"].items():
+        min_val = 100000
+        way_segment_index = -1
+        min_t = -1
+        way_index = -1
+        way_seg_index = -1
+
+        for i in range(len(ways)):
+            for j in range(len(ways[i])):
+                minimum, t = (ways[i][j]).min_node_distance(attraction["lon"], attraction["lat"])
+                if minimum < min_val:
+                    min_val = minimum
+                    min_t = t
+                    way_seg_index = j
+                    way_index = i
+            
+        ways[way_index][way_seg_index].add_attraction(noderef, min_t)
+
+
     # sample house id
     sample_house_id = "257578421"
     sample_house_x = data["nodes"]["attractions"][sample_house_id]["lon"]
     sample_house_y = data["nodes"]["attractions"][sample_house_id]["lat"]
+
+
+
 
     for way in ways:
         for way_seg in way:
@@ -49,6 +73,8 @@ if __name__=="__main__":
             #print(way_seg.nodes_str())
             if way_seg.is_solution(sample_house_x, sample_house_y):
                 print("Is solution")
+            print(f"min_node_distance(self, lon, lat) =  {way_seg.min_node_distance(lon=0, lat=1)}")
+            print("way seg = ", way_seg)
 
 
 

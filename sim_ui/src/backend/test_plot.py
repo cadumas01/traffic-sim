@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import json
 import sys
+import ways
 
 if __name__ == "__main__":
     fig, ax = plt.subplots()
@@ -17,6 +18,8 @@ if __name__ == "__main__":
     # a dictionary
     data = json.load(f)
 
+    ways = ways.Ways(data)
+
     lats = []
     lons = []
 
@@ -25,18 +28,15 @@ if __name__ == "__main__":
         lons.append(node_vals["lon"])
 
 
-    print(lats)
-    print(lons)
     fig.set_figheight(4.5)
     fig.set_figwidth(8)
     ax.set_ylim(bottom=0, top=900)
     ax.set_xlim(left=0, right=1600)
     ax.scatter(np.array(lons), np.array(lats),s=1)
 
-    road = list(data["ways"]["roads"].values())[2]
-    print(road["name"])
+    road = ways.ways["roads"][4]  # this a particular road
 
-    road_nodes = road["noderefs"]
+
 
 
     lons = [] 
@@ -45,7 +45,15 @@ if __name__ == "__main__":
     attraction_lons = []
     attraction_lats = []
 
-    for ref in road_nodes:
+    for road_seg in road.way_segments:
+        print("road seg = ", road_seg)
+        for attraction in road_seg.attractions:
+            print("appending")
+            attraction_lats.append(attraction["lat"])
+            attraction_lons.append(attraction["lon"])
+
+
+    for ref in road.noderefs:
         node = None
         if ref in data["nodes"]["connections"]:
             node = data["nodes"]["connections"][ref]
@@ -59,7 +67,11 @@ if __name__ == "__main__":
         lats.append(node["lat"])
 
 
+    # color attractions near our road orange
+    ways.ways["roads"]
+
     ax.plot(lons, lats, color="r")
+    print(f"attraction lons len = {len(attraction_lons)}")
     ax.scatter(np.array(attraction_lons), np.array(attraction_lats),s=10, color="orange")
 
     plt.savefig(file_name.replace("json", "png"))

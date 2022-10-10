@@ -4,6 +4,8 @@ import json
 import sys
 import ways
 
+
+# OUTDATED !!!
 if __name__ == "__main__":
     fig, ax = plt.subplots()
 
@@ -35,8 +37,6 @@ if __name__ == "__main__":
     ax.scatter(np.array(lons), np.array(lats),s=1)
 
     road = ways.ways["roads"][4]  # this a particular road
-
-
 
 
     lons = [] 

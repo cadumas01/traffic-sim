@@ -8,12 +8,17 @@ import math
 class WaySegment:
 
     # Need to add all properites like speed, width, and a container for travelers
+    # id is start_end
     def __init__(self, noderefs, json_obj):
         self.json_obj = json_obj
         self.nodes = self.load_nodes(noderefs, json_obj)  # essentially same as json dictionary but with value added
         self.pieces = self.gen_piecewise_function(self.nodes)
         self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 
+        self.start_ref = self.nodes[0]['noderef']
+        self.end_ref = self.nodes[-1]['noderef']
+        self.id = str(f"{self.start_ref}_{self.end_ref}")
+    
 
      # evaluates a function (returns a solution of x,y) for a value of t
     def evaluate(self, t):

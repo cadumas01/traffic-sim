@@ -18,15 +18,15 @@ class Network:
         self.add_intersections() # dictionary indexed via noderef that the intersection is associated to
 
     # pass noderefs of a single way and return array of waysegments split at intersections (need to work on this)
-    def noderefs_to_waysegs(self, noderefs):
+    def noderefs_to_waysegs(self, way_id, category, noderefs, split, reverse_way):
         waysegs = []
         segment_start_index = 0
         # need to split at stop lights/ intersections -FINISH
         for i in range(len(noderefs)):
             if noderefs[i] in self.data["nodes"]["attractions"] or i == len(noderefs) -1: # attractions, break up the segment, or end of segment
-                #print(f"i = {i}, breaking up segment")
                 noderefs_segment = noderefs[segment_start_index:i+1]
-                waysegs.append(ws.WaySegment(noderefs_segment, self.data))
+
+                waysegs.append(ws.WaySegment(way_id, category, noderefs_segment, self.data, split, reverse_way))
                 segment_start_index = i
 
         return waysegs
@@ -38,11 +38,27 @@ class Network:
 
             for way_id in self.data["ways"][category]:
                 noderefs = self.data["ways"][category][way_id]["noderefs"]
-                way_segs = self.noderefs_to_waysegs(noderefs)
+
+                way_segs = []
+                split = False
+
+                # potential reverse-way way_segments
+                if self.is_two_way(self.data["ways"][category][way_id]):
+                    split = True
+                    # split number of lanes in half and create a second set of one-way way segments in opposite direction
+                    way_segs += self.noderefs_to_waysegs(way_id, category, list(reversed(noderefs)), split, reverse_way=True)
+
+                # right-way way_segments
+                way_segs += self.noderefs_to_waysegs(way_id, category, noderefs, split, reverse_way=False)
 
                 for way_seg in way_segs:
+                    # print(f"way_seg_id = {way_seg.id}")
                     self.way_segments[category][way_seg.id] = way_seg
                
+
+    # returns true if current road is a two way road
+    def is_two_way(self, way_dict):
+        return ("oneway" in way_dict and way_dict["oneway"] != "no") or ("lanes" in way_dict and int(way_dict["lanes"]) >= 2)
 
 
     # associates each attraction node with its closest way segment (and appropriate connection node)
@@ -83,32 +99,31 @@ class Network:
         # maps node_ref to table index
         ref_to_index = {start_end_nodes[i]: i for i in range(n)}
 
-        # n x n table where each row or col corresponds to a start/end node. table[r][c] represents the way segment which has end points r (start) and c (end)
-        table = [[""]* n for i in range(n)] 
+        # n x n table where each row or col corresponds to a start/end node. table[r][c] represents the list of way segments which has end points r (start) and c (end)
+        table = [[[] for c in range(n) ] for r in range(n)] 
 
         for way_seg_id, way_seg in self.way_segments["roads"].items():
             i = ref_to_index[way_seg.start_ref]
             j = ref_to_index[way_seg.end_ref]
 
-            table[i][j] = [way_seg_id]
-            table[j][i] = [way_seg_id]
+
+           
+            table[i][j].append(way_seg_id) # no += ?
+            table[j][i].append(way_seg_id)
 
 
-        
+
         # "sum" the way_segments in each row,r, and those are the way_segments associated with start/end node (intersection) with id index_to_ref[r]
         for r in range(len(table)):
-            way_segment_refs = list(filter(None, table[r]))
+            way_segment_refs = sum(list(filter(None, table[r])), []) # flattened 2d list into 1d list
+            print(way_segment_refs)
             node_ref = index_to_ref[r]
 
             # create new intersection and add to dictionary of intersections (key is noderef)
             self.intersections[node_ref] = Intersection(node_ref, way_segment_refs)
-            
 
-        #print('\n'.join(['\t'.join([str(cell) for cell in row]) for row in table]))
-
-
-      
-        #print(list(self.intersections.values())[1])
+        #print('\n'.join(['\t'.join([str(len(cell)) for cell in row]) for row in table]))
+        print(list(self.intersections.values())[1])
 
 
     

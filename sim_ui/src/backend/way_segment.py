@@ -8,16 +8,24 @@ import math
 class WaySegment:
 
     # Need to add all properites like speed, width, and a container for travelers
-    # id is start_end
-    def __init__(self, noderefs, json_obj):
-        self.json_obj = json_obj
+    def __init__(self, way_id, category, noderefs, json_obj, split=False, reverse_way=False):
+        self.way_id = way_id      # way_id is the id of the way which this waysegmenet is part of (should NOT be used as index since may not be unique)
+        self.category = category  # way category which this way segment belongs to (road or nonroad)
+        self.json_obj = json_obj 
         self.nodes = self.load_nodes(noderefs, json_obj)  # essentially same as json dictionary but with value added
         self.pieces = self.gen_piecewise_function(self.nodes)
         self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 
+        self.maxspeed = 0 # adjust
+        self.lanes = 0
+        self.set_lanes(split)
+
         self.start_ref = self.nodes[0]['noderef']
         self.end_ref = self.nodes[-1]['noderef']
-        self.id = str(f"{self.start_ref}_{self.end_ref}")
+
+        # way segment id is startref_endref and sometimes startref_endref_r if the waysegment is a 2 way road split into two 1 way roads
+        self.id = ""
+        self.set_id(reverse_way)
     
 
      # evaluates a function (returns a solution of x,y) for a value of t
@@ -36,6 +44,31 @@ class WaySegment:
                 return True
 
         return False
+
+
+    def set_id(self, reverse_way=False):
+        s = str(f"{self.start_ref}_{self.end_ref}")
+        if reverse_way == True:
+            s += "_r"
+        
+        self.id = s
+
+
+    # sets number of lanes
+    def set_lanes(self, split):
+        way_obj = self.json_obj["ways"][self.category][self.way_id]
+        lanes_temp = 0
+        if "lanes" in way_obj:
+            lanes_temp = int(way_obj["lanes"])
+        else:
+            lanes_temp = 1 # return 1 lane if no lanes field present
+
+        if split == True:
+            lanes_temp = lanes_temp // 2 
+        
+        self.lanes = lanes_temp
+    
+
 
 
     def __str__(self):

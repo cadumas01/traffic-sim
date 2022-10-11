@@ -99,31 +99,37 @@ class Network:
         # maps node_ref to table index
         ref_to_index = {start_end_nodes[i]: i for i in range(n)}
 
-        # n x n table where each row or col corresponds to a start/end node. table[r][c] represents the list of way segments which has end points r (start) and c (end)
+        # n x n table (adjacency matrix) where each row corresponds to a start node and each col corresponds end node. table[r][c] represents the list of way segments which has end points r (start) and c (end)
         table = [[[] for c in range(n) ] for r in range(n)] 
 
         for way_seg_id, way_seg in self.way_segments["roads"].items():
-            i = ref_to_index[way_seg.start_ref]
-            j = ref_to_index[way_seg.end_ref]
-
-
+            r = ref_to_index[way_seg.start_ref]
+            c = ref_to_index[way_seg.end_ref]
            
-            table[i][j].append(way_seg_id) # no += ?
-            table[j][i].append(way_seg_id)
+            table[r][c].append(way_seg_id) 
+            
 
 
 
         # "sum" the way_segments in each row,r, and those are the way_segments associated with start/end node (intersection) with id index_to_ref[r]
-        for r in range(len(table)):
-            way_segment_refs = sum(list(filter(None, table[r])), []) # flattened 2d list into 1d list
-            print(way_segment_refs)
-            node_ref = index_to_ref[r]
+        for i in range(len(table)):
+
+            # sum rows to get outgoing way_segments
+            row = table[i]
+            outgoing_way_segment_refs = sum(list(filter(None, row )), []) # flattened 2d list into 1d list
+
+            # sum cols to get incoming way_segments
+            col = [row[i] for row in table]
+            incoming_way_segment_refs = sum(list(filter(None, col )), [])
+
+            node_ref = index_to_ref[i]
 
             # create new intersection and add to dictionary of intersections (key is noderef)
-            self.intersections[node_ref] = Intersection(node_ref, way_segment_refs)
+            self.intersections[node_ref] = Intersection(node_ref, outgoing_way_segment_refs, incoming_way_segment_refs)
 
         #print('\n'.join(['\t'.join([str(len(cell)) for cell in row]) for row in table]))
-        print(list(self.intersections.values())[1])
+        # for intersection in list(self.intersections.values()):
+        #     print(intersection)
 
 
     

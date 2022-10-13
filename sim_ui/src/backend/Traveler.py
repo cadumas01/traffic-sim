@@ -69,6 +69,15 @@ class Traveler:
         self.x = origin_node.lon
         self.y = origin_node.lat
 
+    def get_x():
+        return self.x
+    
+    def get_y():
+        return self.y
+
+    def increment():
+        
+
     def get_current_way_segment(x, y):
         return way_segment(x, y)
 

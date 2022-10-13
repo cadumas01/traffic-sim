@@ -8,7 +8,7 @@ class Network:
 
     def __init__(self, data):
         self.data = data
-        self.way_segments = {}  # a dictionary of roads and nonroads where each is a dcitionary of waysegments (indexed via id where id is startref_endref)
+        self.way_segments = {}  # a dictionary of roads and nonroads where each is a dictionary of waysegments (indexed via id where id is startref_endref)
         self.assemble_ways()
 
         # add all attractions to appropriate way seg

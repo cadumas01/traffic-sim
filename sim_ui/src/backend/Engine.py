@@ -4,13 +4,17 @@ At each time step:
     (For now: randomly generate travelers)
 2. Create new Traveler at origin node, give it a mode at random,
     generate a destination and give it the path to that destination
-3. Increment all existing travelers
-4. Check if each traveler is still on its current way_segment, if not, change its way segment,
-    if it has reached its destination, remove it from existence
+3. Check if any traveler is on an intersection
+    If so, increment its path. If it has reached its destination, delete it
+4. Increment all existing travelers
 """
 
 import random
+from network import Network
+from traveler import Traveler
+import data from './backend/salisbury-road-just-roads.json';
 travelers = []
+network = Network(data)
 
 # Takes array of nodes, creates x travelers at random across the nodes
 def gen_travelers(nodes, x):
@@ -24,26 +28,29 @@ def gen_travelers(nodes, x):
             mode = "Bike"
         else:
             mode = "Walk"
-        traveler = new Traveler(mode, nodes[i], gen_path(nodes[i]), nodes[i].lat, nodes[i].lon)
+        traveler = Traveler(mode, nodes[i], gen_path(nodes[i]))
         travelers.append(traveler)
         x -= 1
 
 def increment_travelers():
     for traveler in travelers:
-        x = traveler.get_x()
-        y = traveler.get_y()
-        traveler.increment()
+        traveler.increment_pos()
 
-# If the x and y coordinate of a traveler corresponds to the lat and lon
-# of a node which is in the "intersections" dictionary of the Network return True
-# else return False
-# Need to figure out an efficient way to figure out if a travelers position is at the position
-# of a node
+# for each traveler, check if traveler's current_node matches any of the entries
+# in the Network intersections dictionary
+# If yes, increment the traveler's path
+# If traveler is at final destination, path cannot be incremented, 
+# "increment_path()" returns 0, we delete the traveler from the model
 def is_at_intersection():
     for traveler in travelers:
-        x = traveler.get_x()
-        y = traveler.get_y()
-        for intersection in Network.intersections:
-            if Network.data["nodes"]["attractions"][intersection.ref][lat] == x and 
-               Network.data["nodes"]["attractions"][intersection.ref][lat] == y:
-            traveler
+        traveler_node = traveler.current_node
+        for intersection in network.intersections:
+            if intersection.traveler_node:
+                at_destination = traveler.increment_path()
+                if at_destination == 0:
+                    travelers.remove(traveler)
+                    del traveler
+                break
+
+def get_way_seg(node):
+    network.way_segments

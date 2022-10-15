@@ -15,17 +15,16 @@ from traveler import Traveler
 
 file = open('salisbury-road-just-roads.json')
 data = json.load(file)
+
 travelers = []
 network = Network(data)
 
-"""
 def __init__(self, t):
     while t > 0:
         gen_travelers(dict_to_array(network.nodes.attractions), 5)
         is_at_intersection()
         increment_travelers()
         t -= 1
-"""
 
 # Converts JSON dict of nodes to array of nodes
 def dict_to_array(nodes):
@@ -70,8 +69,6 @@ def is_at_intersection():
                     travelers.remove(traveler)
                     del traveler
                 break
-
-print(network.intersections)
 
 # Loops through every road in the map. For every way_segment in every road, 
 # if the given node exists in its dictionary of nodes, return that way_segment

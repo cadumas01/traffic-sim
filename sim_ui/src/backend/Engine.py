@@ -12,9 +12,27 @@ At each time step:
 import random
 from network import Network
 from traveler import Traveler
-import data from './backend/salisbury-road-just-roads.json';
+
+file = open('salisbury-road-just-roads.json')
+data = json.load(file)
 travelers = []
 network = Network(data)
+
+"""
+def __init__(self, t):
+    while t > 0:
+        gen_travelers(dict_to_array(network.nodes.attractions), 5)
+        is_at_intersection()
+        increment_travelers()
+        t -= 1
+"""
+
+# Converts JSON dict of nodes to array of nodes
+def dict_to_array(nodes):
+  array = []
+  for node in nodes:
+    array.append(node)
+  return array
 
 # Takes array of nodes, creates x travelers at random across the nodes
 def gen_travelers(nodes, x):
@@ -28,7 +46,8 @@ def gen_travelers(nodes, x):
             mode = "Bike"
         else:
             mode = "Walk"
-        traveler = Traveler(mode, nodes[i], gen_path(nodes[i]))
+        origin_node = nodes[i]
+        traveler = Traveler(mode, origin_node, get_way_seg(origin_node), gen_path(origin_node))
         travelers.append(traveler)
         x -= 1
 
@@ -52,5 +71,12 @@ def is_at_intersection():
                     del traveler
                 break
 
+print(network.intersections)
+
+# Loops through every road in the map. For every way_segment in every road, 
+# if the given node exists in its dictionary of nodes, return that way_segment
 def get_way_seg(node):
-    network.way_segments
+    for road in network.way_segments:
+        for way_segment in road:
+            if node in way_segment.nodes:
+                return way_segment

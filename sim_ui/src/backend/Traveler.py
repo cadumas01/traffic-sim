@@ -62,27 +62,36 @@ class Traveler:
     # Should each way_segment have a property list of adjacent segments? 
     # Or it could have a property of which intersections it's bounded by and each intersection
     # Can have the property of which way_segments are connected to it
-    def __init__(self, mode, origin_node, path, x, y):
+
+    # Mode = str ("Car", "Bike", or "Walk")
+    # Current_node = Node 
+    def __init__(self, mode, current_node, current_way_seg, path):
         self.mode = mode
-        self.origin_node = origin_node
-        self.path = gen_path(origin_node) 
-        self.x = origin_node.lon
-        self.y = origin_node.lat
+        self.current_node = current_node
+        self.current_way_seg = current_way_seg
+        self.path = path
 
-    def get_x():
-        return self.x
-    
-    def get_y():
-        return self.y
+    # Move traveler to node that is the next node on its current_way_seg
+    def increment_pos():
+        nodes = current_way_segment.nodes
+        for i in range(0, len(current_way_segment.nodes)):
+            if nodes[i] == current_node:
+                current_node = nodes[i + 1]
+                break
 
-    def increment():
-        
-
-    def get_current_way_segment(x, y):
-        return way_segment(x, y)
+    # Move traveler to way_seg that is the next value of its path
+    # On success return 1
+    # If there is no next value, return 0
+    def increment_path():
+        if path.next:
+            current_way_seg = path.next
+            return 1
+        else:
+            return 0
 
     # Has an origin node, gets a destination node, finds shortest path between them
     # Finds shortest path by some witchcraft
+    """
     def gen_path(node):
         path = []
         dest_node = gen_destination(node)
@@ -94,9 +103,12 @@ class Traveler:
             segment = intersection.way_segment
         }
         return path
+    """
         
     # Takes origin node, calculates prob of traveler going to any given destination from this origin
     # Randomly picks a destination based on those probabilities
+    """
     def gen_destination(node):
         return dest_node
+    """
         

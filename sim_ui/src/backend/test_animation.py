@@ -39,13 +39,13 @@ class Engine:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1800
-        self.height = 900
+        self.width = 1400
+        self.height = 700
         self.bg_color = (250, 250, 250)
         self.road_color = (0,0,0)
 
         self.fps = 60
-        self.zoom = 5
+        self.zoom = 0
         self.offset = (0, 0)
 
         self.mouse_last = (0, 0)
@@ -119,14 +119,18 @@ class Engine:
         self.screen.fill((r, g, b))
 
 
+    # accepts a road of type WaySegment
+    def draw_road(self, road, color):
+        width = int(road.width / 4)
+        for piece in road.pieces:
+        
+            pygame.draw.line(self.screen, color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
+
     def draw_roads(self):
         for road in self.network.way_segments["roads"].values():
+            self.draw_road(road, color=self.road_color)
             
-            width = int(road.width / 4)
-            for piece in road.pieces:
-            
-                
-                pygame.draw.line(self.screen, self.road_color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
+           
 
     def draw_intersections(self):
         for intersection_id in self.network.intersections:
@@ -150,6 +154,31 @@ class Engine:
       
         self.draw_roads()
         self.draw_intersections()
+
+        test_path = ['3199087788', '8545220735', '8545220746', '63577798', '63582073', '4257913364', '9641895410', '63532720', '69495662', '63592289', '4258760804', '63581737', '8545220749']
+
+        shortest_path = self.network.shortest_path('61573639', '63554801')
+
+        print(shortest_path.edges)
+        for edge in shortest_path.edges:
+            way_segment = self.network.way_segments["roads"][edge[1]]
+            self.draw_road(way_segment, (250,0,0))
+
+
+        
+        # # FIX - intersections are not properly linked
+        # while start_intersection != end_intersection:
+        #     print("etst = ", self.network.intersections[start_intersection].next_way_segment)
+        #     way_segment_id = self.network.intersections[start_intersection].next_way_segment[end_intersection]
+        #     way_segment = self.network.way_segments["roads"][way_segment_id]
+            
+        #     self.draw_road(way_segment, 250,0,0)
+        #     # point to next node along the way
+        #     start_intersection = way_segment.end_ref
+
+           
+
+
 
 
 

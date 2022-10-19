@@ -96,7 +96,6 @@ class WaySegment:
     def __str__(self):
         string = "WaySegment:\n"
 
-        print(self.pieces)
         for piece in self.pieces:
             string += str(piece[2]) + "\n"
 

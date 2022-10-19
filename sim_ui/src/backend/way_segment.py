@@ -12,14 +12,26 @@ class WaySegment:
         self.way_id = way_id      # way_id is the id of the way which this waysegmenet is part of (should NOT be used as index since may not be unique)
         self.category = category  # way category which this way segment belongs to (road or nonroad)
         self.json_obj = json_obj 
-        self.nodes = self.load_nodes(noderefs, json_obj)  # essentially same as json dictionary but with value added
+
+        # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
+        self.nodes = self.load_nodes(noderefs, json_obj) 
+        
+        self.noderefs = noderefs # ordered list of each noderef that makes up the way_segment
+        print("\n\n", self.nodes)
         self.pieces = self.gen_piecewise_function(self.nodes)
         self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 
-        self.maxspeed = 0 # adjust
-        self.lanes = 0
+        self.set_width()
+
+        self.maxspeed = 1 # adjust
+        self.lanes = 1
         self.set_lanes(split)
 
+        self.set_weight() # edge weight, lower weight means: shorter road, higher speed, more lanes
+
+        
+
+        # these are the two intersections the way segment is bounded by
         self.start_ref = self.nodes[0]['noderef']
         self.end_ref = self.nodes[-1]['noderef']
 
@@ -46,6 +58,13 @@ class WaySegment:
         return False
 
 
+    def set_width(self):
+        if 'width' in self.json_obj["ways"][self.category][self.way_id]:
+            self.width = float(self.json_obj["ways"][self.category][self.way_id]['width'])
+        else:
+            self.width = 1 # temp
+
+
     def set_id(self, reverse_way=False):
         s = str(f"{self.start_ref}_{self.end_ref}")
         if reverse_way == True:
@@ -64,11 +83,15 @@ class WaySegment:
             lanes_temp = 1 # return 1 lane if no lanes field present
 
         if split == True:
-            lanes_temp = lanes_temp // 2 
+            lanes_temp = max(1, lanes_temp // 2)
         
         self.lanes = lanes_temp
+
     
 
+    def set_weight(self):
+        #print(f"self.lanes = {self.lanes}, self.maxspeed = {self.maxspeed}")
+        self.weight = (self.t_len / (self.lanes * self.maxspeed) )
 
 
     def __str__(self):
@@ -125,7 +148,7 @@ class WaySegment:
 
             pieces.append((t_lowerbound, t_upperbound, func))
 
-        self.t_upperbound = t
+        self.t_len = t
         return pieces
     
 

@@ -15,9 +15,8 @@ class WaySegment:
 
         # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
         self.nodes = self.load_nodes(noderefs, json_obj) 
-        
+
         self.noderefs = noderefs # ordered list of each noderef that makes up the way_segment
-        print("\n\n", self.nodes)
         self.pieces = self.gen_piecewise_function(self.nodes)
         self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 

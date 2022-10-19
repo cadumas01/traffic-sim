@@ -14,10 +14,10 @@ class WaySegment:
         self.json_obj = json_obj 
 
         # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
-        self.nodes = self.load_nodes(noderefs, json_obj) 
+        self.load_nodes(noderefs, json_obj) # generates (self.nodes)
 
         self.noderefs = noderefs # ordered list of each noderef that makes up the way_segment
-        self.pieces = self.gen_piecewise_function(self.nodes)
+        self.gen_piecewise_function(self.nodes) # generates list of pieces (self.pieces)
         self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
 
         self.set_width()
@@ -89,7 +89,6 @@ class WaySegment:
     
 
     def set_weight(self):
-        #print(f"self.lanes = {self.lanes}, self.maxspeed = {self.maxspeed}")
         self.weight = (self.t_len / (self.lanes * self.maxspeed) )
 
 
@@ -99,7 +98,6 @@ class WaySegment:
         for piece in self.pieces:
             string += str(piece[2]) + "\n"
 
-        
         string += "with attractions at t = \n"
         for attraction in self.attractions:
             string += "\t" + str(attraction["t"]) + "\n"
@@ -147,7 +145,7 @@ class WaySegment:
             pieces.append((t_lowerbound, t_upperbound, func))
 
         self.t_len = t
-        return pieces
+        self.pieces = pieces
     
 
     # returns list of dictionaries  containing all fields for a node
@@ -164,7 +162,7 @@ class WaySegment:
             nodes.append(node)
 
 
-        return nodes
+        self.nodes = nodes
 
 
     def add_attraction(self, noderef, t_value):
@@ -176,7 +174,6 @@ class WaySegment:
     # Find min distance of a [attraction] node to a way segment node 
     def min_node_distance(self, lon, lat):
         minimum =  100000
-        min_node_name = ""
         t= 0
 
         for node in self.nodes:

@@ -7158,7 +7158,7 @@
         "2887651": {
             "colour": "#008150",
             "from": "Cleveland Circle",
-            "name": "MBTA Green Line (C): Cleveland Circle → Government Center",
+            "name": "MBTA Green Line (C): Cleveland Circle â†’ Government Center",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",
@@ -8338,7 +8338,7 @@
         "11359934": {
             "colour": "#008150",
             "from": "Government Center",
-            "name": "MBTA Green Line (C): Government Center → Cleveland Circle",
+            "name": "MBTA Green Line (C): Government Center â†’ Cleveland Circle",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",

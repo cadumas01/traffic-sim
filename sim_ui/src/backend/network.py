@@ -157,18 +157,14 @@ class Network:
             # should just be updating the value with a prexiting key that we put into dictionary when splitting ways into way_segments
             self.intersections[node_ref] = Intersection(node_ref, outgoing_way_segment_refs, incoming_way_segment_refs)
 
-        #print('\n'.join(['\t'.join([str(len(cell)) for cell in row]) for row in table]))
-        # for intersection in list(self.intersections.values()):
-        #     print(intersection)
 
-
+    # Makes Dijkstrar Graph reprsentation where nodes are Insersection refs and edges are way_segment refs with corrseponding weights
     def make_graph(self):
         self.graph = Graph()
 
         # go through each (road) way segment and find the two intersections it is bounded by 
         # (indexed via noderefs which each correspond to an Intersection object)
-
-        for road_id, road in self.way_segments["roads"].items():
+        for road in self.way_segments["roads"].values():
             # add edge to graph from start intersection to end intersection where the edge is:(waysegment weight,  waysegment id) 
             self.graph.add_edge(road.start_ref, road.end_ref, (road.weight, road.id))
         
@@ -181,38 +177,6 @@ class Network:
 
         return find_path(self.graph, start_intersection_ref, end_intersection_ref, cost_func=cost_func)
 
-        #print(type(graph))
-       # print (json.dumps(dict(graph), indent=4, default=float))
-
-
-         # OLD IDEA with trying to store shortest path data on intersections
-        # intersections = list(self.intersections.values())
-        # for i in range(len(intersections)):
-        #     start = intersections[i].ref
-        #    # print(f"Working with start intersection = {start}")
-        #     for j in range(i + 1, len(intersections)):
-                
-        #         end = intersections[j].ref
-        #         #print(f"\tto end = {end}")
-        #         try: 
-        #             path_info = find_path(graph, start, end, cost_func=cost_func)
-
-                   
-        #             # for intersection i to j, the shortest path requires you to take the next edge
-        #             # Each intersection knows the next path to take to get to any other intersection
-
-        #             for k in range(len(path_info.nodes)):
-        #                 current_intersection_id = path_info.nodes[k]
-        #                 next_way_seg = path_info.edges[k][1]
-        #                 self.intersections[current_intersection_id].next_way_segment[str(end)] = next_way_seg
-        #         except:
-        #             continue
-        
-        
-        # FIX - intersections are not properly linked
-        for intersection in self.intersections.values():
-            print("\n\n", intersection.next_way_segment)
-
 
     def __str__(self):
         s = ""
@@ -221,7 +185,6 @@ class Network:
         s += f"\t{len(self.intersections)} intersections"
 
         return s
-
 
 
 if __name__=="__main__":

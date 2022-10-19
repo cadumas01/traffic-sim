@@ -80,39 +80,13 @@ class Engine:
             for events in pygame.event.get():
                 if events.type == pygame.QUIT:
                     sys.exit(0)
-
-           
-
-            
+         
 
     def run(self, steps_per_update=1):
         """Runs the simulation by updating in every loop."""
         def loop(sim):
             sim.run(steps_per_update)
         self.loop(loop)
-
-    def convert(self, x, y=None):
-        """Converts simulation coordinates to screen coordinates"""
-        if isinstance(x, list):
-            return [self.convert(e[0], e[1]) for e in x]
-        if isinstance(x, tuple):
-            return self.convert(*x)
-        return (
-            int(self.width/2 + (x + self.offset[0])*self.zoom),
-            int(self.height/2 + (y + self.offset[1])*self.zoom)
-        )
-
-    def inverse_convert(self, x, y=None):
-        """Converts screen coordinates to simulation coordinates"""
-        if isinstance(x, list):
-            return [self.convert(e[0], e[1]) for e in x]
-        if isinstance(x, tuple):
-            return self.convert(*x)
-        return (
-            int(-self.offset[0] + (x - self.width/2)/self.zoom),
-            int(-self.offset[1] + (y - self.height/2)/self.zoom)
-        )
-
 
     def background(self, r, g, b):
         """Fills screen with one color."""
@@ -159,26 +133,11 @@ class Engine:
 
         shortest_path = self.network.shortest_path('61573639', '63554801')
 
-        print(shortest_path.edges)
         for edge in shortest_path.edges:
             way_segment = self.network.way_segments["roads"][edge[1]]
             self.draw_road(way_segment, (250,0,0))
 
-
         
-        # # FIX - intersections are not properly linked
-        # while start_intersection != end_intersection:
-        #     print("etst = ", self.network.intersections[start_intersection].next_way_segment)
-        #     way_segment_id = self.network.intersections[start_intersection].next_way_segment[end_intersection]
-        #     way_segment = self.network.way_segments["roads"][way_segment_id]
-            
-        #     self.draw_road(way_segment, 250,0,0)
-        #     # point to next node along the way
-        #     start_intersection = way_segment.end_ref
-
-           
-
-
 
 
 

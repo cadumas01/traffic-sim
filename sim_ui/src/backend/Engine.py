@@ -46,9 +46,10 @@ def gen_travelers(nodes, x):
             mode = "Bike"
         else:
             mode = "Walk"
-        print(nodes)
         origin_node = nodes[i]
-        traveler = Traveler(mode, origin_node, get_way_seg(origin_node), gen_path(origin_node))
+        # Once we have it, the fourth argument passed to Traveler will be
+        # gen_path(origin_node)
+        traveler = Traveler(mode, origin_node, get_way_seg(origin_node), [])
         travelers.append(traveler)
         x -= 1
 
@@ -60,14 +61,14 @@ def increment_travelers():
 # in the Network intersections dictionary
 # If yes, increment the traveler's path
 # If traveler is at final destination, path cannot be incremented, 
-# "increment_path()" returns 0, we delete the traveler from the model
+# "increment_path()" returns 1, we delete the traveler from the model
 def is_at_intersection():
     for traveler in travelers:
         traveler_node = traveler.current_node
         for intersection in network.intersections:
-            if intersection.traveler_node:
+            if traveler_node in network.intersections[intersection].incoming_way_segment_refs:
                 at_destination = traveler.increment_path()
-                if at_destination == 0:
+                if at_destination == 1:
                     travelers.remove(traveler)
                     del traveler
                 break
@@ -76,7 +77,7 @@ def is_at_intersection():
 # if the given node exists in its dictionary of nodes, return that way_segment
 def get_way_seg(trav_node):
     for way_segment in network.way_segments["roads"]:
-        if trav_node in network.way_segments["roads"][way_segment].nodes:
+        if trav_node in network.way_segments["roads"][way_segment].noderefs:
             return way_segment
 
 def run(t):

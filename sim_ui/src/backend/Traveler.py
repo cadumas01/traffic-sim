@@ -72,9 +72,9 @@ class Traveler:
         self.path = path
 
     # Move traveler to node that is the next node on its current_way_seg
-    def increment_pos():
-        nodes = current_way_segment.nodes
-        for i in range(0, len(current_way_segment.nodes)):
+    def increment_pos(self):
+        nodes = self.current_way_seg.noderefs
+        for i in range(0, len(self.current_way_seg.noderefs)):
             if nodes[i] == current_node:
                 current_node = nodes[i + 1]
                 break
@@ -82,12 +82,12 @@ class Traveler:
     # Move traveler to way_seg that is the next value of its path
     # On success return 1
     # If there is no next value, return 0
-    def increment_path():
-        if path.next:
-            current_way_seg = path.next
-            return 1
-        else:
+    def increment_path(self):
+        if self.path.next:
+            current_way_seg = self.path.next
             return 0
+        else:
+            return 1
 
     # Has an origin node, gets a destination node, finds shortest path between them
     # Finds shortest path by some witchcraft

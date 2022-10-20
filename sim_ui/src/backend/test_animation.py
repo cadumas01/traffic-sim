@@ -39,13 +39,13 @@ class Engine:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1800
-        self.height = 900
+        self.width = 1400
+        self.height = 700
         self.bg_color = (250, 250, 250)
         self.road_color = (0,0,0)
 
         self.fps = 60
-        self.zoom = 5
+        self.zoom = 0
         self.offset = (0, 0)
 
         self.mouse_last = (0, 0)
@@ -80,10 +80,7 @@ class Engine:
             for events in pygame.event.get():
                 if events.type == pygame.QUIT:
                     sys.exit(0)
-
-           
-
-            
+         
 
     def run(self, steps_per_update=1):
         """Runs the simulation by updating in every loop."""
@@ -91,42 +88,23 @@ class Engine:
             sim.run(steps_per_update)
         self.loop(loop)
 
-    def convert(self, x, y=None):
-        """Converts simulation coordinates to screen coordinates"""
-        if isinstance(x, list):
-            return [self.convert(e[0], e[1]) for e in x]
-        if isinstance(x, tuple):
-            return self.convert(*x)
-        return (
-            int(self.width/2 + (x + self.offset[0])*self.zoom),
-            int(self.height/2 + (y + self.offset[1])*self.zoom)
-        )
-
-    def inverse_convert(self, x, y=None):
-        """Converts screen coordinates to simulation coordinates"""
-        if isinstance(x, list):
-            return [self.convert(e[0], e[1]) for e in x]
-        if isinstance(x, tuple):
-            return self.convert(*x)
-        return (
-            int(-self.offset[0] + (x - self.width/2)/self.zoom),
-            int(-self.offset[1] + (y - self.height/2)/self.zoom)
-        )
-
-
     def background(self, r, g, b):
         """Fills screen with one color."""
         self.screen.fill((r, g, b))
 
 
+    # accepts a road of type WaySegment
+    def draw_road(self, road, color):
+        width = int(road.width / 4)
+        for piece in road.pieces:
+        
+            pygame.draw.line(self.screen, color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
+
     def draw_roads(self):
         for road in self.network.way_segments["roads"].values():
+            self.draw_road(road, color=self.road_color)
             
-            width = int(road.width / 4)
-            for piece in road.pieces:
-            
-                
-                pygame.draw.line(self.screen, self.road_color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
+           
 
     def draw_intersections(self):
         for intersection_id in self.network.intersections:
@@ -150,6 +128,16 @@ class Engine:
       
         self.draw_roads()
         self.draw_intersections()
+
+        test_path = ['3199087788', '8545220735', '8545220746', '63577798', '63582073', '4257913364', '9641895410', '63532720', '69495662', '63592289', '4258760804', '63581737', '8545220749']
+
+        shortest_path = self.network.shortest_path('61573639', '63554801')
+
+        for edge in shortest_path.edges:
+            way_segment = self.network.way_segments["roads"][edge[1]]
+            self.draw_road(way_segment, (250,0,0))
+
+        
 
 
 

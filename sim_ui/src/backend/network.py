@@ -1,6 +1,9 @@
+from cmath import cos
 import way_segment as ws
 import json
 from intersection import Intersection
+from dijkstar import Graph, find_path
+
 
 
 # contains a dictionary of way segments
@@ -9,21 +12,49 @@ class Network:
     def __init__(self, data):
         self.data = data
         self.way_segments = {}  # a dictionary of roads and nonroads where each is a dictionary of waysegments (indexed via id where id is startref_endref)
+        self.intersections = {} 
+
         self.assemble_ways()
 
         # add all attractions to appropriate way seg
         self.add_attractions()
 
-        self.intersections = {}
+        # dictionary of intersections indexed by noderef
         self.add_intersections() # dictionary indexed via noderef that the intersection is associated to
+
+        self.make_graph()
+
+    # checks if node is part of two separate ways
+    def node_is_intersection(self, noderef):
+
+        if noderef in self.intersections:
+            return True
+        else:
+            count = 0
+
+            for way_segment in self.data["ways"]["roads"].values():
+                if noderef in way_segment["noderefs"]:
+                    count += 1
+        
+            # if more than a single way uses a node, it is an intersection
+            if count > 1:
+                self.intersections[noderef] = None
+                return True
+            else:
+                return False
+
+
+        # add intersection to self.intersections dictionary (leave the value blank as this will be filled in later)
 
     # pass noderefs of a single way and return array of waysegments split at intersections (need to work on this)
     def noderefs_to_waysegs(self, way_id, category, noderefs, split, reverse_way):
         waysegs = []
         segment_start_index = 0
-        # need to split at stop lights/ intersections -FINISH
+
         for i in range(len(noderefs)):
-            if noderefs[i] in self.data["nodes"]["attractions"] or i == len(noderefs) -1: # attractions, break up the segment, or end of segment
+
+            # if we have a way_segment (bounded by two different nodes) or the way ends make a new way segment
+            if (self.node_is_intersection(noderefs[i]) and segment_start_index != i) or i == len(noderefs) -1: # attractions, break up the segment, or end of segment
                 noderefs_segment = noderefs[segment_start_index:i+1]
 
                 waysegs.append(ws.WaySegment(way_id, category, noderefs_segment, self.data, split, reverse_way))
@@ -107,8 +138,6 @@ class Network:
             c = ref_to_index[way_seg.end_ref]
            
             table[r][c].append(way_seg_id) 
-            
-
 
 
         # "sum" the way_segments in each row,r, and those are the way_segments associated with start/end node (intersection) with id index_to_ref[r]
@@ -125,15 +154,29 @@ class Network:
             node_ref = index_to_ref[i]
 
             # create new intersection and add to dictionary of intersections (key is noderef)
+            # should just be updating the value with a prexiting key that we put into dictionary when splitting ways into way_segments
             self.intersections[node_ref] = Intersection(node_ref, outgoing_way_segment_refs, incoming_way_segment_refs)
 
-        #print('\n'.join(['\t'.join([str(len(cell)) for cell in row]) for row in table]))
-        # for intersection in list(self.intersections.values()):
-        #     print(intersection)
 
+    # Makes Dijkstrar Graph reprsentation where nodes are Insersection refs and edges are way_segment refs with corrseponding weights
+    def make_graph(self):
+        self.graph = Graph()
 
-    
+        # go through each (road) way segment and find the two intersections it is bounded by 
+        # (indexed via noderefs which each correspond to an Intersection object)
+        for road in self.way_segments["roads"].values():
+            # add edge to graph from start intersection to end intersection where the edge is:(waysegment weight,  waysegment id) 
+            self.graph.add_edge(road.start_ref, road.end_ref, (road.weight, road.id))
         
+
+    # returns PathInfo for shortest path
+    def shortest_path(self, start_intersection_ref, end_intersection_ref):
+        def cost_func(u, v, edge, prev_edge):
+            length, name = edge
+            return length
+
+        return find_path(self.graph, start_intersection_ref, end_intersection_ref, cost_func=cost_func)
+
 
     def __str__(self):
         s = ""
@@ -144,10 +187,9 @@ class Network:
         return s
 
 
-
 if __name__=="__main__":
 
-    f = open("test-map.json")
+    f = open("test-map.json", encoding="utf-8")
     
     # returns JSON object as 
     # a dictionary

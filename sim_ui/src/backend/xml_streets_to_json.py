@@ -244,6 +244,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map"):
+    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map", "bc"):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

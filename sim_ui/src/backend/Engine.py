@@ -77,7 +77,7 @@ def is_at_intersection():
 # if the given node exists in its dictionary of nodes, return that way_segment
 def get_way_seg(trav_node):
     for way_segment in network.way_segments["roads"]:
-        if trav_node in network.way_segments["roads"][way_segment].noderefs:
+        if trav_node in network.way_segments["roads"][way_segment].attractions:
             return way_segment
 
 def run(t):

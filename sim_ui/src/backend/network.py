@@ -77,7 +77,8 @@ class Network:
                 if self.is_two_way(self.data["ways"][category][way_id]):
                     split = True
                     # split number of lanes in half and create a second set of one-way way segments in opposite direction
-                    way_segs += self.noderefs_to_waysegs(way_id, category, list(reversed(noderefs)), split, reverse_way=True)
+                    # If way_segment A has id: nodei_nodej. Then reverse of way_segment A has id: nodeJ_nodei
+                    way_segs += self.noderefs_to_waysegs(way_id, category, list(reversed(noderefs)), split)
 
                 # right-way way_segments
                 way_segs += self.noderefs_to_waysegs(way_id, category, noderefs, split, reverse_way=False)
@@ -110,6 +111,12 @@ class Network:
                                       
             self.way_segments["roads"][way_seg_id].add_attraction(noderef, min_t)
 
+            # Since a two lane road is really 2 one way way_segments we must also associate an attraction to the 
+            # corresponding opposite way_segment (i.e. reverse the nodes in the way segment id)
+            if self.reverse_way_seg_id(way_seg_id) in self.way_segments["roads"]:
+                self.way_segments["roads"][self.reverse_way_seg_id(way_seg_id)].add_attraction(noderef) # FINISH
+
+    
 
     # creates intersections between touching way_segments
     # see diagram in shared google folder
@@ -172,8 +179,8 @@ class Network:
     # returns PathInfo for shortest path
     def shortest_path(self, start_intersection_ref, end_intersection_ref):
         def cost_func(u, v, edge, prev_edge):
-            length, name = edge
-            return length
+            weight, name = edge
+            return weight
 
         return find_path(self.graph, start_intersection_ref, end_intersection_ref, cost_func=cost_func)
 
@@ -185,6 +192,11 @@ class Network:
         s += f"\t{len(self.intersections)} intersections"
 
         return s
+
+
+    def reverse_way_seg_id(self, way_seg_id):
+        parts = way_seg_id.split("_")
+        return f"{parts[1]}_{parts[0]}"
 
 
 if __name__=="__main__":

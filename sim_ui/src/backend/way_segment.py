@@ -1,4 +1,5 @@
 import math
+from node import Node
 
 # defines a class, wag_segment, which is a consists of a parametric piecewise function
 # outlining the "domain" of a given road_segment
@@ -8,17 +9,18 @@ import math
 class WaySegment:
 
     # Need to add all properites like speed, width, and a container for travelers
-    def __init__(self, way_id, category, noderefs, json_obj, split=False, reverse_way=False):
+    def __init__(self, way_id, category, noderefs, data, split=False):
         self.way_id = way_id      # way_id is the id of the way which this waysegmenet is part of (should NOT be used as index since may not be unique)
         self.category = category  # way category which this way segment belongs to (road or nonroad)
-        self.json_obj = json_obj 
+        self.data = data 
 
         # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
-        self.load_nodes(noderefs, json_obj) # generates (self.nodes)
+        self.load_nodes(noderefs, data) # generates (self.nodes)
 
         self.noderefs = noderefs # ordered list of each noderef that makes up the way_segment
         self.gen_piecewise_function(self.nodes) # generates list of pieces (self.pieces)
-        self.attractions = [] # list of all attraction nodes associated to a way segment and (their t value?)
+        self.attractions = {} # dict of all attraction nodes associated to a way segment and indexed by id
+        # MAYBE CHANGE ATTRACTIONS TO DICTIONARY index by t value???
 
         self.set_width()
 
@@ -36,7 +38,7 @@ class WaySegment:
 
         # way segment id is startref_endref and sometimes startref_endref_r if the waysegment is a 2 way road split into two 1 way roads
         self.id = ""
-        self.set_id(reverse_way)
+        self.set_id()
     
 
      # evaluates a function (returns a solution of x,y) for a value of t
@@ -58,23 +60,23 @@ class WaySegment:
 
 
     def set_width(self):
-        if 'width' in self.json_obj["ways"][self.category][self.way_id]:
-            self.width = float(self.json_obj["ways"][self.category][self.way_id]['width'])
+        if 'width' in self.data["ways"][self.category][self.way_id]:
+            self.width = float(self.data["ways"][self.category][self.way_id]['width'])
         else:
             self.width = 1 # temp
 
 
     def set_id(self, reverse_way=False):
         s = str(f"{self.start_ref}_{self.end_ref}")
-        if reverse_way == True:
-            s += "_r"
+        #if reverse_way == True:
+         #   s += "_r"
         
         self.id = s
 
 
     # sets number of lanes
     def set_lanes(self, split):
-        way_obj = self.json_obj["ways"][self.category][self.way_id]
+        way_obj = self.data["ways"][self.category][self.way_id]
         lanes_temp = 0
         if "lanes" in way_obj:
             lanes_temp = int(way_obj["lanes"])
@@ -88,6 +90,7 @@ class WaySegment:
 
     
 
+    # very simple - need to adjust
     def set_weight(self):
         self.weight = (self.t_len / (self.lanes * self.maxspeed) )
 
@@ -148,16 +151,17 @@ class WaySegment:
         self.pieces = pieces
     
 
+    # !!! Convert this TO NODE type Node
     # returns list of dictionaries  containing all fields for a node
-    def load_nodes(self, noderefs, json_obj):
+    def load_nodes(self, noderefs, data):
         nodes = []
 
         for noderef in noderefs:   
             node = {"noderef": noderef}
-            if noderef in json_obj["nodes"]["attractions"]:  # Replace this part with a database query if we go that route
-                node.update(json_obj["nodes"]["attractions"][noderef])
+            if noderef in data["nodes"]["attractions"]:  # Replace this part with a database query if we go that route
+                node.update(data["nodes"]["attractions"][noderef])
             else:
-                node.update(json_obj["nodes"]["connections"][noderef])
+                node.update(data["nodes"]["connections"][noderef])
 
             nodes.append(node)
 
@@ -166,9 +170,10 @@ class WaySegment:
 
 
     def add_attraction(self, noderef, t_value):
-        attraction = self.json_obj["nodes"]["attractions"][noderef]
-        attraction.update({"t": t_value})
-        self.attractions.append(attraction)
+        attract_dict = self.data["nodes"]["attractions"][noderef]
+
+        attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"])
+        self.attractions[noderef] = attraction
 
 
     # Find min distance of a [attraction] node to a way segment node 

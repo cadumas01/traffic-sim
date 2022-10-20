@@ -1,6 +1,14 @@
 # About
 An urban traffic simulator designed to changes in traffic with variable street designs.
 
+# Dependencies
+
+Dijkstar
+- ```pip install Dijkstar```
+
+numpy
+- ```pip install numpy```
+
 # Planning
 1. Build map with GUI
  - Get small street section in XML tag form

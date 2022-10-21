@@ -38,18 +38,17 @@ def dict_to_array(nodes):
 def gen_travelers(nodes, x):
     while x > 0:
         i = random.randint(0, len(nodes) - 1)
-        mode_seed = random.randint(0, 3)
-        mode = ""
-        if mode_seed == 1:
-            mode = "Car"
-        elif mode_seed == 2:
-            mode = "Bike"
-        else:
-            mode = "Walk"
         origin_node = nodes[i]
+        origin_way_seg = get_way_seg(origin_node)
+        origin_intersection = find_nearest_intersection(origin_node, origin_way_seg)
+        k =  random.randint(0, len(nodes) - 1)
+        end_node = nodes[k]
+        end_way_seg = get_way_seg(end_node)
+        end_intersection = find_nearest_intersection(end_node, end_way_seg)
+        t = origin_way_seg.attractions[origin_node].t
         # Once we have it, the fourth argument passed to Traveler will be
         # gen_path(origin_node)
-        traveler = Traveler(mode, origin_node, get_way_seg(origin_node), [])
+        traveler = Traveler("Car", t, end_node, origin_way_seg, gen_path(origin_intersection, end_intersection))
         travelers.append(traveler)
         x -= 1
 
@@ -73,11 +72,19 @@ def is_at_intersection():
                     del traveler
                 break
 
+def find_nearest_intersection(attraction_id, way_seg):
+    t = way_seg.attractions[attraction_id].t
+    total_t = way_seg.t_len
+    if t / total_t < 0.5:
+        return way_seg.start_ref
+    else:
+        return way_seg.end_ref
+
 # Loops through every road in the map. For every way_segment in every road, 
 # if the given node exists in its dictionary of nodes, return that way_segment
 def get_way_seg(trav_node):
     for way_segment in network.way_segments["roads"]:
-        if trav_node in network.way_segments["roads"][way_segment].attractions:
+        if trav_node in network.way_segments["roads"][way_segment].attractions.keys():
             return way_segment
 
 def run(t):

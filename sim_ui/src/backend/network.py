@@ -109,12 +109,16 @@ class Network:
                     min_t = t
                     way_seg_index = way_seg_id
                                       
-            self.way_segments["roads"][way_seg_id].add_attraction(noderef, min_t)
+            self.way_segments["roads"][way_seg_id].add_attraction(noderef, t_value=min_t)
 
             # Since a two lane road is really 2 one way way_segments we must also associate an attraction to the 
             # corresponding opposite way_segment (i.e. reverse the nodes in the way segment id)
-            if self.reverse_way_seg_id(way_seg_id) in self.way_segments["roads"]:
-                self.way_segments["roads"][self.reverse_way_seg_id(way_seg_id)].add_attraction(noderef) # FINISH
+            reverse_id = self.reverse_way_seg_id(way_seg_id)
+            if reverse_id in self.way_segments["roads"]:
+                # min_t is the t_value for the proper direction way_segment so if 
+                # t_len = 5 and on proper_way_segment, t= 1 then for reverse, t=4
+                t_value = self.way_segments["roads"][reverse_id].t_len - min_t
+                self.way_segments["roads"][reverse_id].add_attraction(noderef,t_value=t_value) 
 
     
 

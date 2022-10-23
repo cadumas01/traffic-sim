@@ -101,9 +101,9 @@ class WaySegment:
         for piece in self.pieces:
             string += str(piece[2]) + "\n"
 
-        string += "with attractions at t = \n"
-        for attraction in self.attractions:
-            string += "\t" + str(attraction["t"]) + "\n"
+        # string += "with attractions at t = \n"
+        # for attraction in self.attractions.values():
+        #     string += "\t" + str(attraction.t) + "\n"
 
         return string
         

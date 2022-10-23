@@ -17,28 +17,32 @@ class Traveler:
         self.path = path
         self.at_destination = at_destination
         self.is_done = is_done
-        self.speed = current_way_seg.maxspeed * (1 - current_way_seg.weight)
+        # we'll finalize speed calculations later
+        self.speed = current_way_seg.maxspeed
 
     # Increment traveler t value by speed 
     # Speed is way_seg.maxspeed * (1 - way_seg.weight)
     # Lower weight = faster road, so a lower weight means a higher speed
     def increment_pos(self):
-        self.t += self.speed
+        self.current_t += self.speed
 
     def increment_path(self):
-        for i in range(len(self.path)):
-            if self.path[i] == self.current_way_seg:
-                self.current_way_seg = self.path[i + 1]
+        self.path.pop(0)
+        self.current_way_seg = self.path[0]
+        self.speed = self.current_way_seg.maxspeed
     
     def increment(self):
         if self.at_destination == True:
-            if self.t >= self.end_t:
+            if self.current_t >= self.end_t:
                 self.is_done = True
         else:
-            if self.t + self.speed >= self.current_way_seg.t_len:
-                self.t = (self.t - self.current_way_seg.t_len) + self.speed
+            if self.current_t + self.speed >= self.current_way_seg.t_len:
+                self.current_t = (self.current_t - self.current_way_seg.t_len) + self.speed
                 self.increment_path()
         self.increment_pos()
-        if self.path.next is None and self.at_destination == False:
+        if self.path is None and self.at_destination == False:
             self.at_destination = True
+
+    def __str__(self):
+        return f"Traveler: Current Way Segment = {self.current_way_seg.id}, Current t = {self.current_t}"
             

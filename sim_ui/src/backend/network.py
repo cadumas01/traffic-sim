@@ -47,7 +47,7 @@ class Network:
         # add intersection to self.intersections dictionary (leave the value blank as this will be filled in later)
 
     # pass noderefs of a single way and return array of waysegments split at intersections (need to work on this)
-    def noderefs_to_waysegs(self, way_id, category, noderefs, split, reverse_way):
+    def noderefs_to_waysegs(self, way_id, category, noderefs, split):
         waysegs = []
         segment_start_index = 0
 
@@ -57,7 +57,7 @@ class Network:
             if (self.node_is_intersection(noderefs[i]) and segment_start_index != i) or i == len(noderefs) -1: # attractions, break up the segment, or end of segment
                 noderefs_segment = noderefs[segment_start_index:i+1]
 
-                waysegs.append(ws.WaySegment(way_id, category, noderefs_segment, self.data, split, reverse_way))
+                waysegs.append(ws.WaySegment(way_id, category, noderefs_segment, self.data, split))
                 segment_start_index = i
 
         return waysegs
@@ -81,7 +81,7 @@ class Network:
                     way_segs += self.noderefs_to_waysegs(way_id, category, list(reversed(noderefs)), split)
 
                 # right-way way_segments
-                way_segs += self.noderefs_to_waysegs(way_id, category, noderefs, split, reverse_way=False)
+                way_segs += self.noderefs_to_waysegs(way_id, category, noderefs, split)
 
                 for way_seg in way_segs:
                     # print(f"way_seg_id = {way_seg.id}")

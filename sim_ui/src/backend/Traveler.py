@@ -45,7 +45,7 @@ class Traveler:
                 self.is_done = True
         else:
             if self.current_t + self.speed * self.step_size >= self.current_way_seg.t_len:
-                self.current_t = (self.current_t - self.current_way_seg.t_len) * self.speed
+                self.current_t = (self.current_t - self.current_way_seg.t_len) * (self.path[1].maxspeed) / self.speed 
                 self.increment_path()
 
         self.increment_pos()

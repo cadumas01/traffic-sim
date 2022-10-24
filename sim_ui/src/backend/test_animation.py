@@ -51,7 +51,7 @@ class Engine:
         self.bg_color = (250, 250, 250)
         self.road_color = (0,0,0)
 
-        self.fps = 3
+        self.fps = 30
         self.zoom = 0
         self.offset = (0, 0)
 
@@ -126,9 +126,9 @@ class Engine:
         
             pygame.draw.line(self.screen, color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
 
-            # green circles indicate where head is
-            pygame.draw.circle(self.screen, (0,255,0), (piece[2].x2 , piece[2].y2), radius=4)
-            pygame.draw.circle(self.screen, (128,0,0), (piece[2].x1 , piece[2].y1), radius=2)
+            # # green circles indicate where head is
+            # pygame.draw.circle(self.screen, (0,255,0), (piece[2].x2 , piece[2].y2), radius=4)
+            # pygame.draw.circle(self.screen, (128,0,0), (piece[2].x1 , piece[2].y1), radius=2)
 
 
     def draw_roads(self):

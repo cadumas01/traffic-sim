@@ -30,6 +30,12 @@ class Network:
         if noderef in self.intersections:
             return True
         else:
+
+            # attractions ON the road are usually stop lights or stop signs
+            if noderef in self.data["nodes"]["attractions"]:
+                self.intersections[noderef] = None
+                return True
+
             count = 0
 
             for way_segment in self.data["ways"]["roads"].values():
@@ -98,7 +104,7 @@ class Network:
         for noderef, attraction in self.data["nodes"]["attractions"].items():
             min_val = 100000
             min_t = -1
-            way_seg_index = -1
+            min_way_seg_id = -1
 
             # maybe use vectorized operations??
             for way_seg_id in self.way_segments["roads"]: # loop through each of the roads
@@ -107,9 +113,9 @@ class Network:
                 if minimum < min_val:
                     min_val = minimum
                     min_t = t
-                    way_seg_index = way_seg_id
+                    min_way_seg_id = way_seg_id
                                       
-            self.way_segments["roads"][way_seg_id].add_attraction(noderef, t_value=min_t)
+            self.way_segments["roads"][min_way_seg_id].add_attraction(noderef, t_value=min_t)
 
             # Since a two lane road is really 2 one way way_segments we must also associate an attraction to the 
             # corresponding opposite way_segment (i.e. reverse the nodes in the way segment id)
@@ -214,6 +220,9 @@ if __name__=="__main__":
 
     net = Network(data)
     print(net)
+
+    for way_seg in net.way_segments["roads"].values():
+        print("Attractions = ", way_seg.attractions)
     
 
 

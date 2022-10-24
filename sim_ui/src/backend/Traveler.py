@@ -15,16 +15,16 @@ class Traveler:
         self.end_t = end_t
         self.current_way_seg = current_way_seg
         self.path = path
-        self.at_destination = at_destination
+        self.at_destination = at_destination # same thing as is_done?
         self.is_done = is_done
         # we'll finalize speed calculations later
         self.speed = current_way_seg.maxspeed
 
+        self.step_size = 1
     # Increment traveler t value by speed 
-    # Speed is way_seg.maxspeed * (1 - way_seg.weight)
-    # Lower weight = faster road, so a lower weight means a higher speed
+  
     def increment_pos(self):
-        self.current_t += self.speed
+        self.current_t += self.speed * self.step_size
 
     def increment_path(self):
         self.path.pop(0)
@@ -32,13 +32,22 @@ class Traveler:
         self.speed = self.current_way_seg.maxspeed
     
     def increment(self):
+        # if we are on the final way segment and have passed the end t, we arrived
+        if len(self.path) == 1 and self.current_t + self.speed * self.step_size >= self.end_t:
+            self.is_done = True
+            self.at_destination = True
+            return
+
+        
+
         if self.at_destination == True:
             if self.current_t >= self.end_t:
                 self.is_done = True
         else:
-            if self.current_t + self.speed >= self.current_way_seg.t_len:
-                self.current_t = (self.current_t - self.current_way_seg.t_len) + self.speed
+            if self.current_t + self.speed * self.step_size >= self.current_way_seg.t_len:
+                self.current_t = (self.current_t - self.current_way_seg.t_len) * self.speed
                 self.increment_path()
+
         self.increment_pos()
         if self.path is None and self.at_destination == False:
             self.at_destination = True

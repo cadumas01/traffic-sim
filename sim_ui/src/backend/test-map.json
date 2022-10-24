@@ -23920,7 +23920,58 @@
         }
     },
     "ways": {
-        "roads":{
+        "roads": {
+            "8644287": {
+                "noderefs": [
+                    "61497829",
+                    "61497920",
+                    "61497924"
+                ],
+                "highway": "service",
+                "maxspeed": "25 mph"
+            },
+            "8644688": {
+                "noderefs": [
+                    "61497866",
+                    "61497871"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "residential",
+                "massgis:way_id": "35",
+                "maxspeed": "25 mph",
+                "source": "massgis_import_v0.1_20071008193615"
+            },
+            "8644752": {
+                "noderefs": [
+                    "61497773",
+                    "61497779"
+                ],
+                "highway": "service",
+                "maxspeed": "25 mph"
+            },
+            "8644816": {
+                "noderefs": [
+                    "61497779",
+                    "61497720"
+                ],
+                "highway": "service",
+                "maxspeed": "10 mph",
+                "name": "Lucas Devine Pathway",
+                "service": "alley",
+                "surface": "paved"
+            },
+            "8644828": {
+                "noderefs": [
+                    "61497779",
+                    "61497725",
+                    "61497840",
+                    "61497846",
+                    "6551607285",
+                    "61497829"
+                ],
+                "highway": "service",
+                "maxspeed": "25 mph"
+            },
             "8647430": {
                 "noderefs": [
                     "61343234",
@@ -23936,6 +23987,14 @@
                 "source": "massgis_import_v0.1_20071008193615",
                 "surface": "asphalt",
                 "width": "10.4"
+            },
+            "8647515": {
+                "noderefs": [
+                    "61497829",
+                    "61497917"
+                ],
+                "highway": "service",
+                "maxspeed": "25 mph"
             },
             "8648041": {
                 "noderefs": [
@@ -24064,6 +24123,22 @@
                 "source": "massgis_import_v0.1_20071008193615",
                 "surface": "asphalt",
                 "width": "10.4"
+            },
+            "8651751": {
+                "noderefs": [
+                    "61497948",
+                    "61589692",
+                    "61589699",
+                    "61589704",
+                    "61589709",
+                    "61589715",
+                    "61589719",
+                    "61589726"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "35",
+                "source": "massgis_import_v0.1_20071008193615"
             },
             "8652355": {
                 "noderefs": [
@@ -24822,6 +24897,24 @@
                 "surface": "asphalt",
                 "width": "21.3"
             },
+            "8814612": {
+                "noderefs": [
+                    "63581737",
+                    "3324537282",
+                    "3324537281",
+                    "3324537288",
+                    "8545220743",
+                    "3324537280",
+                    "5184538633",
+                    "2756576778",
+                    "63577798"
+                ],
+                "cycleway:both": "no",
+                "highway": "secondary_link",
+                "oneway": "yes",
+                "source": "Bing",
+                "surface": "asphalt"
+            },
             "8814643": {
                 "noderefs": [
                     "63581737",
@@ -25275,6 +25368,48 @@
                 "surface": "asphalt",
                 "width": "12.2"
             },
+            "8815074": {
+                "noderefs": [
+                    "2535766169",
+                    "63528814",
+                    "63575448",
+                    "63582371",
+                    "2535765118"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "foot": "yes",
+                "highway": "steps",
+                "massgis:way_id": "46",
+                "name": "Summit Path",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "8815076": {
+                "noderefs": [
+                    "63552275",
+                    "63577773",
+                    "63538273",
+                    "63591708",
+                    "63577832",
+                    "63582864",
+                    "63551440"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "8815122": {
+                "noderefs": [
+                    "63540096",
+                    "63576229"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "foot": "yes",
+                "highway": "footway",
+                "massgis:way_id": "46",
+                "name": "Rawson Path",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
             "8815124": {
                 "noderefs": [
                     "63545138",
@@ -25289,6 +25424,71 @@
                 "source": "massgis_import_v0.1_20071009101959",
                 "surface": "asphalt",
                 "width": "12.2"
+            },
+            "8815126": {
+                "noderefs": [
+                    "63565355",
+                    "63558512"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "8815189": {
+                "noderefs": [
+                    "63565488",
+                    "63540623",
+                    "8395484744"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "foot": "yes",
+                "highway": "steps",
+                "massgis:way_id": "46",
+                "name": "Summit Path",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "8815275": {
+                "noderefs": [
+                    "63528542",
+                    "63572048",
+                    "63542025",
+                    "63527445",
+                    "63533034",
+                    "63581976",
+                    "63542381",
+                    "63589012",
+                    "63528017",
+                    "63562583",
+                    "63522031",
+                    "2056707766",
+                    "63541258",
+                    "63585096",
+                    "63570670",
+                    "63577373"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "residential",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "8815277": {
+                "noderefs": [
+                    "63536366",
+                    "3324532265",
+                    "3324532276",
+                    "3324531853",
+                    "3324532283",
+                    "7249207942",
+                    "7249207944",
+                    "7249207946",
+                    "63585071",
+                    "63537476"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
             },
             "8815403": {
                 "noderefs": [
@@ -25310,6 +25510,50 @@
                 "service": "parking_aisle",
                 "source": "massgis_import_v0.1_20071009101959",
                 "width": "4.9"
+            },
+            "42036244": {
+                "noderefs": [
+                    "63571937",
+                    "3324543231",
+                    "3324543226",
+                    "3324543224",
+                    "3324543228",
+                    "3324543220",
+                    "69480961",
+                    "5184538646",
+                    "3324543218",
+                    "3324543227",
+                    "63540167"
+                ],
+                "highway": "secondary_link",
+                "lanes": "1",
+                "oneway": "yes",
+                "source": "Bing",
+                "surface": "asphalt"
+            },
+            "42036245": {
+                "noderefs": [
+                    "63577285",
+                    "3324555993",
+                    "3324555996",
+                    "3324555991",
+                    "3324556011",
+                    "3324555988",
+                    "3324555995",
+                    "5184538647",
+                    "69486038",
+                    "3324556017",
+                    "3324556009",
+                    "3324555999",
+                    "3324556012",
+                    "3324556008",
+                    "63534337"
+                ],
+                "highway": "secondary_link",
+                "lanes": "1",
+                "oneway": "yes",
+                "source": "Bing",
+                "surface": "asphalt"
             },
             "42054152": {
                 "noderefs": [
@@ -25435,6 +25679,94 @@
                 "source": "massgis_import_v0.1_20071009101959",
                 "width": "12.2"
             },
+            "47807224": {
+                "noderefs": [
+                    "63565488",
+                    "608052285",
+                    "2535759231"
+                ],
+                "foot": "yes",
+                "highway": "steps",
+                "name": "Summit Path"
+            },
+            "161113686": {
+                "noderefs": [
+                    "1731099002",
+                    "63572291"
+                ],
+                "foot": "yes",
+                "highway": "footway",
+                "name": "Addington Path"
+            },
+            "161114620": {
+                "noderefs": [
+                    "63581894",
+                    "1984403275",
+                    "1731107625"
+                ],
+                "foot": "yes",
+                "highway": "footway",
+                "name": "Claflin Path"
+            },
+            "246548822": {
+                "noderefs": [
+                    "2535759229",
+                    "2535759230"
+                ],
+                "highway": "steps",
+                "step_count": "14"
+            },
+            "246549667": {
+                "noderefs": [
+                    "2535765118",
+                    "63543717"
+                ],
+                "highway": "footway",
+                "name": "Summit Path"
+            },
+            "313867583": {
+                "noderefs": [
+                    "3199087788",
+                    "3324532277",
+                    "3324532268",
+                    "5184538629",
+                    "3324534738",
+                    "3324534740",
+                    "9661173414",
+                    "3324534742",
+                    "3324534739",
+                    "3199087787"
+                ],
+                "cycleway:both": "no",
+                "highway": "secondary_link",
+                "oneway": "yes",
+                "source": "Bing",
+                "surface": "asphalt"
+            },
+            "325834289": {
+                "noderefs": [
+                    "3324492760",
+                    "63565968"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
+            "325834290": {
+                "noderefs": [
+                    "3324497464",
+                    "3324492759",
+                    "63558512",
+                    "3324492760",
+                    "9661173431",
+                    "63556969"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959"
+            },
             "325835277": {
                 "noderefs": [
                     "3324516666",
@@ -25449,6 +25781,16 @@
                 "source": "massgis_import_v0.1_20071009101959",
                 "surface": "asphalt",
                 "width": "4.6"
+            },
+            "325837241": {
+                "noderefs": [
+                    "63564299",
+                    "3324532281",
+                    "7944055724",
+                    "3324532267"
+                ],
+                "highway": "service",
+                "source": "Bing"
             },
             "325837629": {
                 "noderefs": [
@@ -25558,6 +25900,34 @@
                 "source": "massgis_import_v0.1_20071009101959",
                 "surface": "asphalt",
                 "width": "12.2"
+            },
+            "325849771": {
+                "noderefs": [
+                    "3324678344",
+                    "3324679163",
+                    "3324678345",
+                    "3324678355",
+                    "3324678356",
+                    "3324679164",
+                    "3324679161",
+                    "3324678357",
+                    "3324678343",
+                    "3324678359",
+                    "3324678360",
+                    "3324678352",
+                    "3324678342",
+                    "3324678353",
+                    "3324678354",
+                    "3324678351",
+                    "3324678347",
+                    "3324679162",
+                    "3324678344"
+                ],
+                "highway": "residential",
+                "junction": "roundabout",
+                "maxspeed": "25 mph",
+                "source": "Bing",
+                "surface": "paved"
             },
             "325849772": {
                 "noderefs": [
@@ -26020,6 +26390,17 @@
                 "surface": "asphalt",
                 "width": "61.0"
             },
+            "676281399": {
+                "noderefs": [
+                    "6333312951",
+                    "63535020"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "highway": "service",
+                "massgis:way_id": "46",
+                "source": "massgis_import_v0.1_20071009101959",
+                "surface": "asphalt"
+            },
             "690970096": {
                 "noderefs": [
                     "6483176927",
@@ -26056,6 +26437,23 @@
                 "name": "Regent Circle",
                 "source": "massgis_import_v0.1_20071009101959",
                 "width": "12.2"
+            },
+            "776909648": {
+                "noderefs": [
+                    "7249207940",
+                    "7249207941"
+                ],
+                "access": "customers",
+                "highway": "service"
+            },
+            "776909651": {
+                "noderefs": [
+                    "7249207946",
+                    "7249207947",
+                    "7249207948"
+                ],
+                "access": "customers",
+                "highway": "service"
             },
             "851723579": {
                 "noderefs": [
@@ -26163,6 +26561,447 @@
                 "wheelchair": "yes",
                 "width": "2"
             },
+            "851723583": {
+                "noderefs": [
+                    "7944055696",
+                    "7944055717",
+                    "7944055718",
+                    "7944055722",
+                    "7944055719",
+                    "7944055715",
+                    "7944055720",
+                    "7944055723",
+                    "7944055721",
+                    "7944055706"
+                ],
+                "access": "yes",
+                "bicycle": "no",
+                "covered": "no",
+                "crossing": "marked",
+                "crossing:island": "no",
+                "crossing_ref": "ladder",
+                "crossing:signals": "no",
+                "foot": "yes",
+                "footway": "crossing",
+                "highway": "footway",
+                "lit": "yes",
+                "motor_vehicle": "no",
+                "smoothness": "good",
+                "stroller": "yes",
+                "surface": "asphalt",
+                "tactile_paving": "yes",
+                "wheelchair": "yes"
+            },
+            "851723584": {
+                "noderefs": [
+                    "7944055712",
+                    "7944055724",
+                    "7944055713"
+                ],
+                "access": "yes",
+                "bicycle": "no",
+                "covered": "no",
+                "crossing": "marked",
+                "crossing:island": "no",
+                "crossing_ref": "ladder",
+                "crossing:signals": "no",
+                "foot": "yes",
+                "footway": "crossing",
+                "highway": "footway",
+                "lit": "yes",
+                "motor_vehicle": "no",
+                "smoothness": "good",
+                "stroller": "yes",
+                "surface": "asphalt",
+                "tactile_paving": "yes",
+                "wheelchair": "yes"
+            },
+            "891493632": {
+                "noderefs": [
+                    "3324497464",
+                    "8286195491",
+                    "8286195484",
+                    "8286195485",
+                    "8286195486",
+                    "8286195487",
+                    "8286195488",
+                    "8286195489",
+                    "8286195490"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "891493633": {
+                "noderefs": [
+                    "8286195491",
+                    "8286195492",
+                    "8286195493",
+                    "8286195494",
+                    "8286195495",
+                    "8286195496",
+                    "8286195497",
+                    "8286195498",
+                    "8286195499",
+                    "8286195500",
+                    "8286195501",
+                    "8286203329",
+                    "8286195502",
+                    "8286195503",
+                    "8286195504",
+                    "8286195505",
+                    "8286195506",
+                    "8286195507",
+                    "8286195508",
+                    "8286203331",
+                    "8286195509",
+                    "8286195510",
+                    "8286195511",
+                    "8286195512",
+                    "8286195513",
+                    "8286195514",
+                    "8286195515",
+                    "8286195516",
+                    "8286203317",
+                    "8286203318",
+                    "8286203319",
+                    "8286203323",
+                    "8286203320",
+                    "8286203321",
+                    "8286203322"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "891493634": {
+                "noderefs": [
+                    "8286203323",
+                    "8286203324",
+                    "8286203350",
+                    "8286195484"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "891493635": {
+                "noderefs": [
+                    "8286195504",
+                    "8286203325",
+                    "8286203326",
+                    "8286203327",
+                    "8286203328"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "891493636": {
+                "noderefs": [
+                    "8286203329",
+                    "8286203330",
+                    "8286203326"
+                ],
+                "highway": "steps",
+                "incline": "up"
+            },
+            "891493637": {
+                "noderefs": [
+                    "8286203331",
+                    "8286203332"
+                ],
+                "handrail": "yes",
+                "highway": "steps",
+                "incline": "up"
+            },
+            "891493641": {
+                "noderefs": [
+                    "8286195492",
+                    "8286203324"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "891493642": {
+                "noderefs": [
+                    "8286195488",
+                    "8286203351",
+                    "8286203352",
+                    "8286203353",
+                    "8286203320"
+                ],
+                "highway": "path",
+                "surface": "paved"
+            },
+            "920263041": {
+                "noderefs": [
+                    "8545220730",
+                    "8545220732",
+                    "8545220731"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263042": {
+                "noderefs": [
+                    "8545220733",
+                    "8545220735",
+                    "8545220734"
+                ],
+                "crossing": "traffic_signals",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263043": {
+                "noderefs": [
+                    "8545220736",
+                    "3324534750",
+                    "8545220737"
+                ],
+                "crossing": "traffic_signals",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263044": {
+                "noderefs": [
+                    "8545220738",
+                    "8545220740",
+                    "8545220739"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263045": {
+                "noderefs": [
+                    "9661173406",
+                    "8545220741",
+                    "8545220743",
+                    "8545220742"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263046": {
+                "noderefs": [
+                    "8545220744",
+                    "8545220746",
+                    "8545220745"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263047": {
+                "noderefs": [
+                    "9661173405",
+                    "8545220747",
+                    "8545220749",
+                    "8545220748"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "920263048": {
+                "noderefs": [
+                    "8545220750",
+                    "8545220752",
+                    "8545220751"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "927262657": {
+                "noderefs": [
+                    "8812306949",
+                    "9661173395",
+                    "9661173394",
+                    "9661173393",
+                    "2535759231",
+                    "9661173392",
+                    "9661173391",
+                    "9661173390",
+                    "9661173389",
+                    "9661173388",
+                    "9661173387",
+                    "9661173396",
+                    "9661173386",
+                    "9661173385",
+                    "9661173404",
+                    "9661173384",
+                    "9661173383",
+                    "9661173382",
+                    "9661173405",
+                    "9661173381",
+                    "9661173380",
+                    "9661173410",
+                    "9661173379",
+                    "9661173378",
+                    "9661173377",
+                    "9661173376",
+                    "9661173375",
+                    "9661173374",
+                    "9661173373",
+                    "9661173372",
+                    "3324516672",
+                    "9661173436",
+                    "8603352778",
+                    "8603352777",
+                    "8603352776",
+                    "8603352775",
+                    "9853885282",
+                    "8603352631",
+                    "8603352632",
+                    "8603352633",
+                    "8603352634",
+                    "8603352635",
+                    "8603352636"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1005990995": {
+                "noderefs": [
+                    "9281715734",
+                    "9281715736",
+                    "9281715737",
+                    "9281715738",
+                    "9281715739",
+                    "9281715740",
+                    "9281715741",
+                    "9281715742",
+                    "9281715743",
+                    "8545220730"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1005990996": {
+                "noderefs": [
+                    "8545220739",
+                    "8545220750"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1005990997": {
+                "noderefs": [
+                    "8545220738",
+                    "9661173409",
+                    "9281715744",
+                    "9281715745",
+                    "9281715746",
+                    "9281715747",
+                    "8545220737"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1051316650": {
+                "noderefs": [
+                    "9661173396",
+                    "9661173397",
+                    "9661173398",
+                    "9661173399",
+                    "9661173400",
+                    "9661173401",
+                    "9661173402",
+                    "9661173403",
+                    "9661173404"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "1051316651": {
+                "noderefs": [
+                    "8545220748",
+                    "9661173406",
+                    "9661173407",
+                    "9661173408",
+                    "8545220745"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1051316652": {
+                "noderefs": [
+                    "9661173409",
+                    "8545220744"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1051316653": {
+                "noderefs": [
+                    "9661173410",
+                    "9661173411",
+                    "9661173412"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "1051316654": {
+                "noderefs": [
+                    "9661173413",
+                    "9661173414",
+                    "9661173415"
+                ],
+                "crossing": "marked",
+                "footway": "crossing",
+                "highway": "footway"
+            },
+            "1051316655": {
+                "noderefs": [
+                    "9661173412",
+                    "9661173416",
+                    "9661173415"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1051316656": {
+                "noderefs": [
+                    "9661173412",
+                    "9661173417",
+                    "9661173418",
+                    "9661173419"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
+            "1051316657": {
+                "noderefs": [
+                    "8545220736",
+                    "8545220734",
+                    "9661173420",
+                    "9661173421",
+                    "9661173422",
+                    "9661173423",
+                    "9661173424",
+                    "9661173425",
+                    "9661173426",
+                    "7944055711",
+                    "9661173427",
+                    "7944055710",
+                    "9281715778",
+                    "9661173428",
+                    "9661173429",
+                    "9661173430",
+                    "9661173431",
+                    "9661173432",
+                    "5184489167",
+                    "9661173433",
+                    "9661173434",
+                    "9661173435",
+                    "9661173443",
+                    "8603352755"
+                ],
+                "footway": "sidewalk",
+                "highway": "footway"
+            },
             "1093572383": {
                 "noderefs": [
                     "63577798",
@@ -26210,6 +27049,25 @@
                 "turn:lanes": "through|through;right",
                 "width": "61.0"
             },
+            "1096306148": {
+                "noderefs": [
+                    "63577285",
+                    "3324556007",
+                    "3324556002",
+                    "63540167"
+                ],
+                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
+                "condition": "fair",
+                "cycleway:right": "lane",
+                "highway": "secondary",
+                "lanes": "2",
+                "massgis:way_id": "186451",
+                "name": "Beacon Street",
+                "oneway": "yes",
+                "source": "massgis_import_v0.1_20071009101959",
+                "surface": "asphalt",
+                "turn:lanes": "through|through;right"
+            },
             "1096306149": {
                 "noderefs": [
                     "63540167",
@@ -26231,15 +27089,6 @@
             }
         },
         "nonroads": {
-            "8644287": {
-                "noderefs": [
-                    "61497829",
-                    "61497920",
-                    "61497924"
-                ],
-                "highway": "service",
-                "maxspeed": "25 mph"
-            },
             "8644409": {
                 "noderefs": [
                     "61497833",
@@ -26247,197 +27096,6 @@
                     "61497929",
                     "61497924"
                 ]
-            },
-            "8644688": {
-                "noderefs": [
-                    "61497866",
-                    "61497871"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "residential",
-                "massgis:way_id": "35",
-                "maxspeed": "25 mph",
-                "source": "massgis_import_v0.1_20071008193615"
-            },
-            "8644752": {
-                "noderefs": [
-                    "61497773",
-                    "61497779"
-                ],
-                "highway": "service",
-                "maxspeed": "25 mph"
-            },
-            "8644816": {
-                "noderefs": [
-                    "61497779",
-                    "61497720"
-                ],
-                "highway": "service",
-                "maxspeed": "10 mph",
-                "name": "Lucas Devine Pathway",
-                "service": "alley",
-                "surface": "paved"
-            },
-            "8644828": {
-                "noderefs": [
-                    "61497779",
-                    "61497725",
-                    "61497840",
-                    "61497846",
-                    "6551607285",
-                    "61497829"
-                ],
-                "highway": "service",
-                "maxspeed": "25 mph"
-            },
-            "8647515": {
-                "noderefs": [
-                    "61497829",
-                    "61497917"
-                ],
-                "highway": "service",
-                "maxspeed": "25 mph"
-            },
-            "8651751": {
-                "noderefs": [
-                    "61497948",
-                    "61589692",
-                    "61589699",
-                    "61589704",
-                    "61589709",
-                    "61589715",
-                    "61589719",
-                    "61589726"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "35",
-                "source": "massgis_import_v0.1_20071008193615"
-            },
-            "8814612": {
-                "noderefs": [
-                    "63581737",
-                    "3324537282",
-                    "3324537281",
-                    "3324537288",
-                    "8545220743",
-                    "3324537280",
-                    "5184538633",
-                    "2756576778",
-                    "63577798"
-                ],
-                "cycleway:both": "no",
-                "highway": "secondary_link",
-                "oneway": "yes",
-                "source": "Bing",
-                "surface": "asphalt"
-            },
-            "8815074": {
-                "noderefs": [
-                    "2535766169",
-                    "63528814",
-                    "63575448",
-                    "63582371",
-                    "2535765118"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "foot": "yes",
-                "highway": "steps",
-                "massgis:way_id": "46",
-                "name": "Summit Path",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815076": {
-                "noderefs": [
-                    "63552275",
-                    "63577773",
-                    "63538273",
-                    "63591708",
-                    "63577832",
-                    "63582864",
-                    "63551440"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815122": {
-                "noderefs": [
-                    "63540096",
-                    "63576229"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "foot": "yes",
-                "highway": "footway",
-                "massgis:way_id": "46",
-                "name": "Rawson Path",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815126": {
-                "noderefs": [
-                    "63565355",
-                    "63558512"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815189": {
-                "noderefs": [
-                    "63565488",
-                    "63540623",
-                    "8395484744"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "foot": "yes",
-                "highway": "steps",
-                "massgis:way_id": "46",
-                "name": "Summit Path",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815275": {
-                "noderefs": [
-                    "63528542",
-                    "63572048",
-                    "63542025",
-                    "63527445",
-                    "63533034",
-                    "63581976",
-                    "63542381",
-                    "63589012",
-                    "63528017",
-                    "63562583",
-                    "63522031",
-                    "2056707766",
-                    "63541258",
-                    "63585096",
-                    "63570670",
-                    "63577373"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "residential",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "8815277": {
-                "noderefs": [
-                    "63536366",
-                    "3324532265",
-                    "3324532276",
-                    "3324531853",
-                    "3324532283",
-                    "7249207942",
-                    "7249207944",
-                    "7249207946",
-                    "63585071",
-                    "63537476"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
             },
             "29513314": {
                 "noderefs": [
@@ -32641,84 +33299,11 @@
                     "329716459"
                 ]
             },
-            "42036244": {
-                "noderefs": [
-                    "63571937",
-                    "3324543231",
-                    "3324543226",
-                    "3324543224",
-                    "3324543228",
-                    "3324543220",
-                    "69480961",
-                    "5184538646",
-                    "3324543218",
-                    "3324543227",
-                    "63540167"
-                ],
-                "highway": "secondary_link",
-                "lanes": "1",
-                "oneway": "yes",
-                "source": "Bing",
-                "surface": "asphalt"
-            },
-            "42036245": {
-                "noderefs": [
-                    "63577285",
-                    "3324555993",
-                    "3324555996",
-                    "3324555991",
-                    "3324556011",
-                    "3324555988",
-                    "3324555995",
-                    "5184538647",
-                    "69486038",
-                    "3324556017",
-                    "3324556009",
-                    "3324555999",
-                    "3324556012",
-                    "3324556008",
-                    "63534337"
-                ],
-                "highway": "secondary_link",
-                "lanes": "1",
-                "oneway": "yes",
-                "source": "Bing",
-                "surface": "asphalt"
-            },
             "42053825": {
                 "noderefs": [
                     "522193972",
                     "63592566"
                 ]
-            },
-            "47807224": {
-                "noderefs": [
-                    "63565488",
-                    "608052285",
-                    "2535759231"
-                ],
-                "foot": "yes",
-                "highway": "steps",
-                "name": "Summit Path"
-            },
-            "161113686": {
-                "noderefs": [
-                    "1731099002",
-                    "63572291"
-                ],
-                "foot": "yes",
-                "highway": "footway",
-                "name": "Addington Path"
-            },
-            "161114620": {
-                "noderefs": [
-                    "63581894",
-                    "1984403275",
-                    "1731107625"
-                ],
-                "foot": "yes",
-                "highway": "footway",
-                "name": "Claflin Path"
             },
             "212132141": {
                 "noderefs": [
@@ -33516,28 +34101,12 @@
                 "name": "Best Western University Hotel",
                 "tourism": "hotel"
             },
-            "246548822": {
-                "noderefs": [
-                    "2535759229",
-                    "2535759230"
-                ],
-                "highway": "steps",
-                "step_count": "14"
-            },
             "246548823": {
                 "noderefs": [
                     "2535759230",
                     "63525961",
                     "2535759231"
                 ]
-            },
-            "246549667": {
-                "noderefs": [
-                    "2535765118",
-                    "63543717"
-                ],
-                "highway": "footway",
-                "name": "Summit Path"
             },
             "246549868": {
                 "noderefs": [
@@ -33588,25 +34157,6 @@
                 "admin_level": "6",
                 "border_type": "county",
                 "boundary": "administrative"
-            },
-            "313867583": {
-                "noderefs": [
-                    "3199087788",
-                    "3324532277",
-                    "3324532268",
-                    "5184538629",
-                    "3324534738",
-                    "3324534740",
-                    "9661173414",
-                    "3324534742",
-                    "3324534739",
-                    "3199087787"
-                ],
-                "cycleway:both": "no",
-                "highway": "secondary_link",
-                "oneway": "yes",
-                "source": "Bing",
-                "surface": "asphalt"
             },
             "325834250": {
                 "noderefs": [
@@ -33693,40 +34243,6 @@
                 "protected": "perpetuity",
                 "source": "MassGIS OpenSpace (http://www.mass.gov/mgis/osp.htm)"
             },
-            "325834289": {
-                "noderefs": [
-                    "3324492760",
-                    "63565968"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "325834290": {
-                "noderefs": [
-                    "3324497464",
-                    "3324492759",
-                    "63558512",
-                    "3324492760",
-                    "9661173431",
-                    "63556969"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959"
-            },
-            "325837241": {
-                "noderefs": [
-                    "63564299",
-                    "3324532281",
-                    "7944055724",
-                    "3324532267"
-                ],
-                "highway": "service",
-                "source": "Bing"
-            },
             "325838900": {
                 "noderefs": [
                     "2535759229",
@@ -33736,51 +34252,12 @@
                     "63560261"
                 ]
             },
-            "325849771": {
-                "noderefs": [
-                    "3324678344",
-                    "3324679163",
-                    "3324678345",
-                    "3324678355",
-                    "3324678356",
-                    "3324679164",
-                    "3324679161",
-                    "3324678357",
-                    "3324678343",
-                    "3324678359",
-                    "3324678360",
-                    "3324678352",
-                    "3324678342",
-                    "3324678353",
-                    "3324678354",
-                    "3324678351",
-                    "3324678347",
-                    "3324679162",
-                    "3324678344"
-                ],
-                "highway": "residential",
-                "junction": "roundabout",
-                "maxspeed": "25 mph",
-                "source": "Bing",
-                "surface": "paved"
-            },
             "566865416": {
                 "noderefs": [
                     "63581737",
                     "9661173383",
                     "5458181966"
                 ]
-            },
-            "676281399": {
-                "noderefs": [
-                    "6333312951",
-                    "63535020"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "highway": "service",
-                "massgis:way_id": "46",
-                "source": "massgis_import_v0.1_20071009101959",
-                "surface": "asphalt"
             },
             "695843957": {
                 "noderefs": [
@@ -36704,14 +37181,6 @@
                 "addr:unit": "2",
                 "building": "yes"
             },
-            "776909648": {
-                "noderefs": [
-                    "7249207940",
-                    "7249207941"
-                ],
-                "access": "customers",
-                "highway": "service"
-            },
             "776909649": {
                 "noderefs": [
                     "7249207942",
@@ -36725,15 +37194,6 @@
                     "8026006290",
                     "7249207945"
                 ]
-            },
-            "776909651": {
-                "noderefs": [
-                    "7249207946",
-                    "7249207947",
-                    "7249207948"
-                ],
-                "access": "customers",
-                "highway": "service"
             },
             "835328255": {
                 "noderefs": [
@@ -36812,61 +37272,6 @@
                 "building:levels": "15",
                 "building:part": "yes"
             },
-            "851723583": {
-                "noderefs": [
-                    "7944055696",
-                    "7944055717",
-                    "7944055718",
-                    "7944055722",
-                    "7944055719",
-                    "7944055715",
-                    "7944055720",
-                    "7944055723",
-                    "7944055721",
-                    "7944055706"
-                ],
-                "access": "yes",
-                "bicycle": "no",
-                "covered": "no",
-                "crossing": "marked",
-                "crossing:island": "no",
-                "crossing_ref": "ladder",
-                "crossing:signals": "no",
-                "foot": "yes",
-                "footway": "crossing",
-                "highway": "footway",
-                "lit": "yes",
-                "motor_vehicle": "no",
-                "smoothness": "good",
-                "stroller": "yes",
-                "surface": "asphalt",
-                "tactile_paving": "yes",
-                "wheelchair": "yes"
-            },
-            "851723584": {
-                "noderefs": [
-                    "7944055712",
-                    "7944055724",
-                    "7944055713"
-                ],
-                "access": "yes",
-                "bicycle": "no",
-                "covered": "no",
-                "crossing": "marked",
-                "crossing:island": "no",
-                "crossing_ref": "ladder",
-                "crossing:signals": "no",
-                "foot": "yes",
-                "footway": "crossing",
-                "highway": "footway",
-                "lit": "yes",
-                "motor_vehicle": "no",
-                "smoothness": "good",
-                "stroller": "yes",
-                "surface": "asphalt",
-                "tactile_paving": "yes",
-                "wheelchair": "yes"
-            },
             "861145446": {
                 "noderefs": [
                     "3324534736",
@@ -36883,101 +37288,6 @@
                     "8251225269",
                     "8251225270"
                 ]
-            },
-            "891493632": {
-                "noderefs": [
-                    "3324497464",
-                    "8286195491",
-                    "8286195484",
-                    "8286195485",
-                    "8286195486",
-                    "8286195487",
-                    "8286195488",
-                    "8286195489",
-                    "8286195490"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
-            "891493633": {
-                "noderefs": [
-                    "8286195491",
-                    "8286195492",
-                    "8286195493",
-                    "8286195494",
-                    "8286195495",
-                    "8286195496",
-                    "8286195497",
-                    "8286195498",
-                    "8286195499",
-                    "8286195500",
-                    "8286195501",
-                    "8286203329",
-                    "8286195502",
-                    "8286195503",
-                    "8286195504",
-                    "8286195505",
-                    "8286195506",
-                    "8286195507",
-                    "8286195508",
-                    "8286203331",
-                    "8286195509",
-                    "8286195510",
-                    "8286195511",
-                    "8286195512",
-                    "8286195513",
-                    "8286195514",
-                    "8286195515",
-                    "8286195516",
-                    "8286203317",
-                    "8286203318",
-                    "8286203319",
-                    "8286203323",
-                    "8286203320",
-                    "8286203321",
-                    "8286203322"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
-            "891493634": {
-                "noderefs": [
-                    "8286203323",
-                    "8286203324",
-                    "8286203350",
-                    "8286195484"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
-            "891493635": {
-                "noderefs": [
-                    "8286195504",
-                    "8286203325",
-                    "8286203326",
-                    "8286203327",
-                    "8286203328"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
-            "891493636": {
-                "noderefs": [
-                    "8286203329",
-                    "8286203330",
-                    "8286203326"
-                ],
-                "highway": "steps",
-                "incline": "up"
-            },
-            "891493637": {
-                "noderefs": [
-                    "8286203331",
-                    "8286203332"
-                ],
-                "handrail": "yes",
-                "highway": "steps",
-                "incline": "up"
             },
             "891493638": {
                 "noderefs": [
@@ -37019,25 +37329,6 @@
                 "leisure": "pitch",
                 "sport": "basketball"
             },
-            "891493641": {
-                "noderefs": [
-                    "8286195492",
-                    "8286203324"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
-            "891493642": {
-                "noderefs": [
-                    "8286195488",
-                    "8286203351",
-                    "8286203352",
-                    "8286203353",
-                    "8286203320"
-                ],
-                "highway": "path",
-                "surface": "paved"
-            },
             "895605103": {
                 "noderefs": [
                     "8324983401",
@@ -37047,137 +37338,6 @@
                     "8324983405",
                     "8324983406"
                 ]
-            },
-            "920263041": {
-                "noderefs": [
-                    "8545220730",
-                    "8545220732",
-                    "8545220731"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263042": {
-                "noderefs": [
-                    "8545220733",
-                    "8545220735",
-                    "8545220734"
-                ],
-                "crossing": "traffic_signals",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263043": {
-                "noderefs": [
-                    "8545220736",
-                    "3324534750",
-                    "8545220737"
-                ],
-                "crossing": "traffic_signals",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263044": {
-                "noderefs": [
-                    "8545220738",
-                    "8545220740",
-                    "8545220739"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263045": {
-                "noderefs": [
-                    "9661173406",
-                    "8545220741",
-                    "8545220743",
-                    "8545220742"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263046": {
-                "noderefs": [
-                    "8545220744",
-                    "8545220746",
-                    "8545220745"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263047": {
-                "noderefs": [
-                    "9661173405",
-                    "8545220747",
-                    "8545220749",
-                    "8545220748"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "920263048": {
-                "noderefs": [
-                    "8545220750",
-                    "8545220752",
-                    "8545220751"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "927262657": {
-                "noderefs": [
-                    "8812306949",
-                    "9661173395",
-                    "9661173394",
-                    "9661173393",
-                    "2535759231",
-                    "9661173392",
-                    "9661173391",
-                    "9661173390",
-                    "9661173389",
-                    "9661173388",
-                    "9661173387",
-                    "9661173396",
-                    "9661173386",
-                    "9661173385",
-                    "9661173404",
-                    "9661173384",
-                    "9661173383",
-                    "9661173382",
-                    "9661173405",
-                    "9661173381",
-                    "9661173380",
-                    "9661173410",
-                    "9661173379",
-                    "9661173378",
-                    "9661173377",
-                    "9661173376",
-                    "9661173375",
-                    "9661173374",
-                    "9661173373",
-                    "9661173372",
-                    "3324516672",
-                    "9661173436",
-                    "8603352778",
-                    "8603352777",
-                    "8603352776",
-                    "8603352775",
-                    "9853885282",
-                    "8603352631",
-                    "8603352632",
-                    "8603352633",
-                    "8603352634",
-                    "8603352635",
-                    "8603352636"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
             },
             "967060410": {
                 "noderefs": [
@@ -37215,43 +37375,6 @@
                     "9281715727",
                     "9281701808"
                 ]
-            },
-            "1005990995": {
-                "noderefs": [
-                    "9281715734",
-                    "9281715736",
-                    "9281715737",
-                    "9281715738",
-                    "9281715739",
-                    "9281715740",
-                    "9281715741",
-                    "9281715742",
-                    "9281715743",
-                    "8545220730"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1005990996": {
-                "noderefs": [
-                    "8545220739",
-                    "8545220750"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1005990997": {
-                "noderefs": [
-                    "8545220738",
-                    "9661173409",
-                    "9281715744",
-                    "9281715745",
-                    "9281715746",
-                    "9281715747",
-                    "8545220737"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
             },
             "1005990998": {
                 "noderefs": [
@@ -37303,129 +37426,6 @@
                     "328588342",
                     "328578992"
                 ]
-            },
-            "1051316650": {
-                "noderefs": [
-                    "9661173396",
-                    "9661173397",
-                    "9661173398",
-                    "9661173399",
-                    "9661173400",
-                    "9661173401",
-                    "9661173402",
-                    "9661173403",
-                    "9661173404"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "1051316651": {
-                "noderefs": [
-                    "8545220748",
-                    "9661173406",
-                    "9661173407",
-                    "9661173408",
-                    "8545220745"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1051316652": {
-                "noderefs": [
-                    "9661173409",
-                    "8545220744"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1051316653": {
-                "noderefs": [
-                    "9661173410",
-                    "9661173411",
-                    "9661173412"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "1051316654": {
-                "noderefs": [
-                    "9661173413",
-                    "9661173414",
-                    "9661173415"
-                ],
-                "crossing": "marked",
-                "footway": "crossing",
-                "highway": "footway"
-            },
-            "1051316655": {
-                "noderefs": [
-                    "9661173412",
-                    "9661173416",
-                    "9661173415"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1051316656": {
-                "noderefs": [
-                    "9661173412",
-                    "9661173417",
-                    "9661173418",
-                    "9661173419"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1051316657": {
-                "noderefs": [
-                    "8545220736",
-                    "8545220734",
-                    "9661173420",
-                    "9661173421",
-                    "9661173422",
-                    "9661173423",
-                    "9661173424",
-                    "9661173425",
-                    "9661173426",
-                    "7944055711",
-                    "9661173427",
-                    "7944055710",
-                    "9281715778",
-                    "9661173428",
-                    "9661173429",
-                    "9661173430",
-                    "9661173431",
-                    "9661173432",
-                    "5184489167",
-                    "9661173433",
-                    "9661173434",
-                    "9661173435",
-                    "9661173443",
-                    "8603352755"
-                ],
-                "footway": "sidewalk",
-                "highway": "footway"
-            },
-            "1096306148": {
-                "noderefs": [
-                    "63577285",
-                    "3324556007",
-                    "3324556002",
-                    "63540167"
-                ],
-                "attribution": "Office of Geographic and Environmental Information (MassGIS)",
-                "condition": "fair",
-                "cycleway:right": "lane",
-                "highway": "secondary",
-                "lanes": "2",
-                "massgis:way_id": "186451",
-                "name": "Beacon Street",
-                "oneway": "yes",
-                "source": "massgis_import_v0.1_20071009101959",
-                "surface": "asphalt",
-                "turn:lanes": "through|through;right"
             }
         },
         "rails": {

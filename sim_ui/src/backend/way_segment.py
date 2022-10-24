@@ -43,7 +43,8 @@ class WaySegment:
 
      # evaluates a function (returns a solution of x,y) for a value of t
     def evaluate(self, t):
-        if t > self.t_upperbound or t < 0:
+        print(f"evaluating t = {t} and t_len = {self.t_len}")
+        if t > self.t_len or t < 0:
             return None, None # no solution, t out of range
         else:
             for piece in self.pieces:
@@ -63,7 +64,7 @@ class WaySegment:
         if 'width' in self.data["ways"][self.category][self.way_id]:
             self.width = float(self.data["ways"][self.category][self.way_id]['width'])
         else:
-            self.width = 1 # temp
+            self.width = 2 # temp
 
 
     def set_id(self, reverse_way=False):

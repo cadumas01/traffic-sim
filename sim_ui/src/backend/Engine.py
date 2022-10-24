@@ -13,6 +13,7 @@ import random
 import json
 from network import Network
 from traveler import Traveler
+import time
 
 file = open('test-map.json', encoding="utf-8")
 data = json.load(file)
@@ -21,25 +22,29 @@ network = Network(data)
 
 class Engine:
 
-    def __init__(self, tick, network):
+    def __init__(self, ticks, network):
         self.network = network
         self.travelers = []
-        while tick > 0:
-            self.gen_travelers(list(data["nodes"]["attractions"].keys()), 5)
+        for tick in range(ticks):
+            
+            if tick < 5:
+                self.gen_travelers(list(data["nodes"]["attractions"].keys()), 5)
             print("XXXXXXXXXXX")
             print(f"Time: {tick}")
+            print(f"len(travelers) = {len(self.travelers)}")
             for traveler in self.travelers:
                 print("\n ", traveler)
                 traveler.increment()
                 if traveler.is_done:
+                    print("removing traveler")
                     self.travelers.remove(traveler)
                     del traveler
-            tick -= 1
+            time.sleep(.01)
 
     # Takes array of nodes, creates x travelers at random across the nodes
-    def gen_travelers(self, nodes, x):
+    def gen_travelers(self, nodes, n):
 
-        while x > 0:
+        for _ in range(n):
             i = random.randint(0, len(nodes) - 1)
             origin_node = nodes[i]
             origin_way_seg = self.get_way_seg(origin_node)
@@ -53,14 +58,22 @@ class Engine:
             t = origin_way_seg.attractions[origin_node].t
             end_t = end_way_seg.attractions[end_node].t
             path = []
-            edges = network.shortest_path(origin_intersection, end_intersection)
+
+            try: # sometimes there is no path between these two intersections so just break out and try again
+                edges = network.shortest_path(origin_intersection, end_intersection)
+            except:
+                continue
+
+
             for edge in edges.edges:
                 path.append(self.network.way_segments["roads"][edge[1]])
             if end_way_seg not in path:
                 path.append(end_way_seg)
+
+            #print(f"\ncreating new traveler with end t = {end_t}, path = {path}")
             traveler = Traveler("Car", t, end_t, origin_way_seg, path, False, False)
             self.travelers.append(traveler)
-            x -= 1
+            
 
     def find_nearest_intersection(self, attraction_id, way_seg):
         t = way_seg.attractions[attraction_id].t
@@ -74,9 +87,9 @@ class Engine:
     # if the given node exists in its dictionary of nodes, return that way_segment
     def get_way_seg(self, node_id):
         for way_segment in network.way_segments["roads"].values():
-            print(f"Here are {way_segment.id} atractions = {way_segment.attractions}")
+            #print(f"Here are {way_segment.id} atractions = {way_segment.attractions}")
             if node_id in way_segment.attractions:
                 return way_segment
 
 if __name__ == "__main__":
-    engine = Engine(5, network)
+    engine = Engine(500, network)

@@ -151,9 +151,9 @@ def xml_to_streets_data(xml_file):
                     else:
                         new_elements["attractions"][id] = element
                 
-                # Categorizes ways into "roads" and "nonroads" - key insight: roads have a width
+                # Categorizes ways into "roads" and "nonroads" - key insight: roads have a "width" or "highway"
                 elif element_type == "ways":
-                    if "width" in element: # roads
+                    if "width" in element or "highway" in element: # roads
                         new_elements["roads"][id] = element
                     elif "railway" in element: # rails
                         new_elements["rails"][id] = element
@@ -244,6 +244,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map", "bc"):
+    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map", "new-york"):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

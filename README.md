@@ -12,6 +12,25 @@ numpy
 Pygame
 - ```pip install pygame```
 
+# Structure
+1. Initial XML Received from OpenStreetMaps
+2. Parsed into readable and relevant JSON by xml_streets_to_json.py
+ - JSON includes dictionary of "nodes" (points in space)
+ - Nodes are split into two categories:
+    - "connections" are points along a road (connecting one location to another)
+    - "attractions" are other points on a map indicating places to be (residences, grocery stores, movie theaters)
+ - "ways" are collections of nodes, like a full road or a building
+    - Each way has a property of its "noderefs" the node ID of every node contained within it
+4. The following classes are defined by our program:
+   - Node: with property ID, type, longitude and latitude, and t
+   - Intersection: When a single node is a part of multiple ways, we can identify it as an intersection (a place where ways, AKA roads, meet)
+       - Properties noderef, list of outgoing way segments, list of incoming way segments
+   - Way segment: The parts of a road between intersections
+       - Each road has multiple way segments, split up by intersections
+       - This is done to allow travelers to move onto another road or continue on their current road at each intersection (this behavior is determined by shortest path pathfinding at this time)
+   - Network: The collection of all intersections and way_segments that we observe in our data
+   - Traveler: Representation of cars, bikers or pedestrians moving from place to place
+
 # Planning
 1. Build map with GUI
  - Get small street section in XML tag form

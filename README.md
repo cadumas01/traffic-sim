@@ -1,5 +1,5 @@
 # About
-An urban traffic simulator designed to changes in traffic with variable street designs.
+Urban traffic simulator using OpenStreetMaps, Python, and PyGame, designed to detect changes in traffic with variable street designs.
 
 # Dependencies
 
@@ -8,6 +8,9 @@ Dijkstar
 
 numpy
 - ```pip install numpy```
+
+Pygame
+- ```pip install pygame```
 
 # Planning
 1. Build map with GUI
@@ -24,15 +27,6 @@ numpy
 2. Model Traffic on a Street 
 - Model Trafffic in Python and pass JSON objects to JS Frontend
 - Python is called by the JS Frontend when new information is needed
-
-# Things to do Week of 9/12-9/18
-- Fix npm start
-- XML to JSON converter
-- Just draw ways
-  - Incorporate street labels?
-  - Simple roads? Or maybe just colored rectangles / lines
-- figure out lat/lon to screen coordinates
-
 
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;
@@ -173,11 +167,6 @@ Option 2:
 2. Render roads by forming lines/curves in roads with connection nodes
 4. Only render attractions
 5. Render relations (building walls - surrounding a central building node?)
-
-# React App
-- Using React-Konva (https://konvajs.org/docs/react/index.html) for generating graphics
-- Imports road data from JSON file and reads nodes into two arrays, one for connections and one for attractions
-- Prints all nodes to the screen, adjusting their longitude and latitude to the scale of the window
 
 # Ideas 
 - Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes

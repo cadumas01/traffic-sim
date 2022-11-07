@@ -78,10 +78,13 @@ def normalize_coords(streets_data):
             # If Northmost lat is north of lon=0, move everything to down  
             # Must subtract everything from height_scale=900 so because (0,0) is top left and positive y is down
             if min_lat < 0:
-                node["lat"] = height_scale - ((lat + min_lat ) * occupied_vertical_space / height + vert_margin)
+                # OLD WAY of ADJUSTING WHERE ORIGIN IS BEFORE PLOTTING
+                # node["lat"] = height_scale - ((lat + min_lat ) * occupied_vertical_space / height + vert_margin)
+                node["lat"] = ((lat + min_lat ) * occupied_vertical_space / height + vert_margin)
             else:
-                #
-                node["lat"] = height_scale - ((lat - min_lat) * occupied_vertical_space / height + vert_margin)
+                # OLD WAY of ADJUSTING WHERE ORIGIN IS BEFORE PLOTTING
+                # node["lat"] = height_scale - ((lat - min_lat) * occupied_vertical_space / height + vert_margin)
+                node["lat"] = ((lat - min_lat) * occupied_vertical_space / height + vert_margin)
 
     return streets_data
 
@@ -244,6 +247,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in ("salisbury-road-just-roads", "salisbury-road-large", "beacon-street", "test-map", "new-york"):
+    for f in (["test-map"]):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

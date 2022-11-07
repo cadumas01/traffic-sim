@@ -24,6 +24,10 @@ class Network:
 
         self.make_graph()
 
+        # TESTING - make sure nodes are aligned:
+    
+
+
     # checks if node is part of two separate ways
     def node_is_intersection(self, noderef):
 

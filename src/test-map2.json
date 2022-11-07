@@ -1,0 +1,58 @@
+{
+    
+    "nodes": {
+        "connections": {
+            "1": {
+                "lat": 400,
+                "lon": 400
+            },
+            "2": {
+                "lat": 300,
+                "lon": 300
+            },
+            "3": {
+                "lat": 400,
+                "lon": 450
+            }
+        },
+        "attractions":{
+            "101": {
+                "lat": 400,
+                "lon": 390,
+                "addr:city": "Brighton",
+                "addr:housenumber": "63",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "source": "esri/Boston_MA_Addresses"
+            },
+            "102": {
+                "lat": 400,
+                "lon": 455,
+                "addr:city": "Brighton",
+                "addr:housenumber": "63",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "source": "esri/Boston_MA_Addresses"
+            }
+
+        }
+    },
+
+    "ways": {
+        "roads": {
+            "8644287": {
+                "noderefs": [
+                    "1",
+                    "2",
+                    "3"
+                ],
+                "width": "20",
+                "highway": "service",
+                "maxspeed": "25 mph"
+            }   
+            },
+        "nonroads":{}
+        }
+}

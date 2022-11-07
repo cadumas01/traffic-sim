@@ -38,12 +38,10 @@ class Traveler:
             self.at_destination = True
             return
 
-        
-
         if self.at_destination == True:
             if self.current_t >= self.end_t:
                 self.is_done = True
-        else:
+        else: # need to transfer way_segments 
             if self.current_t + self.speed * self.step_size >= self.current_way_seg.t_len:
                 self.current_t = (self.current_t - self.current_way_seg.t_len) * (self.path[1].maxspeed) / self.speed 
                 self.increment_path()

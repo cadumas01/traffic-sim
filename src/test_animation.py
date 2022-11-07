@@ -18,7 +18,8 @@ def main():
     f.close()
 
     net = Network(data)
-    print(net)  
+    print(net) 
+     
 
     engine = Engine(net, 0)
     engine.loop()
@@ -46,12 +47,12 @@ class Engine:
         
     def set_default_config(self):
         """Set default configuration"""
-        self.width = 1400
-        self.height = 700
+        self.width = 1600
+        self.height = 900
         self.bg_color = (250, 250, 250)
         self.road_color = (0,0,0)
 
-        self.fps = 30
+        self.fps = 45
         self.zoom = 0
         self.offset = (0, 0)
 
@@ -79,13 +80,9 @@ class Engine:
         while True:
 
             # Generate Travelers (right now only first first 5 steps)
-            if time_step < 5:
+            if time_step < 25:
                 self.gen_travelers(list(self.network.data["nodes"]["attractions"].keys()), 5)
-            print("XXXXXXXXXXX")
-            print(f"Time: {time_step}")
-            print(f"len(travelers) = {len(self.travelers)}")
-          
-
+       
             # Draw
             self.draw()
             pygame.display.update()
@@ -95,7 +92,6 @@ class Engine:
             for traveler in self.travelers:
                 traveler.increment()
                 if traveler.is_done:
-                    print("removing traveler")
                     self.travelers.remove(traveler)
                     del traveler
 
@@ -106,57 +102,54 @@ class Engine:
                 if events.type == pygame.QUIT:
                     sys.exit(0)
             
-         
-
-    def run(self, steps_per_update=1):
-        """Runs the simulation by updating in every loop."""
-        def loop(sim):
-            sim.run(steps_per_update)
-        self.loop(loop)
 
     def background(self, r, g, b):
         """Fills screen with one color."""
         self.screen.fill((r, g, b))
 
 
+
+
     # accepts a road of type WaySegment
     def draw_road(self, road, color):
-        width = int(road.width / 4)
-        for piece in road.pieces:
-        
-            pygame.draw.line(self.screen, color, (piece[2].x1, piece[2].y1), (piece[2].x2, piece[2].y2), width=width)
+        width = int(road.width / 5) + 4
 
-            # # green circles indicate where head is
-            # pygame.draw.circle(self.screen, (0,255,0), (piece[2].x2 , piece[2].y2), radius=4)
-            # pygame.draw.circle(self.screen, (128,0,0), (piece[2].x1 , piece[2].y1), radius=2)
+        r = 0
+        g = 0
+        b = 0
+
+        for piece in road.pieces: 
+            pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
+            # r = (r + 20) % 255
+            # g = (g + 20) % 255
+            # b = (b + 20) % 255
+
 
 
     def draw_roads(self):
         for road in self.network.way_segments["roads"].values():
             self.draw_road(road, color=self.road_color)
             
-           
 
     def draw_intersections(self):
         for intersection_id in self.network.intersections:
             x = 0
             y = 0
             if intersection_id == "8545220735":
-                print(" here")
                 x = self.network.data["nodes"]["attractions"][intersection_id]["lon"]
                 y = self.network.data["nodes"]["attractions"][intersection_id]["lat"]
             
-                pygame.draw.circle(self.screen, (255,0,255), (x,y), radius=4)
+                pygame.draw.circle(self.screen, (255,0,255), self.to_pygame(x,y), radius=4)
             elif intersection_id in self.network.data["nodes"]["attractions"]:
                 x = self.network.data["nodes"]["attractions"][intersection_id]["lon"]
                 y = self.network.data["nodes"]["attractions"][intersection_id]["lat"]
             
-                pygame.draw.circle(self.screen, (0,0,255), (x,y), radius=4)
+                pygame.draw.circle(self.screen, (0,0,255), self.to_pygame(x,y), radius=4)
             else:
                 x = self.network.data["nodes"]["connections"][intersection_id]["lon"]
                 y = self.network.data["nodes"]["connections"][intersection_id]["lat"]
             
-                pygame.draw.circle(self.screen, (0,200,255), (x,y), radius=3)
+                pygame.draw.circle(self.screen, (0,200,255), self.to_pygame(x,y), radius=3)
 
 
     def draw_traveler(self, traveler):
@@ -164,7 +157,7 @@ class Engine:
         
         # JANKY TEMP FIX
         if (x, y) != (None, None):
-            pygame.draw.circle(self.screen, (255,0,0), (x,y), radius=3)
+            pygame.draw.circle(self.screen, (255,0,0), self.to_pygame(x,y), radius=3)
 
 
     def draw_travelers(self):
@@ -173,7 +166,7 @@ class Engine:
 
 
     def draw(self):
-    
+
         self.background(*self.bg_color)
       
         self.draw_roads()
@@ -181,13 +174,7 @@ class Engine:
 
         self.draw_travelers()
 
-
-
-        # for edge in shortest_path.edges:
-        #     way_segment = self.network.way_segments["roads"][edge[1]]
-        #     self.draw_road(way_segment, (250,0,0))
-
-        
+      
 
     # Takes array of nodes, creates x travelers at random across the nodes
     def gen_travelers(self, nodes, n):
@@ -204,7 +191,6 @@ class Engine:
             end_intersection = self.find_nearest_intersection(end_node, end_way_seg)
 
             t = origin_way_seg.attractions[origin_node].t
-            print(f"assigning start t = {t}")
             end_t = end_way_seg.attractions[end_node].t
             path = []
 
@@ -241,6 +227,9 @@ class Engine:
                 return way_segment
 
 
+    # converts coordinates to pygame coordinates (bottom left origin to top left origin)
+    def to_pygame(self, x, y):
+        return (x, self.height - y)
 
 if __name__=="__main__":
 

@@ -39,16 +39,21 @@ class WaySegment:
         # way segment id is startref_endref and sometimes startref_endref_r if the waysegment is a 2 way road split into two 1 way roads
         self.id = ""
         self.set_id()
-    
+
+
 
      # evaluates a function (returns a solution of x,y) for a value of t
     def evaluate(self, t):
-        print(f"evaluating t = {t} and t_len = {self.t_len}")
+        #print(f"evaluating t = {t} and t_len = {self.t_len}. Way_seg start = {self.pieces[0][2].evaluate(0)} to {self.pieces[-1][2].evaluate(self.t_len)} AKA {self.start_ref} to {self.end_ref}")
         if t > self.t_len or t < 0:
             return None, None # no solution, t out of range
         else:
             for piece in self.pieces:
+                #print(piece[2])
                 if t >= piece[0] and t <= piece[1]:
+                 #   print(f"coords = {piece[2].evaluate(t)}, current angle = {piece[2].angle}")
+
+                    # we subtract the lower t bound for that given piece so that the t is normalized to that piece
                     return piece[2].evaluate(t)
 
     
@@ -207,8 +212,9 @@ class ParametricLinearFunc:
         if t > self.t_range[1] or t < self.t_range[0]:
             return None, None # no solution, t out of range
         else:
-            x = t * math.cos(self.angle) + self.x1 # Need to deal with None angles!!!
-            y = t * math.sin(self.angle) + self.y1
+            # must normalize t to actual t length (subtract lower bound)
+            x = (t - self.t_range[0]) * math.cos(self.angle) + self.x1 # Need to deal with None angles!!!
+            y = (t - self.t_range[0]) * math.sin(self.angle) + self.y1  
             return x, y
     
     def is_solution(self, x_test, y_test): # checks whether (x_test,y_test) lie on line
@@ -237,7 +243,22 @@ def get_angle(x1,y1,x2,y2):
         else:
             return math.pi/2
     else:
-        return math.atan((y2-y1)/(x2-x1))
+        angle = math.atan((y2-y1)/(x2-x1))
+
+        
+        ''' 
+        Originally, angle for quad 3 is treated as same as angle for quad 1 and quad2 is treated same as quad 4. must adjust that
+        '''
+        if (x2 -x1) < 0:
+            if (y2-y1) < 0: #  in quad 3 (going left and down)
+                return angle + math.pi # add pi
+    
+            else:  # in quad 2 (going left and up):
+                return math.pi - angle
+        else: #quads 1 and 4
+            return angle
+
+
 
 def distance(x1,y1,x2,y2):
     return math.sqrt((x2-x1)**2 + (y2-y1)**2)

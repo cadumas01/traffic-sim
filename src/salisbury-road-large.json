@@ -1677,7 +1677,8 @@
                 "name": "Torah Academy",
                 "phone": "617-731-3196",
                 "source_url": "http://mass.gov/mgis/schools.htm",
-                "type": "Private"
+                "type": "Private",
+                "weight": 20
             },
             "358269332": {
                 "lat": 475.00983012847115,
@@ -1691,25 +1692,29 @@
                 "gnis:state_id": "25",
                 "name": "Beth Pinchas Chassidic Center",
                 "old_name": "Congregation Machseke Torah",
-                "religion": "jewish"
+                "religion": "jewish",
+                "weight": 1
             },
             "8545220749": {
                 "lat": 501.4619869096467,
                 "lon": 1018.3305333771912,
                 "crossing": "marked",
-                "highway": "crossing"
+                "highway": "crossing",
+                "weight": 1
             },
             "8603352631": {
                 "lat": 297.1646829455203,
                 "lon": 50.0,
                 "barrier": "kerb",
-                "kerb": "lowered"
+                "kerb": "lowered",
+                "weight": 1
             },
             "8603352775": {
                 "lat": 231.22812145280042,
                 "lon": 69.62872024234468,
                 "barrier": "kerb",
-                "kerb": "lowered"
+                "kerb": "lowered",
+                "weight": 1
             }
         }
     },

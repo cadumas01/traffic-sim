@@ -153,6 +153,7 @@ def xml_to_streets_data(xml_file):
                         new_elements["connections"][id] = element
                     else:
                         new_elements["attractions"][id] = element
+                        get_node_weight(new_elements["attractions"], id)
                 
                 # Categorizes ways into "roads" and "nonroads" - key insight: roads have a "width" or "highway"
                 elif element_type == "ways":
@@ -172,7 +173,53 @@ def xml_to_streets_data(xml_file):
 
         return streets_data
 
-
+def get_node_weight(elements, node):
+    if "amenity" in elements[node].values():
+        node_quality = elements[node]["amenity"]
+        if node_quality == "school" or \
+            node_quality == "college":
+            weight = 100
+        elif node_quality == "place_of_worship":
+            weight = 50
+        elif node_quality == "restaurant" or \
+            node_quality == "bar" or \
+                node_quality == "cafe":
+            weight = 25
+        elif node_quality == "bank" or \
+            node_quality == "library" or \
+                node_quality == "fire_station" or \
+                    node_quality == "bicycle_rental":
+            weight = 15
+        else:
+            weight = 1
+    elif "public_transport" in elements[node]:
+        node_quality = elements[node]["public_transport"]
+        if node_quality == "station" or \
+            node_quality == "stop_position" or \
+                node_quality == "platform":
+            weight = 10
+        else:
+            weight = 1
+    elif "leisure" in elements[node]:
+        node_quality = elements[node]["leisure"]
+        if node_quality == "park":
+            weight = 20
+        else:
+            weight = 1
+    elif "shop" in elements[node]:
+        node_quality = elements[node]["shop"]
+        if node_quality == "alcohol" or \
+            node_quality == "bakery" or \
+                node_quality == "convenience":
+            weight = 15
+        else:
+            weight = 1
+    elif "addr:housenumber" in elements[node]:
+        weight = 20
+    else:
+        weight = 1
+    elements[node]["weight"] = weight
+        
 def write_json(dictionary, file_name):
     with open(file_name + ".json", 'w+', encoding='utf-8') as f:
             json.dump(dictionary, f, ensure_ascii=False, indent=4)
@@ -247,6 +294,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in (["test-map"]):
+    for f in (["beacon-street"]):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

@@ -24,7 +24,6 @@ class Network:
 
         self.make_graph()
 
-        # TESTING - make sure nodes are aligned:
     
 
 

@@ -178,7 +178,7 @@ class WaySegment:
     def add_attraction(self, noderef, t_value):
         attract_dict = self.data["nodes"]["attractions"][noderef]
 
-        attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"])
+        attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"], attract_dict["weight"])
         self.attractions[noderef] = attraction
 
 
@@ -235,7 +235,11 @@ class ParametricLinearFunc:
     def __str__(self):
         return f"({self.x1},{self.y1}) to ({self.x2},{self.y2}), angle={self.angle}, t=[{self.t_range}]"
 
-# gets angle between line and x axis (in radians)
+''' 
+gets angle between line and x axis (in radians) 
+Assumes (0,0) is bottom left and standard unit circle angles 
+(I.e going from bottom left to top right will be an angle between 0 and pi/4)
+'''
 def get_angle(x1,y1,x2,y2):
     if x2-x1 == 0: # either vertical up or vertical down
         if y2 < y1: # vertical down:
@@ -250,11 +254,8 @@ def get_angle(x1,y1,x2,y2):
         Originally, angle for quad 3 is treated as same as angle for quad 1 and quad2 is treated same as quad 4. must adjust that
         '''
         if (x2 -x1) < 0:
-            if (y2-y1) < 0: #  in quad 3 (going left and down)
-                return angle + math.pi # add pi
+            return angle + math.pi # add pi
     
-            else:  # in quad 2 (going left and up):
-                return math.pi - angle
         else: #quads 1 and 4
             return angle
 

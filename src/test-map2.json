@@ -13,6 +13,10 @@
             "3": {
                 "lat": 400,
                 "lon": 450
+            },
+            "4": {
+                "lat": 500,
+                "lon": 400
             }
         },
         "attractions":{
@@ -24,7 +28,8 @@
                 "addr:postcode": "02135",
                 "addr:state": "MA",
                 "addr:street": "Corey Road",
-                "source": "esri/Boston_MA_Addresses"
+                "source": "esri/Boston_MA_Addresses",
+                "weight": 10
             },
             "102": {
                 "lat": 400,
@@ -34,7 +39,19 @@
                 "addr:postcode": "02135",
                 "addr:state": "MA",
                 "addr:street": "Corey Road",
-                "source": "esri/Boston_MA_Addresses"
+                "source": "esri/Boston_MA_Addresses",
+                "weight": 10
+            },
+            "103": {
+                "lat": 510,
+                "lon": 400,
+                "addr:city": "Brighton",
+                "addr:housenumber": "63",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "source": "esri/Boston_MA_Addresses",
+                "weight": 10
             }
 
         }
@@ -46,7 +63,8 @@
                 "noderefs": [
                     "1",
                     "2",
-                    "3"
+                    "3",
+                    "4"
                 ],
                 "width": "20",
                 "highway": "service",

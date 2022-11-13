@@ -52,7 +52,7 @@ class Engine:
         self.bg_color = (250, 250, 250)
         self.road_color = (0,0,0)
 
-        self.fps = 45
+        self.fps = 30
         self.zoom = 0
         self.offset = (0, 0)
 
@@ -117,9 +117,12 @@ class Engine:
         r = 0
         g = 0
         b = 0
-
+      
         for piece in road.pieces: 
+           
             pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
+
+    
             # r = (r + 20) % 255
             # g = (g + 20) % 255
             # b = (b + 20) % 255
@@ -129,6 +132,12 @@ class Engine:
     def draw_roads(self):
         for road in self.network.way_segments["roads"].values():
             self.draw_road(road, color=self.road_color)
+            
+            # Test draw attractions
+            for attraction in road.attractions.values():
+                green = attraction.weight * 10 
+                pygame.draw.circle(self.screen, (0,green,0), self.to_pygame(attraction.lon,attraction.lat), radius=3)
+
             
 
     def draw_intersections(self):
@@ -204,6 +213,12 @@ class Engine:
                 path.append(self.network.way_segments["roads"][edge[1]])
             if end_way_seg not in path:
                 path.append(end_way_seg)
+
+            # Path should include first way_segment (if it doesn't then add it) - NEW IDEA, MAYBE REMOVE
+            if origin_way_seg != path[0]:
+                path.insert(0, origin_way_seg)
+
+                
 
             #print(f"\ncreating new traveler with end t = {end_t}, path = {path}")
             traveler = Traveler("Car", t, end_t, origin_way_seg, path, False, False)

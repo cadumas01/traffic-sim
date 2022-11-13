@@ -27,7 +27,7 @@ class Traveler:
         self.current_t += self.speed * self.step_size
 
     def increment_path(self):
-        self.path.pop(0)
+        just_popped = self.path.pop(0)
         self.current_way_seg = self.path[0]
         self.speed = self.current_way_seg.maxspeed
     
@@ -43,6 +43,7 @@ class Traveler:
                 self.is_done = True
         else: # need to transfer way_segments 
             if self.current_t + self.speed * self.step_size >= self.current_way_seg.t_len:
+                #print(f"isdone = {self.is_done}, atdestination = {self.at_destination}, path = {self.path}, path[0] = {self.path[0]}, self.end_t = {self.end_t}, current t_len = {self.current_way_seg.t_len}")
                 self.current_t = (self.current_t - self.current_way_seg.t_len) * (self.path[1].maxspeed) / self.speed 
                 self.increment_path()
 

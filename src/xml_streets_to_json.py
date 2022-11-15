@@ -135,6 +135,10 @@ def xml_to_streets_data(xml_file):
                     if k in element:
                         del element[k]  
 
+                # dictionary of cumulative attraction weights by cateory
+                sum_attraction_weights = {}
+
+
                 # remove any "@" from keys
                 element = remove_AT_from_keys(element)
             
@@ -154,7 +158,12 @@ def xml_to_streets_data(xml_file):
                         new_elements["connections"][id] = element
                     else:
                         new_elements["attractions"][id] = element
-                        get_node_weight(new_elements["attractions"], id)
+                        attraction_weight, category = set_weight_and_category(new_elements["attractions"], id)
+
+                        if category not in sum_attraction_weights:
+                            sum_attraction_weights[category] = 0
+                        else:
+                            sum_attraction_weights[category] += attraction_weight
                 
                 # Categorizes ways into "roads" and "nonroads" - key insight: roads have a "width" or "highway"
                 elif element_type == "ways":
@@ -164,24 +173,28 @@ def xml_to_streets_data(xml_file):
                         new_elements["rails"][id] = element
                     else:
                         new_elements["nonroads"][id] = element
-                        if add_building_to_attractions(new_elements, id):
-                            get_node_weight(new_elements["nodes"]["attractions"], id)
 
                 else:
                     # add refined element to new dict of elements, for relations
                     new_elements[id] = element
-                    if add_building_to_attractions(new_elements,  id):
-                        get_node_weight(new_elements["attractions"], id)
 
             # delete old elements list and add new elements list
             del streets_data[element_type]
             streets_data[element_type] = new_elements
 
+
+         #streets_data["sum_attraction_weight"] = sum_attraction_weights
+
         return streets_data
 
-# set attraction weight of nodes
-def get_node_weight(elements, node):
-    if "amenity" in elements[node].values():
+# for each (attraction) node, set weight and category based on attributes of the node
+# returns weight, category
+def set_weight_and_category(elements, node):
+
+    category = ""
+
+
+    if "amenity" in elements[node]:
         node_quality = elements[node]["amenity"]
         if node_quality == "school" or \
             node_quality == "college":
@@ -199,6 +212,8 @@ def get_node_weight(elements, node):
             weight = 15
         else:
             weight = 1
+        
+        category = "amenity"
     elif "public_transport" in elements[node]:
         node_quality = elements[node]["public_transport"]
         if node_quality == "station" or \
@@ -207,12 +222,16 @@ def get_node_weight(elements, node):
             weight = 10
         else:
             weight = 1
+
+        category = "public_transport"
     elif "leisure" in elements[node]:
         node_quality = elements[node]["leisure"]
         if node_quality == "park":
             weight = 20
         else:
             weight = 1
+        
+        category = "leisure"
     elif "shop" in elements[node]:
         node_quality = elements[node]["shop"]
         if node_quality == "alcohol" or \
@@ -221,8 +240,12 @@ def get_node_weight(elements, node):
             weight = 15
         else:
             weight = 1
+        
+        category = "shop"
     elif "addr:housenumber" in elements[node]:
         weight = 20
+        
+        category = "residence"
     else:
         weight = 1
         category = "other"
@@ -232,6 +255,58 @@ def get_node_weight(elements, node):
 
     return weight, category
         
+# add building in "relations" or "ways" -> "non-roads" to dictionary of attraction nodes
+def add_building_to_attractions(new_elements, node_id):
+    non_roads = new_elements["nonroads"]
+    relations = new_elements
+    attractions = new_elements
+    if node_id in non_roads:
+        if "building" in non_roads[node_id].values():
+            coords = get_way_coords(new_elements, node_id)
+            new_attraction = non_roads[node_id]
+            new_attraction["lon"] = coords[0]
+            new_attraction["lat"] = coords[1]
+            del new_attraction["noderefs"]
+            attractions[node_id] = new_attraction
+        return True
+    elif node_id in relations:
+        if "building" in relations[node_id].values():
+            coords = get_relation_coords(new_elements, node_id)
+            new_attraction = relations[node_id]
+            new_attraction["lon"] = coords[0]
+            new_attraction["lat"] = coords[1]
+            del new_attraction["members"]
+            attractions[node_id] = new_attraction
+        return True
+    else:
+        return False
+
+# get mean of node coords in way
+def get_way_coords(new_elements, way_id):
+    non_roads = new_elements["ways"]["nonroads"]
+    connections = new_elements["nodes"]["connections"]
+    lons = []
+    lats = []
+    for node_ref in non_roads[way_id]["noderefs"]:
+        if node_ref in connections:
+            lons.append(connections[node_ref]["lon"])
+            lats.append(connections[node_ref]["lat"])
+    return[np.mean(lons), np.mean(lats)]
+
+# get mean of node coords in relation
+def get_relation_coords(new_elements, relation_id):
+    relations = new_elements["relations"]
+    connections = new_elements["nodes"]["connections"]
+    lons = []
+    lats = []
+    for member in relations[relation_id]["members"]:
+        node_id = member["ref"]
+        if node_id in connections:
+            lons.append(connections[node_id]["lon"])
+            lats.append(connections[node_id]["lat"])
+    return[np.mean(lons), np.mean(lats)]
+
+
 def write_json(dictionary, file_name):
     with open(file_name + ".json", 'w+', encoding='utf-8') as f:
             json.dump(dictionary, f, ensure_ascii=False, indent=4)

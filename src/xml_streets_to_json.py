@@ -4,6 +4,7 @@ import json
 import pprint
 import sys
 import math
+import numpy as np
 
 
 def get_min_max_lon_lat(streets_data):
@@ -106,9 +107,6 @@ def xml_to_streets_data(xml_file):
         for k in ["node", "way", "relation"]:
            rename_key(streets_data, k, k+"s")
 
-        # dictionary of cumulative attraction weights by cateory
-        sum_attraction_weights = {}
-
         # for each node, way and relation, take the id and use it as a key in the newly created dictionary
         for element_type in ["nodes", "ways", "relations"]:
             #print("raw_data[elementtype]=", raw_data[element_type])
@@ -156,13 +154,7 @@ def xml_to_streets_data(xml_file):
                         new_elements["connections"][id] = element
                     else:
                         new_elements["attractions"][id] = element
-                        attraction_weight, category = set_weight_and_category(new_elements["attractions"], id)
-
-                        if category not in sum_attraction_weights:
-                            sum_attraction_weights[category] = 0
-                        else:
-                            sum_attraction_weights[category] += attraction_weight
-
+                        get_node_weight(new_elements["attractions"], id)
                 
                 # Categorizes ways into "roads" and "nonroads" - key insight: roads have a "width" or "highway"
                 elif element_type == "ways":
@@ -172,28 +164,24 @@ def xml_to_streets_data(xml_file):
                         new_elements["rails"][id] = element
                     else:
                         new_elements["nonroads"][id] = element
+                        if add_building_to_attractions(new_elements, id):
+                            get_node_weight(new_elements["nodes"]["attractions"], id)
+
                 else:
                     # add refined element to new dict of elements, for relations
                     new_elements[id] = element
+                    if add_building_to_attractions(new_elements,  id):
+                        get_node_weight(new_elements["attractions"], id)
 
             # delete old elements list and add new elements list
             del streets_data[element_type]
             streets_data[element_type] = new_elements
 
-        
-         #streets_data["sum_attraction_weight"] = sum_attraction_weights
-
         return streets_data
 
-
-# for each (attraction) node, set weight and category based on attributes of the node
-# returns weight, category
-def set_weight_and_category(elements, node):
-
-    category = ""
-    
-
-    if "amenity" in elements[node]:
+# set attraction weight of nodes
+def get_node_weight(elements, node):
+    if "amenity" in elements[node].values():
         node_quality = elements[node]["amenity"]
         if node_quality == "school" or \
             node_quality == "college":
@@ -211,8 +199,6 @@ def set_weight_and_category(elements, node):
             weight = 15
         else:
             weight = 1
-        
-        category = "amenity"
     elif "public_transport" in elements[node]:
         node_quality = elements[node]["public_transport"]
         if node_quality == "station" or \
@@ -221,15 +207,12 @@ def set_weight_and_category(elements, node):
             weight = 10
         else:
             weight = 1
-        
-        category = "public_transport"
     elif "leisure" in elements[node]:
         node_quality = elements[node]["leisure"]
         if node_quality == "park":
             weight = 20
         else:
             weight = 1
-        category = "leisure"
     elif "shop" in elements[node]:
         node_quality = elements[node]["shop"]
         if node_quality == "alcohol" or \
@@ -238,10 +221,8 @@ def set_weight_and_category(elements, node):
             weight = 15
         else:
             weight = 1
-        category = "shop"
     elif "addr:housenumber" in elements[node]:
         weight = 20
-        category = "residence"
     else:
         weight = 1
         category = "other"

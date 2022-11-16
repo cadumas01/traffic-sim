@@ -3966,7 +3966,8 @@
                 "lon": 871.618819689005,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69482704": {
                 "lat": 528.0140867973705,
@@ -3979,63 +3980,72 @@
                 "railway": "halt",
                 "station": "light_rail",
                 "wikidata": "Q7684756",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "69483674": {
                 "lat": 744.1334360214972,
                 "lon": 1431.5938944097884,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69486038": {
                 "lat": 606.099044626955,
                 "lon": 876.7582799347496,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69487900": {
                 "lat": 420.14091490276127,
                 "lon": 284.07704778817947,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69488125": {
                 "lat": 467.05753855747133,
                 "lon": 453.2325660911179,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69489222": {
                 "lat": 763.2163940928365,
                 "lon": 1495.8316330467035,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69492427": {
                 "lat": 591.2385080840136,
                 "lon": 824.5916555456193,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69493876": {
                 "lat": 689.7790839870531,
                 "lon": 1292.7457511225084,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "69495662": {
                 "lat": 588.2320842751869,
                 "lon": 818.685687816333,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "257578421": {
                 "lat": 562.5021693472213,
@@ -4058,7 +4068,8 @@
                 "phone": "617-731-3196",
                 "source_url": "http://mass.gov/mgis/schools.htm",
                 "type": "Private",
-                "weight": 20
+                "weight": 100,
+                "category": "amenity"
             },
             "358269332": {
                 "lat": 542.5090780136672,
@@ -4073,21 +4084,24 @@
                 "name": "Beth Pinchas Chassidic Center",
                 "old_name": "Congregation Machseke Torah",
                 "religion": "jewish",
-                "weight": 1
+                "weight": 50,
+                "category": "amenity"
             },
             "431399508": {
                 "lat": 362.1758702541016,
                 "lon": 88.08273869255397,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "431399523": {
                 "lat": 387.29405626841475,
                 "lon": 169.77920172970607,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "1399777043": {
                 "lat": 646.0553868588888,
@@ -4101,7 +4115,8 @@
                 "railway": "stop",
                 "ref": "70226",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399777044": {
                 "lat": 635.3202904300288,
@@ -4115,7 +4130,8 @@
                 "railway": "stop",
                 "ref": "70225",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399780476": {
                 "lat": 463.6557289873557,
@@ -4129,7 +4145,8 @@
                 "railway": "stop",
                 "ref": "70234",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399780477": {
                 "lat": 471.7126463900658,
@@ -4143,7 +4160,8 @@
                 "railway": "stop",
                 "ref": "70233",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399782319": {
                 "lat": 611.2912802868561,
@@ -4157,7 +4175,8 @@
                 "railway": "stop",
                 "ref": "70228",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399796244": {
                 "lat": 719.6568193560107,
@@ -4171,7 +4190,8 @@
                 "railway": "stop",
                 "ref": "70224",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399796409": {
                 "lat": 533.4748863706601,
@@ -4185,7 +4205,8 @@
                 "railway": "stop",
                 "ref": "70232",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399796411": {
                 "lat": 522.4115451585933,
@@ -4199,7 +4220,8 @@
                 "railway": "stop",
                 "ref": "70231",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399797957": {
                 "lat": 603.3984852754844,
@@ -4213,7 +4235,8 @@
                 "railway": "stop",
                 "ref": "70230",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "1399797961": {
                 "lat": 594.9387220021617,
@@ -4227,7 +4250,8 @@
                 "railway": "stop",
                 "ref": "70229",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "2458520472": {
                 "lat": 549.2828567192543,
@@ -4235,21 +4259,24 @@
                 "amenity": "restaurant",
                 "cuisine": "tapas",
                 "name": "Barcelona Wine Bar",
-                "weight": 1
+                "weight": 25,
+                "category": "amenity"
             },
             "2535759232": {
                 "lat": 609.5157744146577,
                 "lon": 912.3319473698675,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "2756576778": {
                 "lat": 547.9922579128074,
                 "lon": 710.8397392776624,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "3324532268": {
                 "lat": 513.8473403637506,
@@ -4257,63 +4284,72 @@
                 "crossing:barrier": "no",
                 "highway": "traffic_signals",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "3324534750": {
                 "lat": 508.5059025300982,
                 "lon": 631.575145306103,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "3324539494": {
                 "lat": 584.5691709004764,
                 "lon": 811.9635826232235,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "3324543230": {
                 "lat": 604.1668764722117,
                 "lon": 865.5253609200374,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "3324632890": {
                 "lat": 764.8650781166043,
                 "lon": 1500.99866550507,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489130": {
                 "lat": 364.3393017787954,
                 "lon": 87.48717892122616,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489136": {
                 "lat": 363.11584395096077,
                 "lon": 83.593982640201,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489137": {
                 "lat": 360.97479275211765,
                 "lon": 84.27225904674467,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489139": {
                 "lat": 389.28590529297657,
                 "lon": 169.38216188162414,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489144": {
                 "lat": 413.217934023423,
@@ -4324,28 +4360,32 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "5184489146": {
                 "lat": 469.0643077996203,
                 "lon": 452.6425207621025,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489162": {
                 "lat": 418.23858718266223,
                 "lon": 277.41008701766367,
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489163": {
                 "lat": 420.3647181639182,
                 "lon": 276.8531283430526,
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489179": {
                 "lat": 468.7957438857019,
@@ -4353,7 +4393,8 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489180": {
                 "lat": 467.1545199707277,
@@ -4361,7 +4402,8 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489181": {
                 "lat": 465.0955299675537,
@@ -4369,84 +4411,96 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489184": {
                 "lat": 519.3529005892717,
                 "lon": 623.9541860128941,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489185": {
                 "lat": 534.6386633286762,
                 "lon": 669.8839761334647,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489186": {
                 "lat": 641.7434440265583,
                 "lon": 1187.4309316094632,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489188": {
                 "lat": 715.8372436982254,
                 "lon": 1349.0868083511255,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184489189": {
                 "lat": 760.9410609372991,
                 "lon": 1488.2989048320828,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538629": {
                 "lat": 515.7347478667926,
                 "lon": 606.9641892113301,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538632": {
                 "lat": 536.1829058309243,
                 "lon": 669.360104112728,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538633": {
                 "lat": 549.7752238937994,
                 "lon": 710.1394051013391,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538645": {
                 "lat": 606.1139648445421,
                 "lon": 865.1558932840475,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538647": {
                 "lat": 608.2177154999474,
                 "lon": 876.5321877999418,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538651": {
                 "lat": 611.4031819171696,
                 "lon": 912.354005139647,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538659": {
                 "lat": 614.7303904004096,
@@ -4457,14 +4511,16 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "5184538676": {
                 "lat": 691.7783931204085,
                 "lon": 1292.001301408216,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538679": {
                 "lat": 713.4500089123746,
@@ -4478,42 +4534,48 @@
                 "railway": "stop",
                 "ref": "70223",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "5184538680": {
                 "lat": 717.7768719617623,
                 "lon": 1348.5574218880763,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538687": {
                 "lat": 745.4464151537948,
                 "lon": 1429.3274586140974,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538688": {
                 "lat": 762.9254498530674,
                 "lon": 1487.8522350037197,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538689": {
                 "lat": 765.1933228998112,
                 "lon": 1495.3463621226833,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "5184538690": {
                 "lat": 766.9091479021911,
                 "lon": 1500.756030042265,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "6047233704": {
                 "lat": 360.2735425340025,
@@ -4527,7 +4589,8 @@
                 "railway": "stop",
                 "ref": "70238",
                 "source": "massdot_import_081211",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "6047233707": {
                 "lat": 352.6642316536063,
@@ -4538,7 +4601,8 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "6568254472": {
                 "lat": 468.0721133412061,
@@ -4551,7 +4615,8 @@
                 "railway": "halt",
                 "station": "light_rail",
                 "wikidata": "Q5246445",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "7762626861": {
                 "lat": 410.91276043324143,
@@ -4562,21 +4627,24 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10
+                "weight": 10,
+                "category": "public_transport"
             },
             "7944055723": {
                 "lat": 379.19237821347326,
                 "lon": 479.6246870554416,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "7944055724": {
                 "lat": 432.6515172032897,
                 "lon": 468.5020568864471,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8026006290": {
                 "lat": 489.0573991326444,
@@ -4584,56 +4652,64 @@
                 "crossing": "unmarked",
                 "crossing:island": "no",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8545220732": {
                 "lat": 439.4700565611081,
                 "lon": 649.1276152240604,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8545220735": {
                 "lat": 512.9521273191228,
                 "lon": 624.0479315322046,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8545220746": {
                 "lat": 542.2927348613039,
                 "lon": 707.7020215944941,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8545220749": {
                 "lat": 559.816530212808,
                 "lon": 704.878627124722,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8603352631": {
                 "lat": 426.1463024116211,
                 "lon": 71.29677625707825,
                 "barrier": "kerb",
                 "kerb": "lowered",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "8603352775": {
                 "lat": 383.0044937624649,
                 "lon": 84.13991243071735,
                 "barrier": "kerb",
                 "kerb": "lowered",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "9905022516": {
                 "lat": 460.4553423520163,
                 "lon": 445.2917691432607,
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "9905088917": {
                 "lat": 453.75616473383496,
@@ -4641,14 +4717,16 @@
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
                 "traffic_signals:direction": "forward",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "9905088918": {
                 "lat": 482.41790238375154,
                 "lon": 458.2837952593342,
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "9905088919": {
                 "lat": 488.40836967502423,
@@ -4656,14 +4734,567 @@
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
                 "traffic_signals:direction": "backward",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
             },
             "9905088920": {
                 "lat": 545.9780285623949,
                 "lon": 430.83841581122465,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1
+                "weight": 1,
+                "category": "other"
+            },
+            "29513387": {
+                "addr:housenumber": "118",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 448.5982287612939,
+                "lat": 539.053555661192,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29581585": {
+                "addr:housenumber": "1731",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "building:levels": "15",
+                "lon": 556.1131234786192,
+                "lat": 455.486065413504,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29587830": {
+                "addr:housenumber": "84",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 539.7210795072742,
+                "lat": 560.2909931265667,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29591433": {
+                "addr:housenumber": "359",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 651.099579799316,
+                "lat": 475.5710146126235,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629916": {
+                "addr:housenumber": "1756",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 484.3769109073997,
+                "lat": 511.02161696592145,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29637262": {
+                "addr:housenumber": "111",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 465.30257745022834,
+                "lat": 568.461304181455,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29638156": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "344",
+                "addr:postcode": "02445",
+                "addr:state": "MA",
+                "addr:street": "Tappan",
+                "building": "yes",
+                "building:levels": "3",
+                "lon": 640.3938414713641,
+                "lat": 414.2877136119123,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681152": {
+                "addr:housenumber": "102",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 495.38055166452546,
+                "lat": 548.1175877393734,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681158": {
+                "addr:housenumber": "74",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 562.8618852772186,
+                "lat": 567.9376045504007,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681223": {
+                "addr:housenumber": "1773",
+                "addr:street": "Beacon Street",
+                "amenity": "place_of_worship",
+                "building": "yes",
+                "ele": "30",
+                "gnis:county_id": "021",
+                "gnis:created": "02/01/1994",
+                "gnis:feature_id": "607128",
+                "gnis:state_id": "25",
+                "name": "All Saints Parish / Evergreen Church of Boston",
+                "old_name": "Saint Andrew Episcopal Church",
+                "religion": "christian",
+                "website": "http://www.allsaintsbrookline.org/",
+                "lon": 442.8018146193156,
+                "lat": 420.552712902972,
+                "weight": 50,
+                "category": "amenity"
+            },
+            "29708171": {
+                "addr:housenumber": "18",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 581.7742166737568,
+                "lat": 568.1047109859987,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708180": {
+                "addr:housenumber": "72",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 571.5140452839036,
+                "lat": 570.083131814308,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708201": {
+                "addr:housenumber": "100",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 508.4370354850385,
+                "lat": 551.755468304918,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708208": {
+                "addr:housenumber": "112",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 467.13526296779844,
+                "lat": 539.5452833980224,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708217": {
+                "addr:housenumber": "90",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 522.0909832079315,
+                "lat": 554.4636152884592,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29790590": {
+                "addr:housenumber": "1717",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "name": "Star Market",
+                "shop": "supermarket",
+                "lon": 609.9072046612278,
+                "lat": 451.12504177837377,
+                "weight": 1,
+                "category": "shop"
+            },
+            "29792459": {
+                "addr:housenumber": "78",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 555.0614702762514,
+                "lat": 562.7558130430225,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29795832": {
+                "addr:housenumber": "1768",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 457.4731722372933,
+                "lat": 501.7444110628048,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29820614": {
+                "addr:housenumber": "121",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 443.5028840535184,
+                "lat": 564.3895768492032,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936472": {
+                "addr:housenumber": "106",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 482.59586857950364,
+                "lat": 544.9157090826993,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939839": {
+                "addr:housenumber": "17",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 449.4937741943095,
+                "lat": 524.6740895561229,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29940419": {
+                "addr:housenumber": "105",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 479.67983147856546,
+                "lat": 569.8100918358557,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272447": {
+                "addr:housenumber": "1734",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 534.5000055144583,
+                "lat": 538.02406065934,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212273775": {
+                "addr:housenumber": "12",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "lon": 495.48299774892695,
+                "lat": 436.8573607120285,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670662": {
+                "addr:housenumber": "1710",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 594.108186005452,
+                "lat": 544.07487194126,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670663": {
+                "addr:housenumber": "1712",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 588.8321514043797,
+                "lat": 542.567266861621,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670664": {
+                "addr:housenumber": "1714",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 583.8801821967262,
+                "lat": 541.0043740881842,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670665": {
+                "addr:housenumber": "1716",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 579.6175182813013,
+                "lat": 539.1139825414128,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670666": {
+                "addr:housenumber": "1718",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 574.7609489251751,
+                "lat": 537.5727240834244,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670667": {
+                "addr:housenumber": "1720;1720B",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 569.9799274313258,
+                "lat": 537.1930045495949,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670668": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 562.2186255798621,
+                "lat": 536.6634611670322,
+                "weight": 1,
+                "category": "other"
+            },
+            "9670669": {
+                "addr:housenumber": "1726",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 555.8839099609203,
+                "lat": 531.7642834442767,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670670": {
+                "addr:housenumber": "1728",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 552.1561469487366,
+                "lat": 527.4806890247256,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670671": {
+                "addr:housenumber": "1730",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 547.2549106105691,
+                "lat": 528.2043195692214,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670672": {
+                "addr:housenumber": "1732",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 543.5894607970985,
+                "lat": 524.7428291298174,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670673": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 538.3504899332381,
+                "lat": 525.1256683450049,
+                "weight": 1,
+                "category": "other"
+            },
+            "9670674": {
+                "addr:housenumber": "1736",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 534.4864951309784,
+                "lat": 521.8557670606277,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670675": {
+                "addr:housenumber": "1738",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 530.2555392576571,
+                "lat": 520.5278677107431,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670676": {
+                "addr:housenumber": "1740",
+                "addr:street": "Beacon Street",
+                "building": "house",
+                "type": "multipolygon",
+                "lon": 526.0287192159375,
+                "lat": 519.2036984155204,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670677": {
+                "addr:housenumber": "1742",
+                "addr:street": "Beacon Street",
+                "building": "house",
+                "type": "multipolygon",
+                "lon": 520.9701374567345,
+                "lat": 520.9253257240919,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708457": {
+                "addr:housenumber": "1789",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 420.41769537296983,
+                "lat": 436.84409829598314,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709579": {
+                "addr:housenumber": "343",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 661.7317922306528,
+                "lat": 434.93555381864445,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709756": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "369",
+                "addr:postcode": "02445",
+                "addr:state": "MA",
+                "addr:street": "Tappan Street",
+                "building": "residential",
+                "building:levels": "4",
+                "type": "multipolygon",
+                "lon": 645.9506837295409,
+                "lat": 500.39759326686897,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709757": {
+                "addr:housenumber": "1693",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 649.5362966719317,
+                "lat": 505.06513461447287,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709758": {
+                "addr:housenumber": "1691",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 654.7422365840673,
+                "lat": 506.9753368938834,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709778": {
+                "addr:housenumber": "17",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 545.7902747296432,
+                "lat": 417.66863487751186,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709779": {
+                "addr:housenumber": "15",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 542.4332660569914,
+                "lat": 422.9073718812899,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709780": {
+                "addr:housenumber": "13",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 538.4444861090416,
+                "lat": 424.61325007229846,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709781": {
+                "addr:housenumber": "11",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 534.0301750276408,
+                "lat": 426.5019009263643,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709782": {
+                "addr:housenumber": "9",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 529.5221184279895,
+                "lat": 428.429095675952,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709783": {
+                "addr:housenumber": "7",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 524.3412998646371,
+                "lat": 428.6920645076126,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709784": {
+                "addr:housenumber": "5",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 519.7574196822629,
+                "lat": 430.65407309700015,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709785": {
+                "addr:housenumber": "3",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 515.7015473527574,
+                "lat": 432.388548371099,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709786": {
+                "addr:housenumber": "1",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 510.8047225676977,
+                "lat": 434.1323487815873,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709787": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 482.88317102434996,
+                "lat": 429.6145069488864,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709788": {
+                "addr:housenumber": "18",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 484.06335358954954,
+                "lat": 423.71679367611677,
+                "weight": 20,
+                "category": "residence"
             }
         }
     },
@@ -7238,7 +7869,7 @@
         "2887651": {
             "colour": "#008150",
             "from": "Cleveland Circle",
-            "name": "MBTA Green Line (C): Cleveland Circle → Government Center",
+            "name": "MBTA Green Line (C): Cleveland Circle â†’ Government Center",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",
@@ -8418,7 +9049,7 @@
         "11359934": {
             "colour": "#008150",
             "from": "Government Center",
-            "name": "MBTA Green Line (C): Government Center → Cleveland Circle",
+            "name": "MBTA Green Line (C): Government Center â†’ Cleveland Circle",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",

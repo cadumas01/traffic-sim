@@ -81,7 +81,7 @@ class Engine:
 
             # Generate Travelers (right now only first first 5 steps)
             if time_step < 25:
-                self.gen_travelers(5)
+                self.gen_travelers(50)
        
             # Draw
             self.draw()
@@ -93,6 +93,8 @@ class Engine:
                 traveler.increment()
                 if traveler.is_done:
                     self.travelers.remove(traveler)
+
+                    traveler.current_way_seg.num_cars =- 1
                     del traveler
 
             clock.tick(self.fps)
@@ -114,10 +116,17 @@ class Engine:
     def draw_road(self, road, color):
         width = int(road.width / 5) + 4
 
-        r = 0
+        r = 0 
         g = 0
         b = 0
-      
+
+        # roads become more purple with increased traffic
+  
+
+       # if road.id == "8545220732_3324532280":
+
+       # print(road.id, r,g,b)
+    
         for piece in road.pieces: 
            
             pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
@@ -194,7 +203,6 @@ class Engine:
         trips = self.network.random_trips_pairs(n)
 
         for trip in trips:
-           
             origin_node = trip[0]
             origin_way_seg = self.get_way_seg(origin_node)
             origin_intersection = self.find_nearest_intersection(origin_node, origin_way_seg)
@@ -224,7 +232,7 @@ class Engine:
 
 
             #print(f"\ncreating new traveler with end t = {end_t}, path = {path}")
-            traveler = Traveler("Car", t, end_t, origin_way_seg, path, False, False)
+            traveler = Traveler(self.network, "Car", t, end_t, origin_way_seg, path, False, False)
             self.travelers.append(traveler)
             
 

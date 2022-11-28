@@ -55,6 +55,13 @@ def normalize_coords(streets_data):
     vert_margin  = (height_scale - occupied_vertical_space) / 2 # determined by leftover space
     horiz_margin = (width_scale - occupied_horizontal_space) /2
 
+    # add occupied space data to bounds dict in json file
+    streets_data["display_bounds"] = {}
+    streets_data["display_bounds"]["occupied_vertical_space"] = occupied_vertical_space
+    streets_data["display_bounds"]["occupied_horizontal_space"] = occupied_horizontal_space
+
+
+
     # width should be 1400
     # height will be scaled normally as well, so variable height (since width:height ratio is not constant), buffer will be added to make it constant
 
@@ -191,6 +198,9 @@ def xml_to_streets_data(xml_file):
         for element in streets_data["relations"]:
             if add_building_to_attractions(streets_data, element, "relations") == True:
                 update_weights_and_category(streets_data, element, sum_attraction_weights)
+
+        if "bounds" in streets_data:
+            streets_data["bounds"] = remove_AT_from_keys(streets_data["bounds"])
 
         return streets_data
 
@@ -432,6 +442,6 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in (["beacon-street"]):
+    for f in (["beacon-street", "test-map"]):
         print(f"\n {f}")
         write_json(normalize_coords(xml_to_streets_data(f)), f)

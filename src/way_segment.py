@@ -14,6 +14,9 @@ class WaySegment:
         self.category = category  # way category which this way segment belongs to (road or nonroad)
         self.data = data 
 
+        # multiply some t_len by this constant (determined by input data) to convert to ft 
+        self.t_len_to_ft_multiplier = self.t_len_to_ft_multiplier()
+
         # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
         self.load_nodes(noderefs, data) # generates (self.nodes)
 
@@ -22,10 +25,18 @@ class WaySegment:
         self.attractions = {} # dict of all attraction nodes associated to a way segment and indexed by id
         # MAYBE CHANGE ATTRACTIONS TO DICTIONARY index by t value???
 
+        # Used for determining weight (when num_cars > capacity then weight goes up)
+        self.num_cars = 0 # start value
+
         self.set_width()
 
-        self.maxspeed = 1 # adjust
+        self.max_speed = 1 # adjust 
         self.lanes = 1
+        self.allowable_speed = self.max_speed # determined by traffic conidtions, at most max_speed
+
+        # also sets capacity
+        self.get_capacity()
+
         self.set_lanes(split)
 
         self.set_weight() # edge weight, lower weight means: shorter road, higher speed, more lanes
@@ -40,6 +51,23 @@ class WaySegment:
         self.id = ""
         self.set_id()
 
+
+    ''' We know from the data json file the actual coordinate bounds of the map and the pixel bounds'''
+    def t_len_to_ft_multiplier(self):
+
+        lat_dist_deg = (float(self.data["bounds"]["minlat"]) - float(self.data["bounds"]["maxlat"])) # in degrees
+        lon_dist_deg = (float(self.data["bounds"]["minlon"]) - float(self.data["bounds"]["maxlon"]))
+
+        lat_dist_ft = lat_dist_deg *  364173
+
+        lon_dist_ft = math.cos(float(self.data["bounds"]["minlat"])) * lon_dist_deg * 364173
+
+        actual_diag_dist = math.sqrt((lat_dist_ft) ** 2 + (lon_dist_ft) ** 2)
+
+
+        display_diag_dist = math.sqrt((self.data["display_bounds"]["occupied_vertical_space"]) **2 + float(self.data["display_bounds"]["occupied_vertical_space"]) **2)
+
+        return actual_diag_dist / display_diag_dist
 
 
      # evaluates a function (returns a solution of x,y) for a value of t
@@ -91,11 +119,43 @@ class WaySegment:
         
         self.lanes = lanes_temp
 
+
+    ''' Used to determine how much space is needed per car (used to find capacity)
+        - Assumes higher max_speed requires more space (more space between cars on highway and at higher speeds)
+        - Minimum following distance is used to determine length per car (increases with speed) https://www.smartmotorist.com/safe-following-distance
+        - assumes a car length of 15 ft
+    '''
+    def ft_per_car(self):
+        following_distance_multiplier = self.allowable_speed / 20 # for each additional 20 mph, multiplier increases by 1
+        return self.allowable_speed * following_distance_multiplier + 15
+
+
     
+    # the longer the road and more lanes, the more cars can fit
+    def get_capacity(self):
+        self.capacity = math.ceil(self.lanes * self.t_len_to_ft_multiplier * (self.t_len) / self.ft_per_car())
+        #print("Capacity = ", self.capacity)
+        return self.capacity
+
+
+    # is max speed when num_cars <= capacity, otherwise (there is traffic) and speed decreases
+    def get_allowable_speed(self):
+
+    
+       
+        if self.num_cars <= self.get_capacity():
+            self.allowable_speed = self.max_speed
+        else: # some decreasing function with respect to num_cars
+            self.allowable_speed = self.max_speed * (self.get_capacity() / self.num_cars) 
+        
+
+        return self.allowable_speed
+
 
     # very simple - need to adjust
+    # weight should be low (good) when length is short and allowable_speed (speed cars/travelers can actually travel at) is high
     def set_weight(self):
-        self.weight = (self.t_len / (self.lanes * self.maxspeed) )
+        self.weight = (self.t_len / (self.get_allowable_speed()) )
 
 
     def __str__(self):
@@ -185,7 +245,7 @@ class WaySegment:
 
     # Find min distance of a [attraction] node to a way segment node 
     def min_node_distance(self, lon, lat):
-        minimum =  100000
+        minimum =  1000000
         t= 0
 
         for node in self.nodes:

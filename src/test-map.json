@@ -5,10 +5,10 @@
     "@attribution": "http://www.openstreetmap.org/copyright",
     "@license": "http://opendatacommons.org/licenses/odbl/1-0/",
     "bounds": {
-        "@minlat": "42.3362400",
-        "@minlon": "-71.1447000",
-        "@maxlat": "42.3414600",
-        "@maxlon": "-71.1319800"
+        "minlat": "42.3362400",
+        "minlon": "-71.1447000",
+        "maxlat": "42.3414600",
+        "maxlon": "-71.1319800"
     },
     "nodes": {
         "connections": {
@@ -24202,6 +24202,4699 @@
                 "highway": "crossing",
                 "weight": 1,
                 "category": "other"
+            },
+            "29513314": {
+                "addr:housenumber": "36",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 744.7537767206517,
+                "lat": 638.3558307899273,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513315": {
+                "addr:housenumber": "779",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 864.8612008853413,
+                "lat": 634.6529744032784,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513316": {
+                "addr:housenumber": "57",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 954.801605233958,
+                "lat": 634.9836280365569,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513317": {
+                "addr:housenumber": "53",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 960.2336103788717,
+                "lat": 630.7887709822689,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513318": {
+                "addr:housenumber": "34",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 752.125888766244,
+                "lat": 630.8003786822653,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513319": {
+                "addr:housenumber": "40",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 737.9614413764806,
+                "lat": 641.5461242976799,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513321": {
+                "addr:housenumber": "93",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1017.5202063825027,
+                "lat": 628.4985717181985,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513323": {
+                "addr:housenumber": "98",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 997.7436921193603,
+                "lat": 625.4130791609632,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513325": {
+                "addr:housenumber": "79",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1037.0907957290897,
+                "lat": 614.1398464805304,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513330": {
+                "addr:housenumber": "94",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 713.8909022864553,
+                "lat": 608.5711351867562,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513338": {
+                "addr:housenumber": "82",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1019.3075856368081,
+                "lat": 600.5701132130896,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513339": {
+                "addr:housenumber": "85",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 700.3574676791796,
+                "lat": 600.7632985098023,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513340": {
+                "addr:housenumber": "762",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 876.8780229905027,
+                "lat": 598.1731231063318,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513341": {
+                "addr:housenumber": "16",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 822.2707798265646,
+                "lat": 600.130513020709,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513345": {
+                "addr:housenumber": "33;39;41",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1123.257413071257,
+                "lat": 585.1875539008483,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513353": {
+                "addr:housenumber": "21",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 874.257383266592,
+                "lat": 552.78121118943,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513354": {
+                "addr:housenumber": "1620",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 989.400300879252,
+                "lat": 555.1460313828727,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513355": {
+                "addr:housenumber": "30",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 835.1814141320386,
+                "lat": 559.4768643547018,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513368": {
+                "addr:housenumber": "47",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 682.8315820185613,
+                "lat": 525.5145389976872,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513371": {
+                "addr:housenumber": "36",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 856.1969099821677,
+                "lat": 522.6723290993377,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513373": {
+                "addr:housenumber": "52",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 827.7646850215845,
+                "lat": 513.6949337081105,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513375": {
+                "addr:housenumber": "93",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 741.7815937447185,
+                "lat": 509.52312622957066,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513377": {
+                "addr:housenumber": "1684",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 866.379801816472,
+                "lat": 495.2165066692833,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513384": {
+                "addr:housenumber": "665",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "name": "Brookline Fire Station Number 7",
+                "lon": 1067.4716805565963,
+                "lat": 486.4397955180285,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513387": {
+                "addr:housenumber": "118",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 693.1361220908445,
+                "lat": 477.5206965773486,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513391": {
+                "addr:housenumber": "676",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1036.9938394129692,
+                "lat": 468.4991919247335,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513394": {
+                "addr:housenumber": "672;674",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1048.0477173797285,
+                "lat": 462.9495504244289,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513404": {
+                "addr:housenumber": "58",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1061.6713667114923,
+                "lat": 443.0191290557621,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513405": {
+                "addr:housenumber": "66",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1081.374949233741,
+                "lat": 440.94765202946843,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513413": {
+                "addr:housenumber": "157",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1002.7980456741302,
+                "lat": 428.6882622985799,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513424": {
+                "addr:housenumber": "152",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1005.311432837103,
+                "lat": 401.5768200680163,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513431": {
+                "addr:housenumber": "7",
+                "addr:street": "Claflin Path",
+                "building": "yes",
+                "lon": 977.0825587313553,
+                "lat": 378.7426495638998,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513447": {
+                "addr:housenumber": "72",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1015.7809988503681,
+                "lat": 330.00655919794565,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29513448": {
+                "access": "yes",
+                "amenity": "toilets",
+                "building": "yes",
+                "toilets:disposal": "flush",
+                "unisex": "yes",
+                "lon": 589.2204025834261,
+                "lat": 332.09014139655653,
+                "weight": 1,
+                "category": "amenity"
+            },
+            "29576796": {
+                "addr:housenumber": "769",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 880.6281854017273,
+                "lat": 627.8113958620888,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29577042": {
+                "addr:housenumber": "25",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 794.5190876871517,
+                "lat": 594.8267889421018,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29577562": {
+                "addr:housenumber": "29",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 995.3212142707064,
+                "lat": 449.40413805263074,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29577653": {
+                "addr:housenumber": "1581;1583",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 1078.4221330063588,
+                "lat": 503.5139856226061,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29578269": {
+                "addr:housenumber": "25",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 985.9175957121162,
+                "lat": 455.8502809373011,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29578677": {
+                "addr:housenumber": "39",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 803.6019700158935,
+                "lat": 547.9364887430997,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29578735": {
+                "addr:housenumber": "40",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 815.7009169378107,
+                "lat": 553.1645969464557,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29579101": {
+                "addr:housenumber": "205",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "lon": 934.300799103707,
+                "lat": 345.43435363054965,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29579898": {
+                "addr:housenumber": "25",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 701.1560396061678,
+                "lat": 542.2301432889278,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29580238": {
+                "addr:housenumber": "677",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1042.4203423314086,
+                "lat": 492.09596991251664,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29580421": {
+                "addr:housenumber": "59",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 685.9359818655729,
+                "lat": 548.4291527081291,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29580860": {
+                "addr:housenumber": "25",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 833.7416557502867,
+                "lat": 581.3726352039525,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29581403": {
+                "addr:housenumber": "54",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1051.1571836337775,
+                "lat": 445.83631791211735,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29581585": {
+                "addr:housenumber": "1731",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "building:levels": "15",
+                "lon": 776.7801038116576,
+                "lat": 412.50647107879985,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29582304": {
+                "addr:housenumber": "124",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1066.8126914870536,
+                "lat": 375.4803500471083,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29582650": {
+                "addr:housenumber": "36",
+                "addr:street": "Cummings Road",
+                "addr:unit": "1;2;3;4;5;6;7;8;9;10",
+                "building": "yes",
+                "lon": 577.4286269949893,
+                "lat": 581.794989669552,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29584101": {
+                "addr:housenumber": "140;142",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 653.6980683098324,
+                "lat": 472.17070752135106,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29584422": {
+                "addr:housenumber": "141",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 648.2599344471271,
+                "lat": 493.50217831301234,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29584628": {
+                "addr:housenumber": "32",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1121.6924740161762,
+                "lat": 618.1259307541814,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29584954": {
+                "addr:housenumber": "50;64",
+                "addr:street": "Westbourne Terrace",
+                "building": "school",
+                "lon": 939.8320758564797,
+                "lat": 610.5852247245846,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29585112": {
+                "addr:housenumber": "751",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 910.9532035626288,
+                "lat": 602.9999365284909,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29585635": {
+                "addr:housenumber": "60",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 781.9789956588536,
+                "lat": 540.711856093373,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29585860": {
+                "addr:housenumber": "36",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 825.6591027397121,
+                "lat": 557.1797004707159,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29585982": {
+                "addr:housenumber": "47",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1029.5848324856127,
+                "lat": 433.46831327144037,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29586350": {
+                "addr:housenumber": "80",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 674.8731559709207,
+                "lat": 601.9482788837556,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29587577": {
+                "addr:housenumber": "67",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1069.459618695536,
+                "lat": 420.24714266021186,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29587602": {
+                "addr:housenumber": "683",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1032.4763615354927,
+                "lat": 492.7058900743808,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29587763": {
+                "addr:housenumber": "91",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1115.3937456025983,
+                "lat": 413.24886016556724,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29587830": {
+                "addr:housenumber": "84",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 764.0274909765137,
+                "lat": 494.0430971459524,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29588084": {
+                "addr:housenumber": "1595",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 1051.6145085547978,
+                "lat": 507.37454090941355,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29588530": {
+                "addr:housenumber": "51",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 819.4152876370507,
+                "lat": 532.5678935818376,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589122": {
+                "addr:housenumber": "33",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "lon": 660.9301323445336,
+                "lat": 622.2518233285066,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589502": {
+                "addr:housenumber": "203;205",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 922.0162337482864,
+                "lat": 468.2908337049136,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589504": {
+                "addr:housenumber": "58",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1083.345332000804,
+                "lat": 630.4242891936435,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589694": {
+                "addr:housenumber": "61",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 948.9039401123223,
+                "lat": 639.6830884043593,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589729": {
+                "addr:housenumber": "22",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1100.178468262458,
+                "lat": 613.5976379030087,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589752": {
+                "addr:housenumber": "59",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 770.3128810718453,
+                "lat": 560.954841172871,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29589790": {
+                "addr:housenumber": "134",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 666.2999105753822,
+                "lat": 471.90308554296035,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29590253": {
+                "addr:housenumber": "12",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1080.067898020656,
+                "lat": 609.7483955179073,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29590864": {
+                "addr:housenumber": "662",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1068.7200050335364,
+                "lat": 460.2995124522263,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29591433": {
+                "addr:housenumber": "359",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 850.6772641732485,
+                "lat": 428.1322534552734,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29628934": {
+                "addr:housenumber": "58",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1064.5105565121758,
+                "lat": 572.8837581704067,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29628977": {
+                "addr:housenumber": "78",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 596.6443176158207,
+                "lat": 518.509372492679,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629147": {
+                "addr:housenumber": "37",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 597.9361747160478,
+                "lat": 485.8213630423389,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629165": {
+                "addr:housenumber": "41",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 596.7160695796114,
+                "lat": 496.5991127459996,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629322": {
+                "addr:housenumber": "88",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1011.7599334936361,
+                "lat": 608.6321216750005,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629377": {
+                "addr:housenumber": "37",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 846.9627981376561,
+                "lat": 543.0344279435521,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629916": {
+                "addr:housenumber": "1756",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 720.9710694558687,
+                "lat": 455.7122782786283,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29629920": {
+                "addr:housenumber": "57",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1049.2558102289636,
+                "lat": 426.08465512801195,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29630741": {
+                "addr:housenumber": "309",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 874.981552559922,
+                "lat": 333.73495252524606,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631367": {
+                "addr:housenumber": "724;726",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 928.4892283229455,
+                "lat": 545.9608581564748,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631379": {
+                "addr:housenumber": "9",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 805.3097167958739,
+                "lat": 618.5405836024906,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631589": {
+                "addr:housenumber": "167",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 599.9102347137858,
+                "lat": 475.46895264191454,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631885": {
+                "addr:housenumber": "628",
+                "addr:street": "Washington Street",
+                "building": "apartments",
+                "lon": 1137.3041568228198,
+                "lat": 450.32501560752473,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631925": {
+                "addr:housenumber": "222;224",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "lon": 897.515744676297,
+                "lat": 375.8581360461641,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29631966": {
+                "addr:housenumber": "18",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 615.5187305873427,
+                "lat": 564.8175672505372,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29632080": {
+                "addr:housenumber": "133",
+                "addr:street": "Beaconsfield Road",
+                "building": "yes",
+                "lon": 778.068996288288,
+                "lat": 346.4604743346333,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29632748": {
+                "addr:housenumber": "65",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 772.378481826766,
+                "lat": 591.2930733305386,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29633329": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "8",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 597.6494528687047,
+                "lat": 630.5471373547209,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29633502": {
+                "addr:housenumber": "658",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1079.3543109803759,
+                "lat": 456.86131163101845,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29633628": {
+                "addr:housenumber": "319;321;323;325",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 883.5683356119282,
+                "lat": 364.0675500067843,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29633997": {
+                "addr:housenumber": "40",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "lon": 936.3669124416828,
+                "lat": 351.9068073030329,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29634027": {
+                "addr:housenumber": "102",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1077.669526462394,
+                "lat": 346.2843689392199,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29634059": {
+                "addr:housenumber": "15",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 721.5486125811291,
+                "lat": 525.5939872577212,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29634335": {
+                "addr:housenumber": "28",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1112.7519005152117,
+                "lat": 617.2158870525345,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29635908": {
+                "addr:housenumber": "42",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 991.4225325983358,
+                "lat": 345.5978563800879,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29636089": {
+                "addr:housenumber": "15",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 879.5176617391545,
+                "lat": 559.2085606538215,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29636251": {
+                "addr:housenumber": "112",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 984.9763472347781,
+                "lat": 637.0862800290497,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29636320": {
+                "addr:housenumber": "10",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 865.2665542797376,
+                "lat": 579.3023189481944,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29636900": {
+                "addr:housenumber": "72",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1050.0796052344244,
+                "lat": 636.237812413465,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29637069": {
+                "addr:housenumber": "15;17;19;21;23;25",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 1004.6029059174123,
+                "lat": 580.7924415259431,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29637262": {
+                "addr:housenumber": "111",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 706.1317004248255,
+                "lat": 500.39947381517385,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29637597": {
+                "addr:housenumber": "208",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 915.4041458508517,
+                "lat": 448.14118508769013,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29637905": {
+                "addr:housenumber": "783",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 857.2548492463374,
+                "lat": 639.2972152820175,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29638156": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "344",
+                "addr:postcode": "02445",
+                "addr:state": "MA",
+                "addr:street": "Tappan",
+                "building": "yes",
+                "building:levels": "3",
+                "lon": 842.3484592816488,
+                "lat": 380.4547853543823,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29638400": {
+                "addr:housenumber": "151",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 626.0326685175003,
+                "lat": 489.77378498571187,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29638479": {
+                "addr:housenumber": "79",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1090.9542713214782,
+                "lat": 415.2949108005681,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29638718": {
+                "addr:housenumber": "689",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1011.721781916093,
+                "lat": 505.16475135047574,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29639035": {
+                "addr:housenumber": "201",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "lon": 932.5212646079273,
+                "lat": 337.7047860188197,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681082": {
+                "addr:housenumber": "5",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 817.6297469984952,
+                "lat": 627.7069265596481,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681085": {
+                "addr:housenumber": "11",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 789.9084532996577,
+                "lat": 625.4006423397448,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681086": {
+                "addr:housenumber": "45",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 973.6253490305618,
+                "lat": 619.734426363445,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681093": {
+                "addr:housenumber": "71",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 761.4645837744459,
+                "lat": 599.6499542300589,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681096": {
+                "addr:housenumber": "26",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 813.3259162223213,
+                "lat": 589.6615281447021,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681099": {
+                "addr:housenumber": "55",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 784.0288066084114,
+                "lat": 577.4014751164234,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681108": {
+                "addr:housenumber": "64",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 658.751236979245,
+                "lat": 563.0983378656813,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681109": {
+                "addr:housenumber": "20",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 607.7502130756595,
+                "lat": 566.10602198064,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681110": {
+                "addr:housenumber": "16",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 622.9629163540799,
+                "lat": 564.7107764078498,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681116": {
+                "addr:housenumber": "24",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 599.7225733747642,
+                "lat": 571.6080719104236,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681117": {
+                "addr:housenumber": "29",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 855.6542733096554,
+                "lat": 544.625143503928,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681120": {
+                "addr:housenumber": "18",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 895.5871597639942,
+                "lat": 540.5209923356697,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681121": {
+                "addr:housenumber": "43",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 837.961400518527,
+                "lat": 538.6874731656915,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681122": {
+                "addr:housenumber": "66",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 767.1592657634062,
+                "lat": 537.6776032420976,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681129": {
+                "addr:housenumber": "26",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 875.6296031780348,
+                "lat": 532.6542880366878,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681131": {
+                "addr:housenumber": "1658",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 906.1088198793113,
+                "lat": 521.6369222346796,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681133": {
+                "addr:housenumber": "48",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 657.7898454500098,
+                "lat": 525.8886570200627,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681134": {
+                "addr:housenumber": "30",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 790.9215303489341,
+                "lat": 523.2371266296605,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681137": {
+                "addr:housenumber": "71",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 782.5411897501473,
+                "lat": 517.8057362724819,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681138": {
+                "addr:housenumber": "56",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 643.3323227760368,
+                "lat": 518.8766111098319,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681140": {
+                "addr:housenumber": "85",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 757.8178741192935,
+                "lat": 514.5214019674745,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681144": {
+                "addr:housenumber": "68",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 620.6884266107826,
+                "lat": 515.1407556890583,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681149": {
+                "addr:housenumber": "667;669;671",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1058.0391753088088,
+                "lat": 487.4606282697404,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681151": {
+                "addr:housenumber": "157",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 615.2203846059149,
+                "lat": 486.10492257782977,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681152": {
+                "addr:housenumber": "102",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 729.5316352151004,
+                "lat": 484.5723744931308,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681154": {
+                "addr:housenumber": "659;661",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1078.8532270150668,
+                "lat": 481.79349104754675,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681158": {
+                "addr:housenumber": "74",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 782.030476887477,
+                "lat": 499.99204353569615,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681170": {
+                "addr:housenumber": "34",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1016.9890916996033,
+                "lat": 460.44228716543824,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681171": {
+                "addr:housenumber": "40",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1026.258164473777,
+                "lat": 455.48298013610804,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681177": {
+                "addr:housenumber": "24;26",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 581.4226170387857,
+                "lat": 457.519210288015,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681188": {
+                "addr:housenumber": "53",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1040.7470661830894,
+                "lat": 430.04553410867527,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681201": {
+                "addr:housenumber": "81",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1099.5332368532097,
+                "lat": 417.8420271634153,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681210": {
+                "addr:housenumber": "111",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1088.1484081269496,
+                "lat": 396.41470993291006,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681212": {
+                "addr:housenumber": "7;9",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1027.7950017441908,
+                "lat": 392.90984774729947,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681223": {
+                "addr:housenumber": "1773",
+                "addr:street": "Beacon Street",
+                "amenity": "place_of_worship",
+                "building": "yes",
+                "ele": "30",
+                "gnis:county_id": "021",
+                "gnis:created": "02/01/1994",
+                "gnis:feature_id": "607128",
+                "gnis:state_id": "25",
+                "name": "All Saints Parish / Evergreen Church of Boston",
+                "old_name": "Saint Andrew Episcopal Church",
+                "religion": "christian",
+                "website": "http://www.allsaintsbrookline.org/",
+                "lon": 688.6266524046981,
+                "lat": 385.32885869857336,
+                "weight": 50,
+                "category": "amenity"
+            },
+            "29681227": {
+                "addr:housenumber": "15",
+                "addr:street": "Claflin Path",
+                "building": "yes",
+                "lon": 962.3151680863417,
+                "lat": 386.39096327359397,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681238": {
+                "addr:housenumber": "23",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "lon": 790.5331739319619,
+                "lat": 362.77458117064646,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681254": {
+                "addr:housenumber": "108;112;116",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1084.5664554465695,
+                "lat": 370.0934842202059,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681283": {
+                "addr:housenumber": "208",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "lon": 905.9535181699812,
+                "lat": 344.2817089933313,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681284": {
+                "addr:housenumber": "90",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1047.5011583277471,
+                "lat": 342.7216340766352,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681290": {
+                "addr:housenumber": "42",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "lon": 731.4265257986757,
+                "lat": 335.84278192075186,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29681299": {
+                "addr:housenumber": "66",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1005.9146212411473,
+                "lat": 330.6356965528369,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29707931": {
+                "addr:housenumber": "44",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1111.7611319987786,
+                "lat": 630.7874443879011,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29707933": {
+                "addr:housenumber": "48,50",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1095.0792524923825,
+                "lat": 628.5450025194207,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29707990": {
+                "addr:housenumber": "6",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "lon": 633.373278953562,
+                "lat": 633.9675397019414,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708001": {
+                "addr:housenumber": "26",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 761.0029687509716,
+                "lat": 623.365646657946,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708005": {
+                "addr:housenumber": "782;784",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 842.9962647509674,
+                "lat": 618.8908782023691,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708009": {
+                "addr:housenumber": "85",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 737.0470366828216,
+                "lat": 619.4798860789758,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708014": {
+                "addr:housenumber": "18",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 770.7972726382226,
+                "lat": 615.1784040062448,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708020": {
+                "addr:housenumber": "41",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 978.1299566006762,
+                "lat": 612.7930215998956,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708032": {
+                "addr:housenumber": "88",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 722.8134301187797,
+                "lat": 603.8291132510637,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708034": {
+                "addr:housenumber": "757",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 903.4017652337164,
+                "lat": 610.7028064290334,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708044": {
+                "addr:housenumber": "82",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 732.9211838722186,
+                "lat": 596.1392881938316,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708049": {
+                "addr:housenumber": "19",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1097.1058968893485,
+                "lat": 592.4694308408953,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708051": {
+                "addr:housenumber": "76",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 740.5288838293842,
+                "lat": 586.9755063015625,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708053": {
+                "addr:housenumber": "93",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 722.0479805057038,
+                "lat": 579.9899922770373,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708067": {
+                "addr:housenumber": "87",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 730.802486135015,
+                "lat": 571.3402656826893,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708080": {
+                "addr:housenumber": "69",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 757.0595065813471,
+                "lat": 556.8755787235557,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708085": {
+                "addr:housenumber": "92",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 712.520044312712,
+                "lat": 555.172213195815,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708094": {
+                "addr:housenumber": "82",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 730.4457947599652,
+                "lat": 543.1119968615997,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708097": {
+                "addr:housenumber": "73",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 606.2087179785696,
+                "lat": 543.8441110999072,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708122": {
+                "addr:housenumber": "47",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 829.3228502300774,
+                "lat": 534.7698743235446,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708155": {
+                "addr:housenumber": "7",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 732.1060644067811,
+                "lat": 518.9688094148862,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708166": {
+                "addr:housenumber": "45",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 597.1811166853789,
+                "lat": 505.8463042563067,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708171": {
+                "addr:housenumber": "18",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 796.7438122425598,
+                "lat": 500.1220497792009,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708174": {
+                "addr:housenumber": "1668",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 890.4536900339859,
+                "lat": 505.06904058616345,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708180": {
+                "addr:housenumber": "72",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 788.761647627512,
+                "lat": 501.661230834914,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708182": {
+                "addr:housenumber": "133",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 662.3214193784065,
+                "lat": 498.2739380707649,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708199": {
+                "addr:housenumber": "10;12",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 979.601238877013,
+                "lat": 486.5879988830961,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708201": {
+                "addr:housenumber": "100",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 739.6892631131435,
+                "lat": 487.40258976852186,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708208": {
+                "addr:housenumber": "112",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 707.557485329848,
+                "lat": 477.9032532135647,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708217": {
+                "addr:housenumber": "90",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 750.3117034432365,
+                "lat": 489.50948657910345,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708222": {
+                "addr:housenumber": "30;32;34;36;38",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 576.1694206401156,
+                "lat": 478.26115730564936,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708240": {
+                "addr:housenumber": "648;652",
+                "addr:street": "Washington Street",
+                "building": "apartments",
+                "lon": 1094.9059323539002,
+                "lat": 458.01253754960953,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708315": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "15-27",
+                "addr:postcode": "02445",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 609.4788215309491,
+                "lat": 444.98479067597896,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708381": {
+                "addr:housenumber": "97",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1127.3365327962617,
+                "lat": 411.1420625661391,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708401": {
+                "addr:housenumber": "19",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1004.7296949453287,
+                "lat": 385.8024528705454,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708419": {
+                "addr:housenumber": "30;32;34;36;38;40;42;44;46;48;50;52;54;56;58;60;62;64;66;68;70;72;74;76",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "lon": 831.7175445576644,
+                "lat": 344.0438064127261,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708458": {
+                "addr:housenumber": "121;123;125;127",
+                "addr:street": "Beaconsfield Road",
+                "building": "yes",
+                "lon": 795.7092846806008,
+                "lat": 342.92476883172475,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708460": {
+                "addr:housenumber": "311;313;315;317",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 891.4173492529716,
+                "lat": 349.5709777689024,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708463": {
+                "addr:housenumber": "21",
+                "addr:street": "Colbourne Crescent",
+                "building": "yes",
+                "lon": 1116.9330343609533,
+                "lat": 350.3223562153961,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29708467": {
+                "addr:housenumber": "56",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 998.0170329324463,
+                "lat": 333.20083248880155,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29786119": {
+                "addr:housenumber": "77",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 578.8932679713043,
+                "lat": 561.8576036805575,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29786176": {
+                "addr:housenumber": "329",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 873.1010056516285,
+                "lat": 376.14073078590116,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29786948": {
+                "addr:housenumber": "29",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1120.3522460114398,
+                "lat": 596.4682835850781,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29787914": {
+                "addr:housenumber": "11",
+                "addr:street": "Claflin Path",
+                "building": "yes",
+                "lon": 969.412713575702,
+                "lat": 383.1489325875604,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29788205": {
+                "addr:housenumber": "91",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1125.3337223026429,
+                "lat": 398.1787118757192,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29788770": {
+                "addr:housenumber": "30",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1007.3994869857618,
+                "lat": 465.88679606673685,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29789079": {
+                "addr:housenumber": "41",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1017.8659886397187,
+                "lat": 438.6418652827108,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29789339": {
+                "addr:housenumber": "64",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1072.1100439878305,
+                "lat": 441.78755205675463,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29789698": {
+                "addr:housenumber": "310;312",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "lon": 853.2470355382532,
+                "lat": 329.97405763696634,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29789984": {
+                "addr:housenumber": "60",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 633.6341171830959,
+                "lat": 516.3954006889132,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29790106": {
+                "addr:housenumber": "29",
+                "addr:street": "Colbourne Crescent",
+                "building": "yes",
+                "lon": 1120.0956978851848,
+                "lat": 339.68273814527885,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29790193": {
+                "addr:housenumber": "145;147",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 635.8067476368643,
+                "lat": 492.4858412422363,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29790321": {
+                "addr:housenumber": "666",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1057.3478014658444,
+                "lat": 463.15036363927175,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29790590": {
+                "addr:housenumber": "1717",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "name": "Star Market",
+                "shop": "supermarket",
+                "lon": 818.6305948987308,
+                "lat": 409.1136615881893,
+                "weight": 1,
+                "category": "shop"
+            },
+            "29790885": {
+                "addr:housenumber": "765",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 888.966428518396,
+                "lat": 621.5095753837159,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29791132": {
+                "addr:housenumber": "46",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1039.1998100911933,
+                "lat": 449.7040036430845,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29791440": {
+                "addr:housenumber": "42",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 660.6654398336323,
+                "lat": 515.2485414776247,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29791574": {
+                "addr:housenumber": "6",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 644.6400685764785,
+                "lat": 568.3338713118997,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29791695": {
+                "addr:housenumber": "85",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1028.6744727464384,
+                "lat": 621.3772476007891,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792128": {
+                "addr:housenumber": "32",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 866.9401845315039,
+                "lat": 527.5139008829619,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792150": {
+                "addr:housenumber": "145;147;149",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1021.6464929180223,
+                "lat": 423.7866876335601,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792238": {
+                "addr:housenumber": "70",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 751.8650505379472,
+                "lat": 579.5270108608324,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792239": {
+                "addr:housenumber": "19",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 711.002682744265,
+                "lat": 535.9097504906433,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792333": {
+                "addr:housenumber": "98",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 705.8635077339419,
+                "lat": 614.2423258916256,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792459": {
+                "addr:housenumber": "78",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 775.9619431140633,
+                "lat": 495.96068923094634,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792583": {
+                "addr:housenumber": "1550;1560",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "building:levels": "14",
+                "lon": 1134.8454454845573,
+                "lat": 552.9262038018594,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792803": {
+                "addr:housenumber": "38",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1119.7627859353308,
+                "lat": 630.6761762893773,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792844": {
+                "addr:housenumber": "74",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 668.9471761728412,
+                "lat": 589.0154767123436,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29792908": {
+                "addr:housenumber": "4",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1047.7996541228538,
+                "lat": 371.49776792548073,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29793353": {
+                "addr:housenumber": "24",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 847.2657747066844,
+                "lat": 564.2569153271497,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29793492": {
+                "addr:housenumber": "747",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 917.2330555252441,
+                "lat": 595.1438449840384,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29793784": {
+                "addr:housenumber": "16",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 706.546859767688,
+                "lat": 514.0371950417975,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29793876": {
+                "addr:housenumber": "12",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 633.3097854381499,
+                "lat": 565.6533216704756,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29794134": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "103",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 699.4018643830017,
+                "lat": 587.9665459559162,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29794285": {
+                "addr:housenumber": "106",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1084.9332827785058,
+                "lat": 341.6562130159014,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29795832": {
+                "addr:housenumber": "1768",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 700.0406129693619,
+                "lat": 448.4947543971044,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29796752": {
+                "addr:housenumber": "16",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1031.9572591397946,
+                "lat": 363.9556001861833,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29797087": {
+                "addr:housenumber": "9",
+                "addr:street": "Colbourne Crescent",
+                "building": "yes",
+                "lon": 1099.4992020409852,
+                "lat": 366.400697761707,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29820082": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "1600",
+                "addr:postcode": "02446",
+                "addr:street": "Beacon Street",
+                "building": "apartments",
+                "building:levels": "11",
+                "name": "Washington on the Square",
+                "website": "http://www.nordblom.com/Management/Multi-family-Management/Multi-family-Management/Washington-on-the-Square.aspx",
+                "lon": 1032.1854925891932,
+                "lat": 553.3433555306049,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29820128": {
+                "addr:housenumber": "40",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 847.4894840483931,
+                "lat": 520.7410188225017,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29820614": {
+                "addr:housenumber": "121",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 689.1720674291108,
+                "lat": 497.23173241043605,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29820749": {
+                "addr:housenumber": "1589",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 1064.0909844922558,
+                "lat": 507.53124486328096,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29821169": {
+                "addr:housenumber": "37",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 683.8574885174111,
+                "lat": 509.21784371269945,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29821574": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "11",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 634.2300514141023,
+                "lat": 591.4572393766423,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29821811": {
+                "addr:housenumber": "22",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 885.3713226668826,
+                "lat": 534.4135179253701,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29821884": {
+                "addr:housenumber": "88",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1118.204620726838,
+                "lat": 435.0922305395593,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29822073": {
+                "addr:housenumber": "158",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 993.5216184390192,
+                "lat": 407.57136813776015,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29822325": {
+                "addr:housenumber": "66",
+                "addr:street": "York Terrace",
+                "building": "yes",
+                "lon": 1064.6538459330675,
+                "lat": 635.419082620765,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29822406": {
+                "addr:housenumber": "14",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 781.2118027663803,
+                "lat": 606.4709705587545,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29822438": {
+                "addr:housenumber": "655;657",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1087.7079984673635,
+                "lat": 481.8109025981597,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29822956": {
+                "addr:housenumber": "77",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 741.602172127108,
+                "lat": 563.1408994335713,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823099": {
+                "addr:housenumber": "3",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "lon": 590.0544765006093,
+                "lat": 601.2720775803771,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823131": {
+                "addr:housenumber": "110",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1091.9647606903218,
+                "lat": 334.501724040535,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823361": {
+                "addr:housenumber": "59",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 632.896219562243,
+                "lat": 544.8896332459492,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823501": {
+                "addr:housenumber": "35",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1005.1226683291264,
+                "lat": 440.85377705687046,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823666": {
+                "addr:housenumber": "175",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 973.1166654546967,
+                "lat": 443.2219321615381,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823938": {
+                "addr:housenumber": "10",
+                "addr:street": "Downing Road",
+                "building": "yes",
+                "lon": 828.7428283782125,
+                "lat": 610.110813715615,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823940": {
+                "addr:housenumber": "48",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 837.1308366848323,
+                "lat": 518.0559467006722,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29823965": {
+                "addr:housenumber": "23",
+                "addr:street": "Warwick Road",
+                "building": "yes",
+                "lon": 645.1921578944558,
+                "lat": 467.74851511991153,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29824125": {
+                "addr:housenumber": "21",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 777.66633952939,
+                "lat": 633.7789145721565,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29824772": {
+                "addr:housenumber": "785",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 851.9222519034234,
+                "lat": 642.3790597046384,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29824995": {
+                "addr:housenumber": "9",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 887.2752701334164,
+                "lat": 565.6684116804295,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29824997": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "1601",
+                "addr:postcode": "02446",
+                "addr:street": "Beacon Street",
+                "building": "apartments",
+                "name": "The Knickerbocker",
+                "lon": 1032.8800211746216,
+                "lat": 509.61820384744277,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29825195": {
+                "addr:housenumber": "97",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1113.677704623468,
+                "lat": 399.66901161591755,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29825228": {
+                "addr:housenumber": "740",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 898.936912613669,
+                "lat": 576.7335164529284,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29825320": {
+                "addr:housenumber": "63",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1059.567500472416,
+                "lat": 421.936063049877,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29826089": {
+                "addr:housenumber": "2",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1062.6605690004576,
+                "lat": 602.2517557590375,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29826496": {
+                "addr:housenumber": "673;675",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1050.531972703885,
+                "lat": 489.39911421571736,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29827209": {
+                "addr:housenumber": "750",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 895.0944108543868,
+                "lat": 584.9360333639272,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29827231": {
+                "addr:housenumber": "761",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 895.72848799577,
+                "lat": 616.2512871600395,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29827393": {
+                "addr:housenumber": "46",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1089.6085138516041,
+                "lat": 568.7479345632162,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29827597": {
+                "addr:housenumber": "99",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 712.5351073384462,
+                "lat": 585.9296525070315,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29827891": {
+                "addr:housenumber": "18",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 856.9845727917345,
+                "lat": 571.1437638994385,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29828241": {
+                "addr:housenumber": "637;651",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 1115.1361487847148,
+                "lat": 482.1436566729672,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29828503": {
+                "addr:housenumber": "101;103;105;107;109;111;113;115;117;119",
+                "addr:street": "Beaconsfield Road",
+                "building": "yes",
+                "lon": 809.6454120973523,
+                "lat": 342.3317519085248,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29828633": {
+                "addr:housenumber": "86",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1035.934184108478,
+                "lat": 339.5320959905321,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29828687": {
+                "addr:housenumber": "69",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1078.1279545523694,
+                "lat": 416.3202576583153,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29828720": {
+                "addr:housenumber": "74",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1091.0808770114293,
+                "lat": 438.7207976444999,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29829014": {
+                "addr:housenumber": "15",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 842.629890002467,
+                "lat": 588.3278033830879,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29932195": {
+                "addr:housenumber": "25",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 865.1893324355653,
+                "lat": 549.7789624251634,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29932399": {
+                "addr:housenumber": "16;18",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 989.6997500296347,
+                "lat": 479.24108673274014,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29932915": {
+                "addr:housenumber": "7",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "lon": 656.0022346664481,
+                "lat": 593.6749550014185,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933255": {
+                "addr:housenumber": "18",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "lon": 584.1768261426269,
+                "lat": 447.9003456009344,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933266": {
+                "addr:housenumber": "31",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 821.9962132690955,
+                "lat": 574.1118528590443,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933422": {
+                "addr:housenumber": "22",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 696.4749249640722,
+                "lat": 523.8224863720648,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933499": {
+                "addr:housenumber": "80",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1099.420836169657,
+                "lat": 437.5101145064754,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933571": {
+                "addr:housenumber": "78",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 740.6521527733944,
+                "lat": 538.0018450030796,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29933606": {
+                "addr:housenumber": "25",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1109.747112760793,
+                "lat": 593.7729755813643,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29934394": {
+                "addr:housenumber": "202",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "lon": 912.9289796011009,
+                "lat": 336.6508068342501,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29934534": {
+                "addr:housenumber": "48",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 992.6603973964171,
+                "lat": 338.4512901203171,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29935174": {
+                "addr:housenumber": "139",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1035.2769404132655,
+                "lat": 414.0196114639595,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29935250": {
+                "addr:housenumber": "1788",
+                "addr:street": "Beacon Street",
+                "building": "apartments",
+                "lon": 652.3289536146616,
+                "lat": 436.3274188229826,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29935436": {
+                "addr:housenumber": "5",
+                "addr:street": "Mason Terrace",
+                "building": "yes",
+                "lon": 1078.4143018669588,
+                "lat": 587.0914543295414,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29935464": {
+                "addr:housenumber": "25",
+                "addr:street": "Orchard Road",
+                "building": "yes",
+                "lon": 772.1332105405049,
+                "lat": 639.4469546155572,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29935988": {
+                "addr:housenumber": "12",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 901.7389215251807,
+                "lat": 546.5749055014123,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936027": {
+                "addr:housenumber": "79",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 750.8723208315735,
+                "lat": 609.3655993578743,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936032": {
+                "addr:housenumber": "92",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1004.0752704606303,
+                "lat": 616.901318375089,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936326": {
+                "addr:housenumber": "119;123;127",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1067.9307581862736,
+                "lat": 404.5366560805041,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936472": {
+                "addr:housenumber": "106",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 719.5854617008124,
+                "lat": 482.0813620146298,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936577": {
+                "addr:housenumber": "736",
+                "addr:street": "Washington Street",
+                "building": "yes",
+                "lon": 913.6114463747857,
+                "lat": 560.923828681086,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29936871": {
+                "addr:housenumber": "49",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 968.0494415917399,
+                "lat": 625.8964569650057,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29937206": {
+                "addr:housenumber": "65",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 620.537292430128,
+                "lat": 543.1761708615113,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29937601": {
+                "addr:housenumber": "135",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1049.1476996474526,
+                "lat": 409.85012552566633,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29937665": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "28",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 589.8090046389618,
+                "lat": 576.0538211145665,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29937807": {
+                "addr:housenumber": "1;3",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 1037.778928160404,
+                "lat": 394.2679486794417,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29938103": {
+                "addr:housenumber": "78",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1028.1997422672202,
+                "lat": 593.9727938503283,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29938363": {
+                "addr:housenumber": "53",
+                "addr:street": "Windsor Road",
+                "building": "yes",
+                "lon": 645.0727560521423,
+                "lat": 546.6133767364279,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29938567": {
+                "addr:housenumber": "11",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 850.2877228709192,
+                "lat": 597.1589417511454,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29938636": {
+                "addr:housenumber": "146",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 1017.2138930675337,
+                "lat": 399.37069371937395,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939106": {
+                "addr:housenumber": "29",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 810.7755116050429,
+                "lat": 530.1354170772884,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939302": {
+                "addr:housenumber": "31;33;35",
+                "addr:street": "Westbourne Terrace",
+                "building": "yes",
+                "lon": 987.1119602338284,
+                "lat": 597.6731628733107,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939657": {
+                "addr:housenumber": "165",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "lon": 985.4816259674259,
+                "lat": 434.09745062633164,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939839": {
+                "addr:housenumber": "17",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "lon": 693.8328347278915,
+                "lat": 466.3336925266967,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939847": {
+                "addr:housenumber": "64",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "lon": 761.6464841182486,
+                "lat": 571.5218432794056,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939905": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "97",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 719.7733681878033,
+                "lat": 632.2745566172568,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29939976": {
+                "addr:housenumber": "84",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1108.0593864585187,
+                "lat": 436.353987558887,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29940104": {
+                "addr:housenumber": "22;24",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 998.8977296774276,
+                "lat": 472.3196730085542,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29940300": {
+                "addr:housenumber": "99",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "lon": 1012.047751699753,
+                "lat": 634.9594176902731,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29940419": {
+                "addr:housenumber": "105",
+                "addr:street": "Salisbury Road",
+                "building": "yes",
+                "lon": 717.3168555265124,
+                "lat": 501.44880992007484,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29940850": {
+                "addr:housenumber": "72",
+                "addr:street": "Evans Road",
+                "building": "yes",
+                "lon": 753.5921232082775,
+                "lat": 535.0802973940549,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29941273": {
+                "addr:housenumber": "1566",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 1108.3372897615163,
+                "lat": 555.4230684962959,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29941459": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "1571",
+                "addr:postcode": "02446",
+                "addr:street": "Beacon Street",
+                "building": "apartments",
+                "name": "The Majestic",
+                "lon": 1102.1421094395382,
+                "lat": 505.76090474692313,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29941482": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "93",
+                "addr:postcode": "02445",
+                "addr:state": "MA",
+                "addr:street": "Williston Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "lon": 726.7587581419925,
+                "lat": 626.7421608424961,
+                "weight": 20,
+                "category": "residence"
+            },
+            "29941703": {
+                "addr:housenumber": "29;31",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "lon": 987.6997042683786,
+                "lat": 375.11988630875106,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272421": {
+                "addr:housenumber": "1665;1669;1671",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 890.9582754168546,
+                "lat": 466.68800375905255,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272447": {
+                "addr:housenumber": "1734",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 759.9656219789111,
+                "lat": 476.71976525822373,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272585": {
+                "addr:housenumber": "89",
+                "addr:street": "University Road",
+                "building": "yes",
+                "lon": 1107.6739922547333,
+                "lat": 417.3770420371434,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272633": {
+                "addr:housenumber": "1614",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 1009.4977148054596,
+                "lat": 543.7623597251381,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212272839": {
+                "addr:housenumber": "1811",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 605.5553966628263,
+                "lat": 368.3897416911546,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212273107": {
+                "addr:housenumber": "1821",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 577.3645206077979,
+                "lat": 360.8337921099345,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212273140": {
+                "addr:housenumber": "1815",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "lon": 595.6213580099303,
+                "lat": 364.7464162235117,
+                "weight": 20,
+                "category": "residence"
+            },
+            "212273775": {
+                "addr:housenumber": "12",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "lon": 729.6113357854648,
+                "lat": 398.01362458289697,
+                "weight": 20,
+                "category": "residence"
+            },
+            "737542191": {
+                "addr:housenumber": "43",
+                "addr:street": "Addington Road",
+                "addr:unit": "1",
+                "building": "yes",
+                "lon": 959.3815960324947,
+                "lat": 348.33047484869405,
+                "weight": 20,
+                "category": "residence"
+            },
+            "737542279": {
+                "addr:housenumber": "41",
+                "addr:street": "Addington Road",
+                "addr:unit": "2",
+                "building": "yes",
+                "lon": 959.4330772619428,
+                "lat": 352.1621767087243,
+                "weight": 20,
+                "category": "residence"
+            },
+            "967060410": {
+                "amenity": "shelter",
+                "building": "yes",
+                "shelter_type": "public_transport",
+                "lon": 1002.0269304026002,
+                "lat": 523.8656006871615,
+                "weight": 1,
+                "category": "amenity"
+            },
+            "9670662": {
+                "addr:housenumber": "1710",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 806.3393413831873,
+                "lat": 481.42720361691954,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670663": {
+                "addr:housenumber": "1712",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 802.2347143649545,
+                "lat": 480.2543099914213,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670664": {
+                "addr:housenumber": "1714",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 798.3822023666128,
+                "lat": 479.0384033882541,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670665": {
+                "addr:housenumber": "1716",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 795.0659531758473,
+                "lat": 477.5677077632201,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670666": {
+                "addr:housenumber": "1718",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 791.2876599494651,
+                "lat": 476.36863232560427,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670667": {
+                "addr:housenumber": "1720;1720B",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 787.568141128435,
+                "lat": 476.07321635313184,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670668": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 781.5300364368763,
+                "lat": 475.661239724623,
+                "weight": 1,
+                "category": "other"
+            },
+            "9670669": {
+                "addr:housenumber": "1726",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 776.6017812510778,
+                "lat": 471.8497546090519,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670670": {
+                "addr:housenumber": "1728",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 773.7016719958772,
+                "lat": 468.5171838604081,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670671": {
+                "addr:housenumber": "1730",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 769.8886289401948,
+                "lat": 469.08015732362986,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670672": {
+                "addr:housenumber": "1732",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 767.0369978430546,
+                "lat": 466.38717086057505,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670673": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 762.9612055134969,
+                "lat": 466.6850138972884,
+                "weight": 1,
+                "category": "other"
+            },
+            "9670674": {
+                "addr:housenumber": "1736",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 759.9551112282287,
+                "lat": 464.1410808578925,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670675": {
+                "addr:housenumber": "1738",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 756.6635301253367,
+                "lat": 463.10799553348124,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670676": {
+                "addr:housenumber": "1740",
+                "addr:street": "Beacon Street",
+                "building": "house",
+                "type": "multipolygon",
+                "lon": 753.3751665992852,
+                "lat": 462.07781213437823,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9670677": {
+                "addr:housenumber": "1742",
+                "addr:street": "Beacon Street",
+                "building": "house",
+                "type": "multipolygon",
+                "lon": 749.4397126205782,
+                "lat": 463.41721177091364,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695497": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "84",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "type": "multipolygon",
+                "lon": 678.0903037964006,
+                "lat": 610.5130205303624,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695498": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "86",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "type": "multipolygon",
+                "lon": 681.1048157837082,
+                "lat": 615.4184346654094,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695499": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "88",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "type": "multipolygon",
+                "lon": 684.1840368147142,
+                "lat": 621.0699337355834,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695500": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "90",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "type": "multipolygon",
+                "lon": 687.4548824228243,
+                "lat": 626.7838241951447,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695501": {
+                "addr:housenumber": "92",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 691.2669959555659,
+                "lat": 632.3666443721277,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695502": {
+                "addr:housenumber": "94",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 695.0181900346154,
+                "lat": 636.9391109719172,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695503": {
+                "addr:housenumber": "96",
+                "addr:street": "Corey Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 699.4625216649209,
+                "lat": 642.5898845606612,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695519": {
+                "addr:housenumber": "37",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 667.9416374466132,
+                "lat": 635.9797345441525,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695520": {
+                "addr:city": "Brighton",
+                "addr:housenumber": "41",
+                "addr:postcode": "02135",
+                "addr:state": "MA",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "source": "esri/Boston_MA_Addresses",
+                "type": "multipolygon",
+                "lon": 673.0550105530549,
+                "lat": 642.2577592366463,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695521": {
+                "addr:housenumber": "17",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 622.7608525294856,
+                "lat": 589.6400538994822,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695522": {
+                "addr:housenumber": "23",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 614.388387594845,
+                "lat": 590.0723514442232,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695523": {
+                "addr:housenumber": "29",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 605.5542526356701,
+                "lat": 592.0751559553239,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695524": {
+                "addr:housenumber": "35;35A",
+                "addr:street": "Cummings Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 598.2633925295574,
+                "lat": 593.7360419895299,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695525": {
+                "addr:housenumber": "27",
+                "addr:street": "Egremont Road",
+                "addr:unit": "1;2;3;4;5;6;A;B",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 648.0105569209354,
+                "lat": 614.8073721585213,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695526": {
+                "addr:housenumber": "23",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 639.0257034339277,
+                "lat": 612.0862992058712,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695527": {
+                "addr:housenumber": "19",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 629.9866107948781,
+                "lat": 609.5188210021963,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695528": {
+                "addr:housenumber": "9;9A;15",
+                "addr:street": "Egremont Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 607.3435113631017,
+                "lat": 607.5925231412773,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9695529": {
+                "addr:housenumber": "15;15A",
+                "addr:street": "Egremont Road",
+                "addr:unit": ";1;2;3;4;5;6;7;8;9;10;11;12;A",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 613.6293694701424,
+                "lat": 608.4761593248861,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708431": {
+                "addr:housenumber": "12",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 586.1930917911238,
+                "lat": 434.8911271319794,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708432": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 586.8944410387032,
+                "lat": 429.92582172762036,
+                "weight": 1,
+                "category": "other"
+            },
+            "9708433": {
+                "addr:housenumber": "8",
+                "addr:street": "Kilsyth Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 588.449438172629,
+                "lat": 423.65632423081047,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708434": {
+                "addr:housenumber": "1822",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 589.3559698208079,
+                "lat": 416.2626060796464,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708435": {
+                "addr:housenumber": "1824",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 582.8226800552269,
+                "lat": 417.1059538698805,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708457": {
+                "addr:housenumber": "1789",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 670.3850414619291,
+                "lat": 397.9317258085703,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708458": {
+                "addr:housenumber": "1791",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 664.7439600861803,
+                "lat": 395.84114922591465,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708459": {
+                "addr:housenumber": "1793",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 657.7005193881995,
+                "lat": 393.56723050605103,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708460": {
+                "addr:housenumber": "1795",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 651.7505048020952,
+                "lat": 391.95279285936886,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708461": {
+                "addr:housenumber": "1797",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 645.133021776679,
+                "lat": 390.151181046587,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708462": {
+                "addr:housenumber": "1799",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 639.2427111159807,
+                "lat": 388.53384147500884,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708463": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 633.8411146260896,
+                "lat": 387.13632272770315,
+                "weight": 1,
+                "category": "other"
+            },
+            "9708464": {
+                "addr:housenumber": "1803",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 624.7909290070951,
+                "lat": 383.01486364903633,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708465": {
+                "addr:housenumber": "1805",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 619.465338832265,
+                "lat": 383.084026197064,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708466": {
+                "addr:housenumber": "1807",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 613.6762030873615,
+                "lat": 381.54890783595783,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708467": {
+                "addr:housenumber": "1809",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 607.2796603387393,
+                "lat": 379.7850210488855,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708468": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 601.5234153801413,
+                "lat": 378.2000863072369,
+                "weight": 1,
+                "category": "other"
+            },
+            "9708469": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 594.9456158016,
+                "lat": 376.38251390587754,
+                "weight": 1,
+                "category": "other"
+            },
+            "9708470": {
+                "addr:housenumber": "1817",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 589.2244066788849,
+                "lat": 374.81837629416214,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708471": {
+                "addr:housenumber": "1819",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 582.8107035200343,
+                "lat": 372.9243865325352,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9708472": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 577.3441119782123,
+                "lat": 371.1738486010565,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709563": {
+                "addr:housenumber": "199;201",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 932.9706528391603,
+                "lat": 465.8938435985681,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709564": {
+                "addr:housenumber": "195",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 937.6877179825519,
+                "lat": 463.18054366000433,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709565": {
+                "addr:housenumber": "191",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 941.8511649053563,
+                "lat": 460.80821991651175,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709566": {
+                "addr:housenumber": "227",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 917.2622282222613,
+                "lat": 382.88079471174945,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709567": {
+                "addr:housenumber": "231",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 916.7672934036382,
+                "lat": 391.002896054278,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709568": {
+                "addr:housenumber": "235",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 915.3485207728921,
+                "lat": 399.7618732183621,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709569": {
+                "addr:housenumber": "239",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 914.0999798683571,
+                "lat": 412.4417879990722,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709570": {
+                "addr:housenumber": "22",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 924.2817256259351,
+                "lat": 416.88237129099116,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709571": {
+                "addr:housenumber": "1646;1646A;1648;1650;1650A;1652;1654",
+                "addr:street": "Beacon Street",
+                "building": "retail",
+                "type": "multipolygon",
+                "lon": 927.4475034464054,
+                "lat": 517.0963768116326,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709572": {
+                "addr:housenumber": "1634;1634A;1636;1636A;1638;1638A;1640;1640A;1642;1642A;1644;1644A",
+                "addr:street": "Beacon Street",
+                "building": "retail",
+                "type": "multipolygon",
+                "lon": 954.1826047386714,
+                "lat": 525.0614701888353,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709573": {
+                "addr:housenumber": "1624;1626;1628;1630;1632",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 975.6346491547758,
+                "lat": 539.2728881833941,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709574": {
+                "addr:housenumber": "1622;1622A",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 988.316430329303,
+                "lat": 540.8702367151964,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709575": {
+                "addr:housenumber": "1620",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 992.5022594540065,
+                "lat": 543.764100880323,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709576": {
+                "addr:housenumber": "1618",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 997.4605453582203,
+                "lat": 545.3862769932571,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709577": {
+                "addr:housenumber": "1616",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1002.2783304062403,
+                "lat": 546.9620223057934,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709578": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1006.2509652732945,
+                "lat": 548.2611174278686,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709579": {
+                "addr:housenumber": "343",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 860.0039468942495,
+                "lat": 397.31148769087906,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709580": {
+                "addr:housenumber": "341",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 863.6530300336734,
+                "lat": 397.01032063081806,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709581": {
+                "addr:housenumber": "339",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 866.251062075341,
+                "lat": 387.552358331076,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709582": {
+                "addr:housenumber": "337",
+                "addr:street": "Tappan Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 862.9958643413061,
+                "lat": 385.1153737446607,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709716": {
+                "addr:housenumber": "187",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 951.3124495916766,
+                "lat": 455.40048255203277,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709717": {
+                "addr:housenumber": "183;185",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 955.4106772069996,
+                "lat": 452.9013446830808,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709718": {
+                "addr:housenumber": "181",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 961.4048083471674,
+                "lat": 449.53569198922094,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709719": {
+                "addr:housenumber": "177",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 965.9186396368981,
+                "lat": 447.0828398251227,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709720": {
+                "addr:housenumber": "19",
+                "addr:street": "University Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 976.4032925111196,
+                "lat": 462.87390691091014,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709721": {
+                "addr:housenumber": "15;17",
+                "addr:street": "University Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 972.4256525249483,
+                "lat": 466.2304669067077,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709722": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 966.9514818006396,
+                "lat": 469.6121769197824,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709723": {
+                "addr:housenumber": "11",
+                "addr:street": "University Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 962.6470790125372,
+                "lat": 472.8352483617052,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709724": {
+                "addr:housenumber": "7;9",
+                "addr:street": "University Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 959.4882357220658,
+                "lat": 475.98964091126174,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709725": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 976.3875621350426,
+                "lat": 416.56459974865965,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709726": {
+                "addr:housenumber": "168;170",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 981.0026398437601,
+                "lat": 415.0661423741895,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709727": {
+                "addr:housenumber": "164",
+                "addr:street": "Winthrop Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 984.8360608848618,
+                "lat": 412.55530007419145,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709728": {
+                "addr:housenumber": "36;36A",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 937.5020735496122,
+                "lat": 360.28626103344385,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709729": {
+                "addr:housenumber": "32",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 941.181331410166,
+                "lat": 364.6356328421368,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709730": {
+                "addr:housenumber": "30",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 944.0365124485419,
+                "lat": 370.8707217993627,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709731": {
+                "addr:housenumber": "26",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 946.758944603107,
+                "lat": 376.65832869320485,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709732": {
+                "addr:housenumber": "22;24",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 949.3749320733577,
+                "lat": 381.9556609993241,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709733": {
+                "addr:housenumber": "20",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 951.9532836445075,
+                "lat": 390.42173719369447,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709734": {
+                "addr:housenumber": "16",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 953.0919483354478,
+                "lat": 396.31922277876043,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709735": {
+                "addr:housenumber": "14",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 954.7536480176523,
+                "lat": 402.45389237298076,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709736": {
+                "addr:housenumber": "10",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 956.0088604919266,
+                "lat": 408.6417639270637,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709737": {
+                "addr:housenumber": "6",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 957.1904262078195,
+                "lat": 413.30153010568694,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709738": {
+                "addr:housenumber": "22",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1014.6493770770456,
+                "lat": 369.54993133252515,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709739": {
+                "addr:housenumber": "24",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1009.2450277711657,
+                "lat": 365.9480619379471,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709740": {
+                "addr:housenumber": "28",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1004.8043427277811,
+                "lat": 362.76697167844037,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709741": {
+                "addr:housenumber": "30",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 999.4844011876013,
+                "lat": 359.34386086801123,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709742": {
+                "addr:housenumber": "36",
+                "addr:street": "Addington Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 995.0119693854797,
+                "lat": 355.5612015413622,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709743": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 974.9808852106514,
+                "lat": 366.04924239211743,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709744": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 974.061254083066,
+                "lat": 361.7118317233351,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709745": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 972.2411781198382,
+                "lat": 357.2283574930704,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709746": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 971.1203888549646,
+                "lat": 352.3705349289565,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709747": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 970.5980688824259,
+                "lat": 347.348753598323,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709748": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 970.7771806594685,
+                "lat": 342.37340306849933,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709749": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 971.6931175317505,
+                "lat": 337.5097766541811,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709750": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 974.335820639298,
+                "lat": 334.6151063988971,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709756": {
+                "addr:city": "Brookline",
+                "addr:housenumber": "369",
+                "addr:postcode": "02445",
+                "addr:state": "MA",
+                "addr:street": "Tappan Street",
+                "building": "residential",
+                "building:levels": "4",
+                "type": "multipolygon",
+                "lon": 846.671547850071,
+                "lat": 447.4469508118717,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709757": {
+                "addr:housenumber": "1693",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 849.4610677967434,
+                "lat": 451.0782263808459,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709758": {
+                "addr:housenumber": "1691",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 854.3298573969859,
+                "lat": 452.825024053863,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709759": {
+                "addr:housenumber": "1689",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 859.0736381784991,
+                "lat": 454.33547605170384,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709760": {
+                "addr:housenumber": "1685",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 863.775590461498,
+                "lat": 455.8314184246525,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709761": {
+                "addr:housenumber": "1683",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 868.6373490596717,
+                "lat": 457.7436258266373,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709762": {
+                "addr:housenumber": "1673;1673A;1675;1677;1679;1681",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 879.345959581229,
+                "lat": 456.1787788554021,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709763": {
+                "addr:housenumber": "11",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 935.8317936637369,
+                "lat": 405.14300960311584,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709764": {
+                "addr:housenumber": "15",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 934.7027817024933,
+                "lat": 400.5671574248309,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709765": {
+                "addr:housenumber": "19",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 933.1368943092532,
+                "lat": 395.02448054485393,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709766": {
+                "addr:housenumber": "23",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 931.3511391652451,
+                "lat": 389.49631328935686,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709767": {
+                "addr:housenumber": "27",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 929.3219207077965,
+                "lat": 384.01167491018606,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709768": {
+                "addr:housenumber": "31",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 927.2272781875118,
+                "lat": 378.42401819143487,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709769": {
+                "addr:housenumber": "35",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 924.9685392487737,
+                "lat": 372.97420291349005,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709770": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 922.3655195893382,
+                "lat": 367.72462046491404,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709771": {
+                "addr:housenumber": "37",
+                "addr:street": "Claflin Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 920.0775160227334,
+                "lat": 362.76315771958156,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709772": {
+                "addr:housenumber": "236",
+                "addr:street": "Rawson Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 900.9772138357905,
+                "lat": 403.19702701789305,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709773": {
+                "addr:housenumber": "32;34",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 899.0956464040552,
+                "lat": 408.396551259333,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709774": {
+                "addr:housenumber": "38",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 891.521291778775,
+                "lat": 406.59989690099746,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709775": {
+                "addr:housenumber": "42",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 884.7700111828681,
+                "lat": 404.5398928433005,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709776": {
+                "addr:housenumber": "46",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 878.5919955269662,
+                "lat": 402.82920801526603,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709777": {
+                "addr:housenumber": "50",
+                "addr:street": "Garrison Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 873.5456552697188,
+                "lat": 400.8663458995856,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709778": {
+                "addr:housenumber": "17",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 768.7491777302238,
+                "lat": 383.08509023613755,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709779": {
+                "addr:housenumber": "15",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 765.5880157416863,
+                "lat": 385.87616176677955,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709780": {
+                "addr:housenumber": "13",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 762.4851991463584,
+                "lat": 387.20379248545214,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709781": {
+                "addr:housenumber": "11",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 759.0509721372829,
+                "lat": 388.67361753268744,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709782": {
+                "addr:housenumber": "9",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 755.5438133864891,
+                "lat": 390.17246183053203,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709783": {
+                "addr:housenumber": "7",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 752.0623952504194,
+                "lat": 391.6611493904159,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709784": {
+                "addr:housenumber": "5",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 748.4962475904706,
+                "lat": 393.1875619760094,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709785": {
+                "addr:housenumber": "3",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 745.3408772404935,
+                "lat": 394.536957132639,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709786": {
+                "addr:housenumber": "1",
+                "addr:street": "Regent Circle",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 741.5312662662794,
+                "lat": 395.89360710233325,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709787": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 719.8089760380891,
+                "lat": 392.378795459583,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709788": {
+                "addr:housenumber": "18",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 720.514514029663,
+                "lat": 387.18410085116903,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709789": {
+                "addr:housenumber": "20",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 722.4947410494724,
+                "lat": 381.12026932071933,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709790": {
+                "addr:housenumber": "24",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 724.2119694682935,
+                "lat": 375.6373410043011,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709791": {
+                "addr:housenumber": "26",
+                "addr:street": "Dean Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 725.7352622716459,
+                "lat": 369.3405781672388,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709792": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 728.3567191579288,
+                "lat": 362.6681772513334,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709793": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 734.1933385368869,
+                "lat": 356.3601542747684,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709794": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 742.7696433393618,
+                "lat": 356.32902453313824,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709795": {
+                "addr:housenumber": "135;137;139;141;143",
+                "addr:street": "Beaconsfield Road",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 744.5928502110686,
+                "lat": 360.977322244796,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9709796": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 745.9338188999318,
+                "lat": 368.93851804356564,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709797": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 750.0428295226676,
+                "lat": 372.44363428019784,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709798": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 760.0094525259796,
+                "lat": 370.43792040389013,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709799": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 762.834182479932,
+                "lat": 365.6133583652335,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709800": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 761.0530199466808,
+                "lat": 357.8032610928461,
+                "weight": 1,
+                "category": "other"
+            },
+            "9709801": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 760.2474340422522,
+                "lat": 353.26851951959094,
+                "weight": 1,
+                "category": "other"
+            },
+            "9714395": {
+                "addr:housenumber": "1572;1574",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1095.0725313317064,
+                "lat": 554.0224059966758,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714396": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1090.9647582390005,
+                "lat": 553.8663469150993,
+                "weight": 1,
+                "category": "other"
+            },
+            "9714397": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1084.6515974800461,
+                "lat": 556.5274370053341,
+                "weight": 1,
+                "category": "other"
+            },
+            "9714398": {
+                "addr:housenumber": "1580",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1076.6074753865148,
+                "lat": 556.1714134152846,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714399": {
+                "addr:housenumber": "1584",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1071.431921794751,
+                "lat": 557.7929739684921,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714400": {
+                "addr:housenumber": "1588",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1064.7765428634998,
+                "lat": 558.5015273395968,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714401": {
+                "addr:housenumber": "1592",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1059.192438265044,
+                "lat": 560.1483698157958,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714402": {
+                "addr:housenumber": "54",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1071.789634622766,
+                "lat": 571.320366767585,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714403": {
+                "addr:housenumber": "50",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1075.7417147114509,
+                "lat": 570.5267699852666,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714404": {
+                "addr:housenumber": "48",
+                "addr:street": "Lancaster Terrace",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1081.2684766913562,
+                "lat": 570.2262279546057,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714411": {
+                "addr:housenumber": "1563",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1109.5044359659707,
+                "lat": 507.2830335387797,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714412": {
+                "addr:housenumber": "1561",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1115.1171412466283,
+                "lat": 506.92416213908365,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714413": {
+                "addr:housenumber": "1559",
+                "addr:street": "Beacon Street",
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1121.251042903625,
+                "lat": 506.6077141196514,
+                "weight": 20,
+                "category": "residence"
+            },
+            "9714414": {
+                "building": "yes",
+                "type": "multipolygon",
+                "lon": 1127.4159986937334,
+                "lat": 510.5551400741853,
+                "weight": 1,
+                "category": "other"
             }
         }
     },
@@ -27374,7 +32067,7 @@
                 "width": "61.0"
             }
         },
-         "nonroads": {
+        "nonroads": {
             "8644409": {
                 "noderefs": [
                     "61497833",
@@ -46744,12 +51437,8 @@
             ]
         }
     },
-    "sum_attraction_weight": {
-        "other": 86,
-        "public_transport": 220,
-        "amenity": 637,
-        "leisure": 23,
-        "shop": 30,
-        "residence": 60
+    "display_bounds": {
+        "occupied_vertical_space": 907.1765994365979,
+        "occupied_horizontal_space": 1500
     }
 }

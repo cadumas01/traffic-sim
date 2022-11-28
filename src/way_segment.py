@@ -72,11 +72,8 @@ class WaySegment:
             self.width = 2 # temp
 
 
-    def set_id(self, reverse_way=False):
-        s = str(f"{self.start_ref}_{self.end_ref}")
-        #if reverse_way == True:
-         #   s += "_r"
-        
+    def set_id(self):
+        s = str(f"{self.start_ref}_{self.end_ref}")  
         self.id = s
 
 
@@ -102,7 +99,7 @@ class WaySegment:
 
 
     def __str__(self):
-        string = "WaySegment:\n"
+        string = f"WaySegment with id = {self.id}:\n"
 
         for piece in self.pieces:
             string += str(piece[2]) + "\n"
@@ -174,12 +171,16 @@ class WaySegment:
 
         self.nodes = nodes
 
+    # takes a Node object
+    def add_attraction(self, attraction):
+        self.attractions[attraction.id] = attraction
 
-    def add_attraction(self, noderef, t_value):
-        attract_dict = self.data["nodes"]["attractions"][noderef]
+    # def add_attraction(self, noderef, t_value):
+    #     attract_dict = self.data["nodes"]["attractions"][noderef]
 
-        attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"], attract_dict["weight"])
-        self.attractions[noderef] = attraction
+    #     attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"], attract_dict["weight"])
+    #     self.attractions[noderef] = attraction
+
 
 
     # Find min distance of a [attraction] node to a way segment node 

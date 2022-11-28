@@ -2,7 +2,13 @@ from cmath import cos
 import way_segment as ws
 import json
 from intersection import Intersection
+from node import Node
 from dijkstar import Graph, find_path
+from scipy import stats
+import numpy as np
+from sklearn.utils.extmath import cartesian
+from itertools import product
+import random
 
 
 
@@ -16,7 +22,8 @@ class Network:
 
         self.assemble_ways()
 
-        # add all attractions to appropriate way seg
+        # add all attractions to appropriate way seg and to self
+        self.attractions = {}
         self.add_attractions()
 
         # dictionary of intersections indexed by noderef
@@ -24,7 +31,11 @@ class Network:
 
         self.make_graph()
 
-    
+        # attractions random variable. maps attraction (really index of attraction in list, use self.attraction_to_index) to weighted probability
+        self.gen_weighted_attractions()
+
+        # generates a new randomvariable (returns a random trip with probabilities calculated using gravity model)
+        self.gen_gravity_model_trips()
 
 
     # checks if node is part of two separate ways
@@ -86,7 +97,7 @@ class Network:
                 if self.is_two_way(self.data["ways"][category][way_id]):
                     split = True
                     # split number of lanes in half and create a second set of one-way way segments in opposite direction
-                    # If way_segment A has id: nodei_nodej. Then reverse of way_segment A has id: nodeJ_nodei
+                    # If way_segment A has id: nodei_nodej. Then reverse of way_segment A has id: nodej_nodei
                     way_segs += self.noderefs_to_waysegs(way_id, category, list(reversed(noderefs)), split)
 
                 # right-way way_segments
@@ -102,6 +113,7 @@ class Network:
         return ("oneway" in way_dict and way_dict["oneway"] != "no") or ("lanes" in way_dict and int(way_dict["lanes"]) >= 2)
 
 
+    
     # associates each attraction node with its closest way segment (and appropriate connection node)
     def add_attractions(self):
         for noderef, attraction in self.data["nodes"]["attractions"].items():
@@ -117,19 +129,32 @@ class Network:
                     min_val = minimum
                     min_t = t
                     min_way_seg_id = way_seg_id
-                                      
-            self.way_segments["roads"][min_way_seg_id].add_attraction(noderef, t_value=min_t)
 
+            attract_dict = self.data["nodes"]["attractions"][noderef]
+
+            attraction_weight = attract_dict["weight"] # maybe update to .5 its value if we also create an attraction for the reverse road
+         
+        
             # Since a two lane road is really 2 one way way_segments we must also associate an attraction to the 
             # corresponding opposite way_segment (i.e. reverse the nodes in the way segment id)
-            reverse_id = self.reverse_way_seg_id(way_seg_id)
+            reverse_id = self.reverse_way_seg_id(min_way_seg_id)
             if reverse_id in self.way_segments["roads"]:
+                attraction_weight = attraction_weight / 2
                 # min_t is the t_value for the proper direction way_segment so if 
                 # t_len = 5 and on proper_way_segment, t= 1 then for reverse, t=4
                 t_value = self.way_segments["roads"][reverse_id].t_len - min_t
-                self.way_segments["roads"][reverse_id].add_attraction(noderef,t_value=t_value) 
 
-    
+                dup_attraction = Node(noderef, "attraction", t_value, attract_dict["lon"], attract_dict["lat"], attraction_weight)
+                self.way_segments["roads"][reverse_id].add_attraction(dup_attraction) 
+                
+                self.attractions[reverse_id] = dup_attraction
+
+
+            attraction = Node(noderef, "attraction", min_t, attract_dict["lon"], attract_dict["lat"], attraction_weight)
+            self.way_segments["roads"][min_way_seg_id].add_attraction(attraction)
+            # add attraction to network object
+            self.attractions[min_way_seg_id] = attraction
+            
 
     # creates intersections between touching way_segments
     # see diagram in shared google folder
@@ -196,6 +221,87 @@ class Network:
             return weight
 
         return find_path(self.graph, start_intersection_ref, end_intersection_ref, cost_func=cost_func)
+        
+
+
+    ''' 
+    Creates a scipy random variable with probabilities of choosing any attraction in the network
+    event values are really indices of attractions (since easier to work with numeric events)
+    '''
+    def gen_weighted_attractions(self):
+        # At this point, no distinguishing between different attraction types
+        sum_weight = sum([a.weight for a in self.attractions.values()])
+        print(sum_weight)
+
+
+        attractions_list = list(self.attractions.values())
+        self.index_to_attraction= {i: attractions_list[i].id for i in range(len(attractions_list))}
+
+        probabilities = [a.weight/sum_weight for a in attractions_list]
+      
+        self.weighted_attractions = stats.rv_discrete(name='weighted_attractions', values=(range(len(attractions_list)), probabilities))
+
+    
+    # for each pair of attractions, returns probability of picking that pair (as end/destination or vice versa)
+    def gen_gravity_model_trips(self):
+
+        #print("Testing", self.weighted_attractions.pmf(self.attraction_to_index['63525961']))
+        self.attractions_list = list(self.attractions.values())
+
+        # indexed via index
+
+        def gravity_score(index_pair_str) -> float:
+           
+            a1 = int(index_pair_str[0])
+            a2 = int(index_pair_str[1])
+            if self.attractions_list[a1].id == self.attractions_list[a2].id:
+                return 0.0 # no traveling from self to self
+            else:  
+                return (self.attractions_list[a1].weight) * (self.attractions_list[a2].weight) 
+
+        # indexed via (a1_index, a2_index)
+        pair_indices = np.array([[(i,j) for j in range(len(self.attractions_list))] for i in range(len(self.attractions_list))])
+        #print("pair indices," , pair_indices)
+
+        pair_weights = np.apply_along_axis(gravity_score, 2, pair_indices)
+       # pair_weights = np.array([[gravity_score(a1,a2) for a2 in attractions_list] for a1 in attractions_list])
+        #print("pair weights = ", pair_weights)
+
+        
+        # sum of all weights
+        sum_weight = np.sum(pair_weights)
+
+        sum_weight_arr = sum_weight * np.ones_like(pair_weights)
+
+        pair_probs = pair_weights / sum_weight_arr
+
+        # used by random_trip_pair()
+        self.flat_pair_probs = pair_probs.reshape(1, pair_probs.size)[0]
+
+        # used by random_trip_pair()
+        self.flat_pair_indices = [(pair[0],pair[1]) for pair in pair_indices.reshape(pair_probs.size, -1)]
+        #print("flat pair indices", self.flat_pair_indices)
+        #print("flat pair probs", self.flat_pair_probs)
+
+
+        #weighted_pairs = stats.rv_discrete(name='weighted_pairs', values=(flat_pair_indices, flat_pair_probs))
+       # print(weighted_pairs)
+
+        #print(weighted_pairs.rvs(size=10))
+            
+    
+    # returns a randomly generated trip pair (from weighted)
+    def random_trips_pairs(self, k):
+        trips_indices = random.choices(self.flat_pair_indices, self.flat_pair_probs, k=k)
+        #print("genereated trip = ", trip)
+
+        trips = []
+        for (i,j) in trips_indices:
+            trips.append((self.index_to_attraction[i], self.index_to_attraction[j]))
+        print(trips)
+        return trips
+
+
 
 
     def __str__(self):
@@ -203,6 +309,7 @@ class Network:
         s += f"Network containing:\n\t{len(self.way_segments['roads'])} road way_segments"
         s += f"\t{len(self.way_segments['nonroads'])} nonroad way_segments"
         s += f"\t{len(self.intersections)} intersections"
+        s += f"\t{len(self.attractions)} attractions"
 
         return s
 
@@ -222,10 +329,8 @@ if __name__=="__main__":
     f.close()
 
     net = Network(data)
-    print(net)
+    
 
-    for way_seg in net.way_segments["roads"].values():
-        print("Attractions = ", way_seg.attractions)
     
 
 

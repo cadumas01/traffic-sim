@@ -81,7 +81,7 @@ class Engine:
 
             # Generate Travelers (right now only first first 5 steps)
             if time_step < 25:
-                self.gen_travelers(list(self.network.data["nodes"]["attractions"].keys()), 5)
+                self.gen_travelers(5)
        
             # Draw
             self.draw()
@@ -122,10 +122,6 @@ class Engine:
            
             pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
 
-    
-            # r = (r + 20) % 255
-            # g = (g + 20) % 255
-            # b = (b + 20) % 255
 
 
 
@@ -135,7 +131,7 @@ class Engine:
             
             # Test draw attractions
             for attraction in road.attractions.values():
-                green = attraction.weight * 10 
+                green = (attraction.weight * 10) % 255
                 pygame.draw.circle(self.screen, (0,green,0), self.to_pygame(attraction.lon,attraction.lat), radius=3)
 
             
@@ -184,18 +180,26 @@ class Engine:
         self.draw_travelers()
 
       
+    # Used to generate traveler
+    def gen_start_node():
+        pass
+
+    
+
 
     # Takes array of nodes, creates x travelers at random across the nodes
-    def gen_travelers(self, nodes, n):
+    def gen_travelers(self, n):
 
-        for _ in range(n):
-            i = random.randint(0, len(nodes) - 1)
-            origin_node = nodes[i]
+        # Generate n trips with gravity model
+        trips = self.network.random_trips_pairs(n)
+
+        for trip in trips:
+           
+            origin_node = trip[0]
             origin_way_seg = self.get_way_seg(origin_node)
             origin_intersection = self.find_nearest_intersection(origin_node, origin_way_seg)
 
-            k =  random.randint(0, len(nodes) - 1)
-            end_node = nodes[k]
+            end_node = trip[1]
             end_way_seg = self.get_way_seg(end_node)
             end_intersection = self.find_nearest_intersection(end_node, end_way_seg)
 
@@ -218,7 +222,6 @@ class Engine:
             if origin_way_seg != path[0]:
                 path.insert(0, origin_way_seg)
 
-                
 
             #print(f"\ncreating new traveler with end t = {end_t}, path = {path}")
             traveler = Traveler("Car", t, end_t, origin_way_seg, path, False, False)

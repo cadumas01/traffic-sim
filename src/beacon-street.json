@@ -3966,8 +3966,7 @@
                 "lon": 871.618819689005,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69482704": {
                 "lat": 528.0140867973705,
@@ -3980,72 +3979,63 @@
                 "railway": "halt",
                 "station": "light_rail",
                 "wikidata": "Q7684756",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "69483674": {
                 "lat": 744.1334360214972,
                 "lon": 1431.5938944097884,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69486038": {
                 "lat": 606.099044626955,
                 "lon": 876.7582799347496,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69487900": {
                 "lat": 420.14091490276127,
                 "lon": 284.07704778817947,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69488125": {
                 "lat": 467.05753855747133,
                 "lon": 453.2325660911179,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69489222": {
                 "lat": 763.2163940928365,
                 "lon": 1495.8316330467035,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69492427": {
                 "lat": 591.2385080840136,
                 "lon": 824.5916555456193,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69493876": {
                 "lat": 689.7790839870531,
                 "lon": 1292.7457511225084,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "69495662": {
                 "lat": 588.2320842751869,
                 "lon": 818.685687816333,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "257578421": {
                 "lat": 562.5021693472213,
@@ -4068,8 +4058,7 @@
                 "phone": "617-731-3196",
                 "source_url": "http://mass.gov/mgis/schools.htm",
                 "type": "Private",
-                "weight": 100,
-                "category": "amenity"
+                "weight": 20
             },
             "358269332": {
                 "lat": 542.5090780136672,
@@ -4084,24 +4073,21 @@
                 "name": "Beth Pinchas Chassidic Center",
                 "old_name": "Congregation Machseke Torah",
                 "religion": "jewish",
-                "weight": 50,
-                "category": "amenity"
+                "weight": 1
             },
             "431399508": {
                 "lat": 362.1758702541016,
                 "lon": 88.08273869255397,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "431399523": {
                 "lat": 387.29405626841475,
                 "lon": 169.77920172970607,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "1399777043": {
                 "lat": 646.0553868588888,
@@ -4115,8 +4101,7 @@
                 "railway": "stop",
                 "ref": "70226",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399777044": {
                 "lat": 635.3202904300288,
@@ -4130,8 +4115,7 @@
                 "railway": "stop",
                 "ref": "70225",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399780476": {
                 "lat": 463.6557289873557,
@@ -4145,8 +4129,7 @@
                 "railway": "stop",
                 "ref": "70234",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399780477": {
                 "lat": 471.7126463900658,
@@ -4160,8 +4143,7 @@
                 "railway": "stop",
                 "ref": "70233",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399782319": {
                 "lat": 611.2912802868561,
@@ -4175,8 +4157,7 @@
                 "railway": "stop",
                 "ref": "70228",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399796244": {
                 "lat": 719.6568193560107,
@@ -4190,8 +4171,7 @@
                 "railway": "stop",
                 "ref": "70224",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399796409": {
                 "lat": 533.4748863706601,
@@ -4205,8 +4185,7 @@
                 "railway": "stop",
                 "ref": "70232",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399796411": {
                 "lat": 522.4115451585933,
@@ -4220,8 +4199,7 @@
                 "railway": "stop",
                 "ref": "70231",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399797957": {
                 "lat": 603.3984852754844,
@@ -4235,8 +4213,7 @@
                 "railway": "stop",
                 "ref": "70230",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "1399797961": {
                 "lat": 594.9387220021617,
@@ -4250,8 +4227,7 @@
                 "railway": "stop",
                 "ref": "70229",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "2458520472": {
                 "lat": 549.2828567192543,
@@ -4259,24 +4235,21 @@
                 "amenity": "restaurant",
                 "cuisine": "tapas",
                 "name": "Barcelona Wine Bar",
-                "weight": 25,
-                "category": "amenity"
+                "weight": 1
             },
             "2535759232": {
                 "lat": 609.5157744146577,
                 "lon": 912.3319473698675,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "2756576778": {
                 "lat": 547.9922579128074,
                 "lon": 710.8397392776624,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "3324532268": {
                 "lat": 513.8473403637506,
@@ -4284,72 +4257,63 @@
                 "crossing:barrier": "no",
                 "highway": "traffic_signals",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "3324534750": {
                 "lat": 508.5059025300982,
                 "lon": 631.575145306103,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "3324539494": {
                 "lat": 584.5691709004764,
                 "lon": 811.9635826232235,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "3324543230": {
                 "lat": 604.1668764722117,
                 "lon": 865.5253609200374,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "3324632890": {
                 "lat": 764.8650781166043,
                 "lon": 1500.99866550507,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489130": {
                 "lat": 364.3393017787954,
                 "lon": 87.48717892122616,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489136": {
                 "lat": 363.11584395096077,
                 "lon": 83.593982640201,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489137": {
                 "lat": 360.97479275211765,
                 "lon": 84.27225904674467,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489139": {
                 "lat": 389.28590529297657,
                 "lon": 169.38216188162414,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489144": {
                 "lat": 413.217934023423,
@@ -4360,32 +4324,28 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "5184489146": {
                 "lat": 469.0643077996203,
                 "lon": 452.6425207621025,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489162": {
                 "lat": 418.23858718266223,
                 "lon": 277.41008701766367,
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489163": {
                 "lat": 420.3647181639182,
                 "lon": 276.8531283430526,
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489179": {
                 "lat": 468.7957438857019,
@@ -4393,8 +4353,7 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489180": {
                 "lat": 467.1545199707277,
@@ -4402,8 +4361,7 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489181": {
                 "lat": 465.0955299675537,
@@ -4411,96 +4369,84 @@
                 "crossing": "zebra",
                 "crossing:barrier": "no",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489184": {
                 "lat": 519.3529005892717,
                 "lon": 623.9541860128941,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489185": {
                 "lat": 534.6386633286762,
                 "lon": 669.8839761334647,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489186": {
                 "lat": 641.7434440265583,
                 "lon": 1187.4309316094632,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489188": {
                 "lat": 715.8372436982254,
                 "lon": 1349.0868083511255,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184489189": {
                 "lat": 760.9410609372991,
                 "lon": 1488.2989048320828,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538629": {
                 "lat": 515.7347478667926,
                 "lon": 606.9641892113301,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538632": {
                 "lat": 536.1829058309243,
                 "lon": 669.360104112728,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538633": {
                 "lat": 549.7752238937994,
                 "lon": 710.1394051013391,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538645": {
                 "lat": 606.1139648445421,
                 "lon": 865.1558932840475,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538647": {
                 "lat": 608.2177154999474,
                 "lon": 876.5321877999418,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538651": {
                 "lat": 611.4031819171696,
                 "lon": 912.354005139647,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538659": {
                 "lat": 614.7303904004096,
@@ -4511,16 +4457,14 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "5184538676": {
                 "lat": 691.7783931204085,
                 "lon": 1292.001301408216,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538679": {
                 "lat": 713.4500089123746,
@@ -4534,48 +4478,42 @@
                 "railway": "stop",
                 "ref": "70223",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "5184538680": {
                 "lat": 717.7768719617623,
                 "lon": 1348.5574218880763,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538687": {
                 "lat": 745.4464151537948,
                 "lon": 1429.3274586140974,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538688": {
                 "lat": 762.9254498530674,
                 "lon": 1487.8522350037197,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538689": {
                 "lat": 765.1933228998112,
                 "lon": 1495.3463621226833,
                 "crossing:barrier": "no",
                 "railway": "level_crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "5184538690": {
                 "lat": 766.9091479021911,
                 "lon": 1500.756030042265,
                 "crossing": "zebra",
                 "railway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "6047233704": {
                 "lat": 360.2735425340025,
@@ -4589,8 +4527,7 @@
                 "railway": "stop",
                 "ref": "70238",
                 "source": "massdot_import_081211",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "6047233707": {
                 "lat": 352.6642316536063,
@@ -4601,8 +4538,7 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "6568254472": {
                 "lat": 468.0721133412061,
@@ -4615,8 +4551,7 @@
                 "railway": "halt",
                 "station": "light_rail",
                 "wikidata": "Q5246445",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "7762626861": {
                 "lat": 410.91276043324143,
@@ -4627,24 +4562,21 @@
                 "operator": "MBTA",
                 "public_transport": "stop_position",
                 "railway": "stop",
-                "weight": 10,
-                "category": "public_transport"
+                "weight": 10
             },
             "7944055723": {
                 "lat": 379.19237821347326,
                 "lon": 479.6246870554416,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "7944055724": {
                 "lat": 432.6515172032897,
                 "lon": 468.5020568864471,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8026006290": {
                 "lat": 489.0573991326444,
@@ -4652,64 +4584,56 @@
                 "crossing": "unmarked",
                 "crossing:island": "no",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8545220732": {
                 "lat": 439.4700565611081,
                 "lon": 649.1276152240604,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8545220735": {
                 "lat": 512.9521273191228,
                 "lon": 624.0479315322046,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8545220746": {
                 "lat": 542.2927348613039,
                 "lon": 707.7020215944941,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8545220749": {
                 "lat": 559.816530212808,
                 "lon": 704.878627124722,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8603352631": {
                 "lat": 426.1463024116211,
                 "lon": 71.29677625707825,
                 "barrier": "kerb",
                 "kerb": "lowered",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "8603352775": {
                 "lat": 383.0044937624649,
                 "lon": 84.13991243071735,
                 "barrier": "kerb",
                 "kerb": "lowered",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "9905022516": {
                 "lat": 460.4553423520163,
                 "lon": 445.2917691432607,
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "9905088917": {
                 "lat": 453.75616473383496,
@@ -4717,16 +4641,14 @@
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
                 "traffic_signals:direction": "forward",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "9905088918": {
                 "lat": 482.41790238375154,
                 "lon": 458.2837952593342,
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "9905088919": {
                 "lat": 488.40836967502423,
@@ -4734,16 +4656,14 @@
                 "highway": "traffic_signals",
                 "traffic_signals": "signal",
                 "traffic_signals:direction": "backward",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             },
             "9905088920": {
                 "lat": 545.9780285623949,
                 "lon": 430.83841581122465,
                 "crossing": "marked",
                 "highway": "crossing",
-                "weight": 1,
-                "category": "other"
+                "weight": 1
             }
         }
     },
@@ -7318,7 +7238,7 @@
         "2887651": {
             "colour": "#008150",
             "from": "Cleveland Circle",
-            "name": "MBTA Green Line (C): Cleveland Circle → Government Center",
+            "name": "MBTA Green Line (C): Cleveland Circle â†’ Government Center",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",
@@ -8498,7 +8418,7 @@
         "11359934": {
             "colour": "#008150",
             "from": "Government Center",
-            "name": "MBTA Green Line (C): Government Center → Cleveland Circle",
+            "name": "MBTA Green Line (C): Government Center â†’ Cleveland Circle",
             "network": "MBTA",
             "operator": "MBTA",
             "public_transport:version": "2",

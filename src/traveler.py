@@ -44,11 +44,6 @@ class Traveler:
         self.current_way_seg = self.path[0]
 
         # remove traveler from old way segment and add it to new way segment
-        if prev_way_seg.id == "63540096_63535481":
-            print(f"Traveler is leaving way_seg with id {63540096_63535481}, before decrement, numcars = {prev_way_seg.num_cars}")
-        if self.current_way_seg.id == "63540096_63535481":
-            print("current_way_Seg capacity = ", self.current_way_seg.capacity)
-            print(f"Traveler is joining way_seg with id {63540096_63535481}, before increment, numcars = {self.current_way_seg.num_cars}")
         prev_way_seg.num_cars =- 1
         self.current_way_seg.num_cars =+ 1
 

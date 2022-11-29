@@ -1,5 +1,6 @@
 import math
 from node import Node
+import re
 
 # defines a class, wag_segment, which is a consists of a parametric piecewise function
 # outlining the "domain" of a given road_segment
@@ -9,16 +10,28 @@ from node import Node
 class WaySegment:
 
     # Need to add all properites like speed, width, and a container for travelers
-    def __init__(self, way_id, category, noderefs, data, split=False):
+    def __init__(self, way_id, category, noderefs, data, split=False, engine_fps=30):
         self.way_id = way_id      # way_id is the id of the way which this waysegmenet is part of (should NOT be used as index since may not be unique)
         self.category = category  # way category which this way segment belongs to (road or nonroad)
         self.data = data 
 
+        # used to find speed in t_unit / tick (from mph)
+        self.engine_fps = engine_fps
+
         # multiply some t_len by this constant (determined by input data) to convert to ft 
-        self.t_len_to_ft_multiplier = self.t_len_to_ft_multiplier()
+        self.t_unit_to_ft = self.t_unit_to_ft()
 
         # ordered list of dictionaries for each node. Essentially same as json dictionary (for a node) but with id added as value instead of key
         self.load_nodes(noderefs, data) # generates (self.nodes)
+
+        # these are the two intersections the way segment is bounded by
+        self.start_ref = self.nodes[0]['noderef']
+        self.end_ref = self.nodes[-1]['noderef']
+
+        # way segment id is startref_endref and sometimes startref_endref_r if the waysegment is a 2 way road split into two 1 way roads
+        self.id = ""
+        self.set_id()
+
 
         self.noderefs = noderefs # ordered list of each noderef that makes up the way_segment
         self.gen_piecewise_function(self.nodes) # generates list of pieces (self.pieces)
@@ -30,7 +43,8 @@ class WaySegment:
 
         self.set_width()
 
-        self.max_speed = 1 # adjust 
+      
+        self.set_max_speed() # adjust 
         self.lanes = 1
 
 
@@ -47,25 +61,44 @@ class WaySegment:
         self.ft_per_car = self.set_ft_per_car()
         self.capacity = self.get_capacity() # also sets capacity
 
-
-
         self.set_lanes(split)
 
         self.set_weight() # edge weight, lower weight means: shorter road, higher speed, more lanes
 
         
 
-        # these are the two intersections the way segment is bounded by
-        self.start_ref = self.nodes[0]['noderef']
-        self.end_ref = self.nodes[-1]['noderef']
+    
 
-        # way segment id is startref_endref and sometimes startref_endref_r if the waysegment is a 2 way road split into two 1 way roads
-        self.id = ""
-        self.set_id()
+    # Gets maxspeed (in mph) from json file and converts to t_unit / tick
+    ''' 
+        max_speed is in units of t_unit / tick. We must convert mph to t_unit / tick
+
+            1 foot / sec = 0.681818 mph
+
+            30 ticks / 1 sec
+
+            1 * t_unit_to_ft / 1 t_unit
+
+            max_speed [in mph] / ( (30 ticks / 1 sec) * (t_unit_to_ft / 1 t_unit) * (0.681818) = ( t_unit / tick)  ==> max_speed [in t_unit / sec]           
+    '''
+    def set_max_speed(self):
+        if self.category != "roads":
+            self.max_speed = 1
+        else:
+            way_data = self.data["ways"][self.category][self.way_id]
+            max_speed_mph = 30 # default - maybe change
+            if "maxspeed" in way_data:
+                max_speed_mph = int(re.sub("[^0-9]", "", way_data["maxspeed"])) # remove any non digits and convert to int
+                print("max speed mph = ", max_speed_mph )
+            
+            # convert to t_unit / tick
+            self.max_speed = max_speed_mph / (self.engine_fps * (self.t_unit_to_ft) * (0.681818))
+            print("max speed ", self.max_speed)
+
 
 
     ''' We know from the data json file the actual coordinate bounds of the map and the pixel bounds'''
-    def t_len_to_ft_multiplier(self):
+    def t_unit_to_ft(self):
 
         lat_dist_deg = (float(self.data["bounds"]["minlat"]) - float(self.data["bounds"]["maxlat"])) # in degrees
         lon_dist_deg = (float(self.data["bounds"]["minlon"]) - float(self.data["bounds"]["maxlon"]))
@@ -75,24 +108,19 @@ class WaySegment:
         lon_dist_ft = math.cos(float(self.data["bounds"]["minlat"])) * lon_dist_deg * 364173
 
         actual_diag_dist = math.sqrt((lat_dist_ft) ** 2 + (lon_dist_ft) ** 2)
-
-
         display_diag_dist = math.sqrt((self.data["display_bounds"]["occupied_vertical_space"]) **2 + float(self.data["display_bounds"]["occupied_vertical_space"]) **2)
+    
 
         return actual_diag_dist / display_diag_dist
 
 
      # evaluates a function (returns a solution of x,y) for a value of t
     def evaluate(self, t):
-        #print(f"evaluating t = {t} and t_len = {self.t_len}. Way_seg start = {self.pieces[0][2].evaluate(0)} to {self.pieces[-1][2].evaluate(self.t_len)} AKA {self.start_ref} to {self.end_ref}")
         if t > self.t_len or t < 0:
             return None, None # no solution, t out of range
         else:
             for piece in self.pieces:
-                #print(piece[2])
                 if t >= piece[0] and t <= piece[1]:
-                 #   print(f"coords = {piece[2].evaluate(t)}, current angle = {piece[2].angle}")
-
                     # we subtract the lower t bound for that given piece so that the t is normalized to that piece
                     return piece[2].evaluate(t)
 
@@ -145,8 +173,7 @@ class WaySegment:
     
     # the longer the road and more lanes, the more cars can fit
     def get_capacity(self):
-        self.capacity = math.ceil(self.lanes * self.t_len_to_ft_multiplier * (self.t_len) / self.ft_per_car)
-        #print("Capacity = ", self.capacity)
+        self.capacity = math.ceil(self.lanes * self.t_unit_to_ft * (self.t_len) / self.ft_per_car)
         return self.capacity
 
 

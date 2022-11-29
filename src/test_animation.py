@@ -74,9 +74,9 @@ class Engine:
         pygame.font.init()
         self.text_font = pygame.font.SysFont('Lucida Console', 16)
 
-        self.draw()
-        pygame.display.flip()
         time_step = 0
+        self.draw(time_step)
+        pygame.display.flip()
         while True:
 
             # Generate Travelers (right now, every second)
@@ -85,12 +85,10 @@ class Engine:
                 
                 # Also recalculate Traffic for future travelers
                 self.network.make_graph()
-
-
-               
        
-            # Draw
-            self.draw()
+
+            # Draw 
+            self.draw(time_step)
             pygame.display.update()
             # Update to next state
             for traveler in self.travelers:
@@ -109,6 +107,7 @@ class Engine:
                     sys.exit(0)
             
 
+
     def background(self, r, g, b):
         """Fills screen with one color."""
         self.screen.fill((r, g, b))
@@ -123,8 +122,7 @@ class Engine:
         g = 0
         b = 0
 
-        for piece in road.pieces: 
-           
+        for piece in road.pieces:    
             pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
 
 
@@ -174,8 +172,12 @@ class Engine:
             self.draw_traveler(traveler)
 
 
-    def draw(self):
+    def draw(self,t):
         self.background(*self.bg_color)
+
+        # Draw Clock
+        self.draw_clock(t)
+
         self.draw_roads()
         self.draw_intersections()
         self.draw_travelers()
@@ -238,6 +240,11 @@ class Engine:
             if node_id in way_segment.attractions:
                 return way_segment
 
+
+    def draw_clock(self,t):
+        font = pygame.font.SysFont(None, 24)
+        img = font.render(f"time (ticks)= {t}", True, (0,0,0))
+        self.screen.blit(img, (20, 20))
 
     # converts coordinates to pygame coordinates (bottom left origin to top left origin)
     def to_pygame(self, x, y):

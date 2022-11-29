@@ -104,7 +104,6 @@ class Network:
                 way_segs += self.noderefs_to_waysegs(way_id, category, noderefs, split)
 
                 for way_seg in way_segs:
-                    # print(f"way_seg_id = {way_seg.id}")
                     self.way_segments[category][way_seg.id] = way_seg
                
 
@@ -231,8 +230,6 @@ class Network:
     def gen_weighted_attractions(self):
         # At this point, no distinguishing between different attraction types
         sum_weight = sum([a.weight for a in self.attractions.values()])
-        print(sum_weight)
-
 
         attractions_list = list(self.attractions.values())
         self.index_to_attraction= {i: attractions_list[i].id for i in range(len(attractions_list))}
@@ -244,12 +241,9 @@ class Network:
     
     # for each pair of attractions, returns probability of picking that pair (as end/destination or vice versa)
     def gen_gravity_model_trips(self):
-
-        #print("Testing", self.weighted_attractions.pmf(self.attraction_to_index['63525961']))
         self.attractions_list = list(self.attractions.values())
 
         # indexed via index
-
         def gravity_score(index_pair_str) -> float:
            
             a1 = int(index_pair_str[0])
@@ -261,18 +255,12 @@ class Network:
 
         # indexed via (a1_index, a2_index)
         pair_indices = np.array([[(i,j) for j in range(len(self.attractions_list))] for i in range(len(self.attractions_list))])
-        #print("pair indices," , pair_indices)
 
         pair_weights = np.apply_along_axis(gravity_score, 2, pair_indices)
-       # pair_weights = np.array([[gravity_score(a1,a2) for a2 in attractions_list] for a1 in attractions_list])
-        #print("pair weights = ", pair_weights)
-
         
         # sum of all weights
         sum_weight = np.sum(pair_weights)
-
         sum_weight_arr = sum_weight * np.ones_like(pair_weights)
-
         pair_probs = pair_weights / sum_weight_arr
 
         # used by random_trip_pair()
@@ -280,25 +268,16 @@ class Network:
 
         # used by random_trip_pair()
         self.flat_pair_indices = [(pair[0],pair[1]) for pair in pair_indices.reshape(pair_probs.size, -1)]
-        #print("flat pair indices", self.flat_pair_indices)
-        #print("flat pair probs", self.flat_pair_probs)
-
-
-        #weighted_pairs = stats.rv_discrete(name='weighted_pairs', values=(flat_pair_indices, flat_pair_probs))
-       # print(weighted_pairs)
-
-        #print(weighted_pairs.rvs(size=10))
+ 
             
     
     # returns a randomly generated trip pair (from weighted)
     def random_trips_pairs(self, k):
         trips_indices = random.choices(self.flat_pair_indices, self.flat_pair_probs, k=k)
-        #print("genereated trip = ", trip)
 
         trips = []
         for (i,j) in trips_indices:
             trips.append((self.index_to_attraction[i], self.index_to_attraction[j]))
-        print(trips)
         return trips
 
 

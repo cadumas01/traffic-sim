@@ -79,15 +79,19 @@ class Engine:
         time_step = 0
         while True:
 
-            # Generate Travelers (right now only first first 5 steps)
-            if time_step < 25:
-                self.gen_travelers(50)
+            # Generate Travelers (right now, every second)
+            if time_step % self.fps == 0:
+                self.gen_travelers(random.randint(150,250))
+                
+                # Also recalculate Traffic for future travelers
+                self.network.make_graph()
+
+
+               
        
             # Draw
             self.draw()
             pygame.display.update()
-
-
             # Update to next state
             for traveler in self.travelers:
                 traveler.increment()
@@ -111,7 +115,6 @@ class Engine:
 
 
 
-
     # accepts a road of type WaySegment
     def draw_road(self, road, color):
         width = int(road.width / 5) + 4
@@ -120,13 +123,6 @@ class Engine:
         g = 0
         b = 0
 
-        # roads become more purple with increased traffic
-  
-
-       # if road.id == "8545220732_3324532280":
-
-       # print(road.id, r,g,b)
-    
         for piece in road.pieces: 
            
             pygame.draw.line(self.screen, (r,g,b), self.to_pygame(piece[2].x1, piece[2].y1), self.to_pygame(piece[2].x2, piece[2].y2), width=width)
@@ -149,12 +145,7 @@ class Engine:
         for intersection_id in self.network.intersections:
             x = 0
             y = 0
-            if intersection_id == "8545220735":
-                x = self.network.data["nodes"]["attractions"][intersection_id]["lon"]
-                y = self.network.data["nodes"]["attractions"][intersection_id]["lat"]
-            
-                pygame.draw.circle(self.screen, (255,0,255), self.to_pygame(x,y), radius=4)
-            elif intersection_id in self.network.data["nodes"]["attractions"]:
+            if intersection_id in self.network.data["nodes"]["attractions"]:
                 x = self.network.data["nodes"]["attractions"][intersection_id]["lon"]
                 y = self.network.data["nodes"]["attractions"][intersection_id]["lat"]
             
@@ -171,7 +162,11 @@ class Engine:
         
         # JANKY TEMP FIX
         if (x, y) != (None, None):
-            pygame.draw.circle(self.screen, (255,0,0), self.to_pygame(x,y), radius=3)
+            if traveler.speed() < 1:
+                pygame.draw.circle(self.screen, (255,0,255), self.to_pygame(x,y), radius=2)
+            else:
+                pygame.draw.circle(self.screen, (255,0,0), self.to_pygame(x,y), radius=2)
+
 
 
     def draw_travelers(self):
@@ -180,21 +175,12 @@ class Engine:
 
 
     def draw(self):
-
         self.background(*self.bg_color)
-      
         self.draw_roads()
         self.draw_intersections()
-
         self.draw_travelers()
 
       
-    # Used to generate traveler
-    def gen_start_node():
-        pass
-
-    
-
 
     # Takes array of nodes, creates x travelers at random across the nodes
     def gen_travelers(self, n):

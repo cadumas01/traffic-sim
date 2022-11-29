@@ -44,13 +44,18 @@ class Traveler:
         self.current_way_seg = self.path[0]
 
         # remove traveler from old way segment and add it to new way segment
-       
+        if prev_way_seg.id == "63540096_63535481":
+            print(f"Traveler is leaving way_seg with id {63540096_63535481}, before decrement, numcars = {prev_way_seg.num_cars}")
+        if self.current_way_seg.id == "63540096_63535481":
+            print("current_way_Seg capacity = ", self.current_way_seg.capacity)
+            print(f"Traveler is joining way_seg with id {63540096_63535481}, before increment, numcars = {self.current_way_seg.num_cars}")
         prev_way_seg.num_cars =- 1
         self.current_way_seg.num_cars =+ 1
 
         #self.speed = self.current_way_seg.max_speed
     
     def increment(self):
+        
         # if we are on the final way segment and have passed the end t, we arrived
         if len(self.path) == 1 and self.current_t + self.speed() * self.step_size >= self.end_t:
             self.is_done = True
@@ -62,7 +67,7 @@ class Traveler:
                 self.is_done = True
         else: # need to transfer way_segments 
             if self.current_t + self.speed() * self.step_size >= self.current_way_seg.t_len:
-                self.current_t = (self.current_t - self.current_way_seg.t_len) * (self.path[1].max_speed) / self.speed() 
+                self.current_t = (self.current_t - self.current_way_seg.t_len) * (self.path[1].get_allowable_speed()) / self.speed() 
                 self.increment_path()
 
         self.increment_pos()

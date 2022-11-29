@@ -32,10 +32,22 @@ class WaySegment:
 
         self.max_speed = 1 # adjust 
         self.lanes = 1
-        self.allowable_speed = self.max_speed # determined by traffic conidtions, at most max_speed
 
-        # also sets capacity
-        self.get_capacity()
+
+        ''' 
+        Dynamical System for determining congestion (allowable speed and thus weight of way_segment):
+
+            allowblespeed_{t+1} = f1(capacity_t)
+            capacity_{t+1}      = f2(ft_per_car_t)
+            ft_per_cat_{t+1}    = f3(allowablespeed_t)
+
+        We must set initial states for these fields
+        '''
+        self.allowable_speed = self.max_speed # determined by traffic conidtions, at most max_speed
+        self.ft_per_car = self.set_ft_per_car()
+        self.capacity = self.get_capacity() # also sets capacity
+
+
 
         self.set_lanes(split)
 
@@ -125,29 +137,29 @@ class WaySegment:
         - Minimum following distance is used to determine length per car (increases with speed) https://www.smartmotorist.com/safe-following-distance
         - assumes a car length of 15 ft
     '''
-    def ft_per_car(self):
+    def set_ft_per_car(self):
         following_distance_multiplier = self.allowable_speed / 20 # for each additional 20 mph, multiplier increases by 1
-        return self.allowable_speed * following_distance_multiplier + 15
+        return (self.allowable_speed * following_distance_multiplier + 15)
 
 
     
     # the longer the road and more lanes, the more cars can fit
     def get_capacity(self):
-        self.capacity = math.ceil(self.lanes * self.t_len_to_ft_multiplier * (self.t_len) / self.ft_per_car())
+        self.capacity = math.ceil(self.lanes * self.t_len_to_ft_multiplier * (self.t_len) / self.ft_per_car)
         #print("Capacity = ", self.capacity)
         return self.capacity
 
 
     # is max speed when num_cars <= capacity, otherwise (there is traffic) and speed decreases
     def get_allowable_speed(self):
-
-    
        
         if self.num_cars <= self.get_capacity():
             self.allowable_speed = self.max_speed
         else: # some decreasing function with respect to num_cars
-            self.allowable_speed = self.max_speed * (self.get_capacity() / self.num_cars) 
+            self.allowable_speed = self.max_speed * (self.get_capacity() / self.num_cars)
         
+        # Once we have calculated the new allowable speed, must update ft_per_car
+        self.set_ft_per_car()
 
         return self.allowable_speed
 

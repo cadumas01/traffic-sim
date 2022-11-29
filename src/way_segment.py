@@ -89,11 +89,9 @@ class WaySegment:
             max_speed_mph = 30 # default - maybe change
             if "maxspeed" in way_data:
                 max_speed_mph = int(re.sub("[^0-9]", "", way_data["maxspeed"])) # remove any non digits and convert to int
-                print("max speed mph = ", max_speed_mph )
             
             # convert to t_unit / tick
             self.max_speed = max_speed_mph / (self.engine_fps * (self.t_unit_to_ft) * (0.681818))
-            print("max speed ", self.max_speed)
 
 
 

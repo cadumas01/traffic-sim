@@ -10,7 +10,7 @@ from traveler import Traveler
 
 
 def main():
-    f = open("test-map.json", encoding="utf-8")
+    f = open("maps/brighton.json", encoding="utf-8")
     
     # returns JSON object as 
     # a dictionary
@@ -81,7 +81,7 @@ class Engine:
 
             # Generate Travelers (right now, every second)
             if time_step % self.fps == 0:
-                self.gen_travelers(random.randint(150,250))
+                self.gen_travelers(random.randint(50,100))
                 
                 # Also recalculate Traffic for future travelers
                 self.network.make_graph()
@@ -236,7 +236,6 @@ class Engine:
     # if the given node exists in its dictionary of nodes, return that way_segment
     def get_way_seg(self, node_id):
         for way_segment in self.network.way_segments["roads"].values():
-            #print(f"Here are {way_segment.id} atractions = {way_segment.attractions}")
             if node_id in way_segment.attractions:
                 return way_segment
 

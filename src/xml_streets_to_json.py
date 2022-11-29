@@ -105,9 +105,9 @@ def lat_to_y(lat, earth_radius):
     return  lat
 
 # cleans xml file and reorganizes into dictionary
-def xml_to_streets_data(xml_file):
-    with open(xml_file  + ".xml") as xml:
-        streets_data = xmltodict.parse(xml.read())["osm"]
+def xml_to_streets_data(map_file):
+    with open(map_file) as f:
+        streets_data = xmltodict.parse(f.read())["osm"]
 
         # Make its own function
         # adjust naming of node to nodes, way to ways and relation to relations
@@ -442,6 +442,7 @@ def remove_AT_from_keys(dictionary):
 
 if __name__ == "__main__":
 
-    for f in (["beacon-street", "test-map"]):
+    for f in (["maps/beacon-street.xml", "maps/brighton.osm"]):
         print(f"\n {f}")
-        write_json(normalize_coords(xml_to_streets_data(f)), f)
+
+        write_json(normalize_coords(xml_to_streets_data(f)), f[:-4])

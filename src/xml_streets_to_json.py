@@ -7,6 +7,25 @@ import math
 import numpy as np
 
 
+
+
+# main function
+def xml_streets_to_json(file=None,screen_width=1600,screen_height=900):
+    print(f"screen_width = {screen_width}, screen_height = {screen_height}")
+
+    # default files
+    if file == None:
+        file= "maps/cleveland-circle.osm" 
+    
+    streets_data = xml_to_streets_data(file)
+
+    # adjusts lon / lat coords to screen coords
+    normalized_street_data = normalize_coords(streets_data, screen_width, screen_height) 
+
+    write_json(normalized_street_data, file[:-4])
+
+
+
 def get_min_max_lon_lat(streets_data):
     min_lon = 10000
     min_lat = 10000
@@ -38,7 +57,7 @@ def get_min_max_lon_lat(streets_data):
     return min_lon, max_lon, min_lat, max_lat
 
 # normalizes coords to 
-def normalize_coords(streets_data):
+def normalize_coords(streets_data,screen_width,screen_height):
 
     min_lon, max_lon, min_lat, max_lat =  get_min_max_lon_lat(streets_data)
 
@@ -46,14 +65,14 @@ def normalize_coords(streets_data):
     width = lon_to_x(max_lon, mid_lat) - lon_to_x(min_lon, mid_lat)
     height = max_lat - min_lat
 
-    width_scale = 1600
-    occupied_horizontal_space = 1500
+ 
+    occupied_horizontal_space = .9375 * screen_width # for width = 1600, occupied horiz space = 1500
 
-    height_scale = 900
+  
     occupied_vertical_space = occupied_horizontal_space * height/ width
 
-    vert_margin  = (height_scale - occupied_vertical_space) / 2 # determined by leftover space
-    horiz_margin = (width_scale - occupied_horizontal_space) /2
+    vert_margin  = (screen_height - occupied_vertical_space) / 2 # determined by leftover space
+    horiz_margin = (screen_width - occupied_horizontal_space) /2
 
     # add occupied space data to bounds dict in json file
     streets_data["display_bounds"] = {}
@@ -106,7 +125,7 @@ def lat_to_y(lat, earth_radius):
 
 # cleans xml file and reorganizes into dictionary
 def xml_to_streets_data(map_file):
-    with open(map_file) as f:
+    with open(map_file, encoding="utf-8") as f:
         streets_data = xmltodict.parse(f.read())["osm"]
 
         # Make its own function
@@ -116,7 +135,6 @@ def xml_to_streets_data(map_file):
 
         # for each node, way and relation, take the id and use it as a key in the newly created dictionary
         for element_type in ["nodes", "ways", "relations"]:
-            #print("raw_data[elementtype]=", raw_data[element_type])
             
             if element_type not in streets_data:
                 continue
@@ -136,7 +154,6 @@ def xml_to_streets_data(map_file):
             for element in streets_data[element_type]: # elements is a list of dictionaries -> need to transform into dictionary of dictionaries
                 id = element["@id"]
 
-                print("element = ", element)
                 # remove unnecessary keys/values for each element
                 for k in ["@id", "@uid", "@user", "@changeset", "@timestamp","@version", "@visible"]:
                     if k in element:
@@ -440,9 +457,6 @@ def remove_AT_from_keys(dictionary):
     return dict(zip(keys,list(dictionary.values()))) 
 
 
+
 if __name__ == "__main__":
-
-    for f in (["maps/beacon-street.xml", "maps/brighton.osm"]):
-        print(f"\n {f}")
-
-        write_json(normalize_coords(xml_to_streets_data(f)), f[:-4])
+    xml_streets_to_json()

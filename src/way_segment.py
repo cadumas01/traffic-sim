@@ -133,9 +133,16 @@ class WaySegment:
 
     def set_width(self):
         if 'width' in self.data["ways"][self.category][self.way_id]:
-            self.width = float(self.data["ways"][self.category][self.way_id]['width'])
+
+            width_str =  self.data["ways"][self.category][self.way_id]['width']
+
+            # if these exist in the width string, split and take first part (maybe ; is used to separate 2 widths)
+            for char in [";", "'", ","]: 
+                width_str = width_str.split(char)[0]
+
+            self.width = float(width_str) * 1/ (self.t_unit_to_ft * 3.33) * 3 # x3  width for visibility sake
         else:
-            self.width = 2 # temp
+            self.width =  10 * 1/ ( self.t_unit_to_ft * 3.33) * 3# convert width (meters) to t_unit
 
 
     def set_id(self):

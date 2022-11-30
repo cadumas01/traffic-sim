@@ -3,6 +3,8 @@ Urban traffic simulator using OpenStreetMaps, Python, and PyGame, designed to de
 
 # Dependencies
 
+Python3
+
 Dijkstar
 - ```pip install Dijkstar```
 
@@ -11,6 +13,13 @@ numpy
 
 Pygame
 - ```pip install pygame```
+
+# How to Run
+
+1. ``` cd  src/ ```
+2. Adjust ```main.py``` such that input map, screen width, and screen height are as desired
+3. ```python3 main.py```
+  - Pygame window will open soon after (may take some time depending on size of map)
 
 # Structure
 1. Initial XML Received from OpenStreetMaps

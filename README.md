@@ -36,9 +36,11 @@ Pygame
        - Properties noderef, list of outgoing way segments, list of incoming way segments
    - Way segment: The parts of a road between intersections
        - Each road has multiple way segments, split up by intersections
-       - This is done to allow travelers to move onto another road or continue on their current road at each intersection (this behavior is determined by shortest path pathfinding at this time)
+       - This is done to allow travelers to move onto another road or continue on their current road at each intersection (Dijkstra's algorithm)
    - Network: The collection of all intersections and way_segments that we observe in our data
-   - Traveler: Representation of cars, bikers or pedestrians moving from place to place
+   - Traveler: Representation of cars travelling on roads from origin to destination nodes
+   - Engine: Runs the simulation
+
 
 # Planning
 1. Build map with GUI

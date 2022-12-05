@@ -163,21 +163,6 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
 }
 ```
 
-# Ideas 
-- Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes
-- Could do simulation over generic city or use google earth to simulate traffic flow over already existing street patterns (and what modifications to street layout and/or transportation modes to increase efficiency)
-- Could use google earth / maps to take real life city layout and put into number form
-- Considerations: need to get real life traffic throughputs for various modes from somewhere, need to domino effect of adjusting one street on all others
-- Consider human behavior / adoption of new transportation modes
-- Consider adjusting costs / taxes /subsidies on certain transportation modes
-- Could extend into macro solution above
-- Consider induced demand
-- We should use a mesoscopic model of traffic flow https://towardsdatascience.com/simulating-traffic-flow-in-python-ee1eab4dd20f
-- Focus in on just one small segment of Boston (to start)
-- Model traffic depending on time of day/day of the week (Traffic is different Tuesday at 9 AM than it is Saturday at 3 PM)
-  - Simulation could run through hours in a day, changing the traffic flow diagram as it goes
-
-
 # Resources / Inspiration
 - https://towardsdatascience.com/how-to-simulate-traffic-on-urban-networks-using-sumo-a2ef172e564
 - https://www.duckietown.org/

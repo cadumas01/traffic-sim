@@ -10,43 +10,6 @@ from traveler import Traveler
 from xml_streets_to_json import xml_streets_to_json
 
 
-def main():
-
-    screen_width = 1280
-    screen_height = 720
-
-    input_osm_file = "maps/test-map.osm"
-    json_file = input_osm_file.replace(".osm", ".json")
-
-    # parse map data
-    xml_streets_to_json(input_osm_file, screen_width=screen_width, screen_height=screen_height)
-
-    f = open(json_file, encoding="utf-8")
-    
-    # returns JSON object as 
-    # a dictionary
-    data = json.load(f)
-    f.close()
-
-    net = Network(data)
-    print(net) 
-     
-
-    # some function determining how many travelers should be generated at a time step
-    def n_travelers(t):
-        if t / 30 > 10:
-            return 100
-
-        return random.randint(5,10)
-
-    engine = Engine(net, 0, n_travelers, screen_width=screen_width, screen_height=screen_height)
-    engine.loop()
-
-
-
-
-
-
 class Engine:
     def __init__(self, network, time_steps, n_travelers_func, screen_width=1600, screen_height=900, config={}):
         # Simulation to draw
@@ -204,7 +167,7 @@ class Engine:
         self.background(*self.bg_color)
 
         # Draw Clock
-        self.draw_clock(t)
+        self.draw_info(t)
 
         self.draw_roads()
         self.draw_intersections()
@@ -268,17 +231,16 @@ class Engine:
                 return way_segment
 
 
-    def draw_clock(self,t):
+    # clock and other things
+    def draw_info(self,t):
         font = pygame.font.SysFont(None, 24)
-        img = font.render(f"time (sec)= {t // self.fps}", True, (0,0,0))
+        img = font.render(f"time (sec)= {t // self.fps},   {len(self.travelers)} travelers", True, (0,0,0))
         self.screen.blit(img, (20, 20))
 
     # converts coordinates to pygame coordinates (bottom left origin to top left origin)
     def to_pygame(self, x, y):
         return (x, self.height - y)
 
-if __name__=="__main__":
 
-    main()
 
    

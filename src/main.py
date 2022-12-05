@@ -10,7 +10,7 @@ def main():
     screen_width = 1000
     screen_height = 700
 
-    input_osm_file = "maps/brighton.osm"
+    input_osm_file = "maps/test-map.osm"
     json_file = input_osm_file.replace(".osm", ".json")
 
     # parse map data

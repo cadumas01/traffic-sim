@@ -41,23 +41,6 @@ Pygame
    - Traveler: Representation of cars travelling on roads from origin to destination nodes
    - Engine: Runs the simulation
 
-
-# Planning
-1. Build map with GUI
- - Get small street section in XML tag form
- - Recreate that in JS / Typescript with React App
-   - xml2json parser: https://www.npmjs.com/package/xml2json
-   - xml2js parser: https://www.npmjs.com/package/xml2js
-   - Two ideas for rendering maps:
-   1. Each street has its own ID, and a function that maps its location and length
-   2. 
- - Static map view to start
- - Relational database for Nodes and Ways
- 
-2. Model Traffic on a Street 
-- Model Trafffic in Python and pass JSON objects to JS Frontend
-- Python is called by the JS Frontend when new information is needed
-
 # Map JSON Schema
 XML tags are parsed into JSON, into 3 dictionaries;
 1. [Nodes](https://wiki.openstreetmap.org/wiki/Node) - Points in space, define places or make up ways
@@ -129,6 +112,16 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
               "width": "6.1"
         },
       },
+      "nonroads" : {
+           "ID": {
+              "node-refs": [
+                "NODE REF ID",
+                "NODE REF ID",
+                "NODE REF ID",
+                ...
+              ]
+            },
+      },
       "rails":  
             "ID": {
               "node-refs": [
@@ -144,17 +137,7 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
                 "name": "NAME",
                 "railway": "RAIL TYPE",
                 "railway:preferred_direction": "FORWARD OR BACKWARD",
-            },
-      "other" : {
-           "ID": {
-              "node-refs": [
-                "NODE REF ID",
-                "NODE REF ID",
-                "NODE REF ID",
-                ...
-              ]
-            },
-      }
+            }
     }
     "relations": {
         "9670662": {

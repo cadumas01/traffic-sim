@@ -163,24 +163,6 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
 }
 ```
 
-# Initial Map Rendering
-Option 1:
-1. Render all nodes first
- - There are generally two types of Nodes:
-    1. **Connections**: Single line nodes, no tags - These are usually part of a way
-    2. **Attractions**: Multi line nodes, with tags - These are usually attractions / buildings
-      - Attraction nodes are at center of a building??
-      - Their boundaries are designated by Relations (as a collection of ways) which form multigons
-2. Then render ways and relations (kind of like connecting the dots)
-3. As ways are formed, properties can be checked to see if they are part of roads or building walls or ...
-All Nodes will be accessed at least once here. Simplest. 
-
-Option 2: 
-1. Loop through all nodes in JSON processing phase and categorize as nodes into two cateogires (connections or attractions)
-2. Render roads by forming lines/curves in roads with connection nodes
-4. Only render attractions
-5. Render relations (building walls - surrounding a central building node?)
-
 # Ideas 
 - Goal: Create a simulation to maximize traveler throughput and costs of different street layouts with different transportation modes
 - Could do simulation over generic city or use google earth to simulate traffic flow over already existing street patterns (and what modifications to street layout and/or transportation modes to increase efficiency)

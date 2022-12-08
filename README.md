@@ -1,6 +1,12 @@
 # About
 Urban traffic simulator using OpenStreetMaps, Python, and PyGame. Uses gravity model to determine traveler generation and destination. Uses Dijkstra's shortest path algorithm for routefinding. Models congestion using road width and speed limit measurements, along with density of modeled travelers.
 
+
+# Demo 
+
+![Demo](EpidemicSimGifs/EpidemicSimGeneralShowcase.gif)
+
+
 # Dependencies
 
 Python3

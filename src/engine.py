@@ -154,6 +154,7 @@ class Engine:
 
             gb = traveler.speed() * 100
 
+
             pygame.draw.circle(self.screen, (200  , gb ,gb), self.to_pygame(x,y), radius=2)
 
 

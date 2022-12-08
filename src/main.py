@@ -7,10 +7,10 @@ from network import Network
 # Parses map data, and runs simulation
 def main():
 
-    screen_width = 1000
-    screen_height = 700
+    screen_width = 1400
+    screen_height = 1000
 
-    input_osm_file = "maps/test-map.osm"
+    input_osm_file = "maps/brighton.osm"
     json_file = input_osm_file.replace(".osm", ".json")
 
     # parse map data

@@ -1,5 +1,15 @@
 # About
-Urban traffic simulator using OpenStreetMaps, Python, and PyGame. Uses gravity model to determine traveler generation and destination. Uses Dijkstra's shortest path algorithm for routefinding. Models congestion using road width and speed limit measurements, along with density of modeled travelers.
+Simulate traffic on traffic on any section of Open Street Map! Inspire by [A-B-street](https://github.com/a-b-street)
+
+
+Urban traffic simulator using OpenStreetMaps, Python, and PyGame.
+- To-scale traveler speeds and map
+- Uses gravity model to determine traveler generation and destination
+    - Flexible destination weighting
+- Models congestion using road width and speed limit measurements, along with density of modeled travelers.
+- Uses Dijkstra's shortest path algorithm for routefinding.
+   - Accounts for congestion to update traffic speeds and routefinding
+
 
 
 # Demo 
@@ -173,10 +183,5 @@ Based on: https://wiki.openstreetmap.org/wiki/Elements
 - https://towardsdatascience.com/how-to-simulate-traffic-on-urban-networks-using-sumo-a2ef172e564
 - https://www.duckietown.org/
 - https://github.com/a-b-street
-  - More complete idea of what we are doing (possibly)
-  - Utilize osm2street for street layout
-  - Utilize https://github.com/asu-trans-ai-lab/grid2demand for corresponding baseline demand
-- https://www.openstreetmap.org/#map=7/41.701/-72.136
-  - Use this
 - https://developer.ibm.com/tutorials/wa-build2dphysicsengine/
 - https://path.berkeley.edu/research/traffic-simulation

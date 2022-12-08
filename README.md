@@ -4,7 +4,7 @@ Urban traffic simulator using OpenStreetMaps, Python, and PyGame. Uses gravity m
 
 # Demo 
 
-![Demo](EpidemicSimGifs/EpidemicSimGeneralShowcase.gif)
+![Demo](gifs/traffic-sim-cropped.gif)
 
 
 # Dependencies

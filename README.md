@@ -16,6 +16,8 @@ Urban traffic simulator using OpenStreetMaps, Python, and PyGame.
 
 ![Demo](gifs/traffic-sim-cropped.gif)
 
+*Standard traffic sim window focused on a section of Brighton, MA. Street networks are outlined in black; travelers (people) in red; Intersections in blue; attractions (destinations) in green.*
+
 
 # Dependencies
 

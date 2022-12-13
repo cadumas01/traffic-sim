@@ -1,5 +1,5 @@
 # About
-Simulate traffic on traffic on any section of Open Street Map! Inspire by [A-B-street](https://github.com/a-b-street)
+Simulate traffic on traffic on any section of Open Street Map! Inspired by [A-B-street](https://github.com/a-b-street)
 
 
 Urban traffic simulator using OpenStreetMaps, Python, and PyGame.
